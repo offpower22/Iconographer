@@ -1,21 +1,57 @@
-MIT License
+Copyright (c) 2026 Shane Montal. All rights reserved.
 
-Copyright (c) 2026 offpower22
+PROPRIETARY SOFTWARE LICENSE
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This software and its associated source code, documentation, design
+assets, and data files (collectively, the "Software") are the
+proprietary property of Shane Montal (the "Author").
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. GRANT OF LIMITED PERMISSION
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+   Permission is granted to any person obtaining a copy of the
+   Software to view and read the source code for the sole purposes
+   of personal evaluation, education, and review.
+
+2. RESTRICTIONS
+
+   Except as expressly permitted in Section 1, no person or
+   organization may, without the prior written permission of the
+   Author:
+
+   (a) use, run, or deploy the Software, in whole or in part, for
+       any purpose, whether commercial or non-commercial;
+   (b) copy, reproduce, modify, adapt, translate, or create
+       derivative works based on the Software;
+   (c) distribute, publish, sublicense, sell, rent, lease, or
+       otherwise transfer the Software or any portion of it;
+   (d) incorporate or integrate the Software, in whole or in part,
+       into any other product, service, application, or system;
+   (e) remove, alter, or obscure any copyright, trademark, or other
+       proprietary notice contained in the Software.
+
+3. REQUESTING PERMISSION
+
+   Organizations, institutions, and individuals wishing to use,
+   deploy, integrate, or license the Software should contact the
+   Author at [YOUR EMAIL]. The Author will consider such requests
+   in good faith and may grant permission on terms to be agreed in
+   writing.
+
+4. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+   NONINFRINGEMENT.
+
+5. LIMITATION OF LIABILITY
+
+   IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES,
+   OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR
+   OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+6. RESERVATION OF RIGHTS
+
+   All rights not expressly granted herein are reserved by the
+   Author.

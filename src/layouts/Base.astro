@@ -1,0 +1,89 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'Iconographer',
+  description = 'Point your camera at an artwork and discover the meaning of its symbols.'
+} = Astro.props;
+
+// The service worker is a PRODUCTION-only feature. Registering it against the
+// dev server poisons the cache with Vite module URLs (/src/..., /@vite/...),
+// which are then served cache-first forever — every code edit silently stops
+// reaching the browser. Evaluated at build time, so the dead branch is dropped.
+const isProd = import.meta.env.PROD;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content={description} />
+
+    <!-- Viewport: cover the notch/home-indicator area so the app is truly full-bleed. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
+    />
+
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#1a1410" />
+
+    <!-- iOS: make Safari treat this as a standalone app once added to the Home Screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Iconographer" />
+
+    <!-- iOS home-screen icons (Safari picks the closest size) -->
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/icons/apple-touch-icon-167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180.png" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+
+    {
+      isProd ? (
+        <!-- Register the service worker for offline app-shell caching. -->
+        <script is:inline>
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/sw.js').catch((err) => {
+                console.warn('Service worker registration failed:', err);
+              });
+            });
+          }
+        </script>
+      ) : (
+        <!-- Dev: tear down any service worker and cache left over from a previous
+             build, otherwise stale modules keep being served and code edits appear
+             to do nothing. Self-heals browsers that already registered one. -->
+        <script is:inline>
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then((regs) => {
+              if (!regs.length) return;
+              Promise.all(regs.map((r) => r.unregister()))
+                .then(() => (window.caches ? caches.keys() : []))
+                .then((keys) => Promise.all(keys.map((k) => caches.delete(k))))
+                .then(() => {
+                  console.warn('[iconographer] removed dev service worker + caches; reloading');
+                  location.reload();
+                });
+            });
+          }
+        </script>
+      )
+    }
+  </body>
+</html>

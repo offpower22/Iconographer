@@ -1,0 +1,447 @@
+/* ---------------------------------------------------------------------------
+   Iconographer — museum-label aesthetic.
+   Warm parchment ground, ink serif for reading, quiet sans for UI, gold accent.
+   Built to feel like a native app once installed (full-bleed, safe-area aware).
+--------------------------------------------------------------------------- */
+
+:root {
+  --ink: #211b14;
+  --ink-soft: #574c3d;
+  --ink-faint: #8a7d6a;
+  --parchment: #f4efe6;
+  --parchment-deep: #eae2d3;
+  --card: #fbf8f2;
+  --line: #d9cfbd;
+  --gold: #a67c34;
+  --gold-deep: #7c5a20;
+  --danger: #9c3b2e;
+  --shadow: 0 1px 2px rgba(33, 27, 20, 0.06), 0 8px 24px rgba(33, 27, 20, 0.08);
+
+  --serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, 'Book Antiqua', Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+
+  /* iOS safe areas */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ece3d4;
+    --ink-soft: #c4b9a5;
+    --ink-faint: #9a8e79;
+    --parchment: #1a1410;
+    --parchment-deep: #14100c;
+    --card: #241d16;
+    --line: #3a3025;
+    --gold: #d2a85f;
+    --gold-deep: #e0bd7d;
+    --danger: #d98070;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--parchment);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Full-bleed native feel */
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* App container fills the viewport and respects the notch/home indicator. */
+.app {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding:
+    calc(var(--safe-top) + 0px)
+    var(--safe-right)
+    var(--safe-bottom)
+    var(--safe-left);
+}
+
+/* ---------------------------------------------------------------- header */
+.masthead {
+  text-align: center;
+  padding: 28px 24px 12px;
+}
+.masthead h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 42px;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+.masthead .subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 15px;
+  margin: 8px auto 0;
+  max-width: 30ch;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------------------------- main */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 8px 20px 32px;
+}
+
+/* Screens toggle via [hidden] */
+[hidden] {
+  display: none !important;
+}
+
+/* ------------------------------------------------------ scan (idle) screen */
+.scan-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  text-align: center;
+  padding: 24px 0;
+}
+.scan-emblem {
+  width: 96px;
+  height: 96px;
+  opacity: 0.9;
+}
+.scan-lede {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  max-width: 34ch;
+  margin: 0;
+}
+
+/* Big primary action */
+.btn-scan {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  color: #fff8ea;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-deep) 100%);
+  padding: 18px 40px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+.btn-scan:active {
+  transform: scale(0.97);
+  filter: brightness(1.05);
+}
+.btn-scan svg {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-secondary {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.btn-secondary:active {
+  background: var(--parchment-deep);
+}
+
+.scan-hint {
+  font-size: 13px;
+  color: var(--ink-faint);
+  max-width: 32ch;
+  line-height: 1.45;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------ loading screen */
+.loading-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--line);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading-screen p {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* ------------------------------------------------------ result screen */
+.result-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#result-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.photo-frame {
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--parchment-deep);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+.photo-frame img {
+  display: block;
+  width: 100%;
+  max-height: 46svh;
+  object-fit: contain;
+  background: #000;
+}
+
+/* Secondary, soft context signal — never the headline claim. */
+.figure-pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  align-self: center;
+  background: var(--parchment-deep);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-family: var(--sans);
+  font-size: 13px;
+}
+.figure-pill-label {
+  color: var(--ink-faint);
+}
+.figure-pill-name {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--ink);
+}
+
+/* One card per detected, matched symbol — the core of the result screen. */
+.symbol-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.symbol-card {
+  display: flex;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+.symbol-thumb {
+  flex: none;
+  width: 92px;
+  height: 92px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--parchment-deep);
+  border: 1px solid var(--line);
+}
+.symbol-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.symbol-body {
+  flex: 1;
+  min-width: 0;
+}
+.symbol-category {
+  font-family: var(--sans);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 4px;
+}
+.symbol-name {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.2;
+  margin: 0 0 6px;
+}
+.symbol-meaning {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
+.symbol-context {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.symbol-context-line {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  color: var(--ink-faint);
+  line-height: 1.5;
+  margin: 0;
+}
+.symbol-context-name {
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* honest "we saw this but don't have it in the reference set" list */
+.also-detected h3 {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 12px;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.chip {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: var(--parchment-deep);
+  border: 1px solid var(--line);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  padding: 4px 0 8px;
+}
+
+/* ------------------------------------------------------ banners */
+.banner {
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.45;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.banner svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+}
+.banner-offline {
+  background: color-mix(in srgb, var(--danger) 12%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--danger) 40%, var(--line));
+  color: var(--ink);
+}
+.banner-error {
+  background: color-mix(in srgb, var(--danger) 12%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--danger) 40%, var(--line));
+  color: var(--ink);
+}
+.banner-note {
+  background: var(--parchment-deep);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+/* offline top strip */
+.offline-strip {
+  background: var(--danger);
+  color: #fff;
+  text-align: center;
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 6px 12px;
+  padding-top: calc(6px + var(--safe-top));
+}
+
+/* ------------------------------------------------------ footer */
+.foot {
+  text-align: center;
+  font-size: 11px;
+  color: var(--ink-faint);
+  padding: 8px 16px 20px;
+  line-height: 1.5;
+}
+.foot a {
+  color: var(--gold);
+  text-decoration: none;
+}

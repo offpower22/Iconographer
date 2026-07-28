@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Iconographer symbol data",
+  "type": "object",
+  "required": [
+    "version",
+    "symbols"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer"
+    },
+    "note": {
+      "type": "string"
+    },
+    "symbols": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "category",
+          "meaning"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "stable kebab-case identifier"
+          },
+          "name": {
+            "type": "string",
+            "description": "lowercase display name used for matching against detected elements"
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "optional plain-English synonyms to match against, for symbols (esp. gestures) whose formal name a vision model is unlikely to phrase verbatim"
+          },
+          "category": {
+            "type": "string",
+            "enum": [
+              "Gesture",
+              "Pose",
+              "Attribute",
+              "Object",
+              "Animal",
+              "Plant",
+              "Garment",
+              "Color",
+              "Monogram",
+              "Scene"
+            ]
+          },
+          "meaning": {
+            "type": "string",
+            "description": "standalone explanation of this symbol, true regardless of which figure it appears with"
+          },
+          "figures": {
+            "type": "array",
+            "description": "optional context: figures/scenes this symbol is commonly associated with",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "note"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "note": {
+                  "type": "string",
+                  "description": "figure-specific nuance for this symbol"
+                },
+                "generic": {
+                  "type": "boolean",
+                  "description": "true when this is a broad class of picture or person (e.g. 'Saints generally') rather than a nameable subject. Shown as card context, but never offered as a figure identification."
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

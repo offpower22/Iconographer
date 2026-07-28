@@ -1,0 +1,84 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/global.css';
+import { symbolCount } from '../lib/iconography';
+const count = symbolCount();
+---
+
+<Base>
+  <div class="app">
+    <div id="offline-strip" class="offline-strip" hidden>
+      You're offline — analysis needs a connection, but the app shell is cached.
+    </div>
+
+    <header class="masthead">
+      <h1>Iconographer</h1>
+      <p class="subtitle">Point your camera at an artwork to uncover the meaning of its icons.</p>
+    </header>
+
+    <main>
+      <!-- ------------------------------------------------ SCAN (idle) -->
+      <section id="scan-screen" class="scan-screen">
+        <svg class="scan-emblem" viewBox="0 0 96 96" fill="none" aria-hidden="true">
+          <circle cx="48" cy="48" r="30" stroke="var(--gold)" stroke-width="2" />
+          <circle cx="48" cy="48" r="40" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="3 5" />
+          <path
+            d="M48 30v36M30 48h36"
+            stroke="var(--gold)"
+            stroke-width="2"
+            stroke-linecap="round"
+            opacity="0.5"
+          />
+          <circle cx="48" cy="48" r="6" fill="var(--gold)" />
+        </svg>
+
+        <button id="scan-btn" class="btn-scan" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+            <circle cx="12" cy="13" r="4" />
+          </svg>
+          Scan artwork
+        </button>
+
+        <button id="library-btn" class="btn-secondary" type="button">Choose from library</button>
+
+        <!-- Camera-first native input. capture="environment" opens the rear camera on iOS. -->
+        <input
+          id="file-input"
+          class="visually-hidden"
+          type="file"
+          accept="image/*"
+          capture="environment"
+        />
+
+        <p class="scan-hint">
+          Best results with a clear, straight-on photo of a single figure or scene.
+        </p>
+      </section>
+
+      <!-- ------------------------------------------------ LOADING -->
+      <section id="loading-screen" class="loading-screen" hidden>
+        <div class="spinner" role="status" aria-label="Analyzing"></div>
+        <p>Reading the iconography…</p>
+      </section>
+
+      <!-- ------------------------------------------------ RESULT -->
+      <section id="result-screen" class="result-screen" hidden>
+        <div id="result-body"></div>
+        <div class="result-actions">
+          <button id="again-btn" class="btn-secondary" type="button">Scan another</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      Cross-referenced against {count} iconographic symbols, gestures &amp; attributes.
+      Explanations are grounded in a curated reference set — never invented.
+    </footer>
+  </div>
+
+  <script>
+    import '../scripts/app.ts';
+  </script>
+</Base>

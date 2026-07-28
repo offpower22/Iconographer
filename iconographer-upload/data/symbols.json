@@ -1,0 +1,4116 @@
+{
+  "$schema": "./symbols.schema.json",
+  "version": 3,
+  "note": "Symbol-first reference data for Iconographer. Each entry is a single iconographic symbol — a gesture, pose, object, animal, plant, garment, color, monogram, or scene type — with a meaning that stands on its own. 'figures' is optional context (who this symbol is commonly associated with), never required to explain the symbol. 'aliases' catches plain-English phrasings a vision model is likely to use. Expand freely; keep 'name' and 'aliases' lowercase and specific.",
+  "symbols": [
+    {
+      "id": "benediction-latin",
+      "name": "benediction gesture (Latin)",
+      "category": "Gesture",
+      "aliases": [
+        "blessing gesture",
+        "hand raised in blessing",
+        "two fingers raised in blessing",
+        "fingers raised in blessing",
+        "blessing hand"
+      ],
+      "meaning": "A raised right hand with the thumb, index, and middle finger extended and the last two folded into the palm is the Western gesture of blessing. The three raised fingers are read as the Trinity and the two folded ones as the dual nature of Christ, so the hand is a small creed as well as a blessing. It signals sacred authority and divine favor conferred on the viewer.",
+      "figures": [
+        {
+          "name": "Christ Pantocrator",
+          "note": "the standard hand of the enthroned, all-ruling Christ"
+        },
+        {
+          "name": "Bishops and popes",
+          "note": "shows the sitter exercising priestly authority"
+        }
+      ]
+    },
+    {
+      "id": "benediction-greek",
+      "name": "benediction gesture (Greek/Byzantine)",
+      "category": "Gesture",
+      "aliases": [
+        "byzantine blessing gesture",
+        "icon blessing hand",
+        "orthodox blessing"
+      ],
+      "meaning": "In Eastern Orthodox icons the blessing hand is shaped so the fingers spell the Greek letters ΙϹ ΧϹ — an abbreviation of 'Jesus Christ.' The gesture is simultaneously a blessing and a monogram naming the one who gives it.",
+      "figures": [
+        {
+          "name": "Christ (Orthodox icons)",
+          "note": "near-universal hand position in Byzantine and Russian icons"
+        }
+      ]
+    },
+    {
+      "id": "orans-pose",
+      "name": "orans / orant pose",
+      "category": "Gesture",
+      "aliases": [
+        "arms raised in prayer",
+        "both arms raised, palms out",
+        "praying with raised arms"
+      ],
+      "meaning": "Both arms raised to shoulder height with palms open and facing outward is one of the oldest prayer postures in Western art, inherited from pagan antiquity. In early Christian catacomb painting it marks a soul at prayer, often standing for the deceased interceding in paradise.",
+      "figures": [
+        {
+          "name": "Early Christian catacomb figures",
+          "note": "the standard pose for the departed soul in 3rd–4th century funerary art",
+          "generic": true
+        },
+        {
+          "name": "The Virgin Orans",
+          "note": "an icon type showing Mary in this pose, sometimes with Christ in a roundel on her breast"
+        }
+      ]
+    },
+    {
+      "id": "ecce-homo-gesture",
+      "name": "Ecce Homo presentation",
+      "category": "Gesture",
+      "aliases": [
+        "behold the man",
+        "presenting a bound figure",
+        "displaying the scourged prisoner"
+      ],
+      "meaning": "A bound, scourged figure in a crown of thorns and mock robe being gestured toward by another shows the moment Pilate presents Christ to the crowd with the words 'Ecce homo' ('Behold the man'). The open presenting hand is what identifies the scene.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "the one presented, crowned with thorns in a mock purple robe"
+        },
+        {
+          "name": "Pontius Pilate",
+          "note": "makes the presenting gesture, often while washing his hands nearby"
+        }
+      ]
+    },
+    {
+      "id": "hand-on-chest",
+      "name": "hand on chest / heart",
+      "category": "Gesture",
+      "aliases": [
+        "hand pressed to chest",
+        "hand over heart",
+        "palm on breast"
+      ],
+      "meaning": "A hand laid flat on the chest signals sincerity, piety, or inward devotion — attention turned toward the figure's own soul rather than outward at the viewer. It is common in portraits of saints and pious donors to convey heartfelt faith or an oath of loyalty.",
+      "figures": [
+        {
+          "name": "Counter-Reformation saints",
+          "note": "a recurring gesture of interior devotion, especially in El Greco"
+        }
+      ]
+    },
+    {
+      "id": "beating-breast",
+      "name": "striking the breast",
+      "category": "Gesture",
+      "aliases": [
+        "beating chest",
+        "fist to chest",
+        "striking own chest"
+      ],
+      "meaning": "A closed fist struck against the chest is the gesture of penitence and self-accusation — the 'mea culpa' of the repentant sinner or the publican in the parable who would not raise his eyes. Distinct from the open, flat hand of sincerity.",
+      "figures": [
+        {
+          "name": "Penitent figures",
+          "note": "Mary Magdalene, Saint Peter after his denial, and the publican",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "finger-pointing-up",
+      "name": "index finger raised upward",
+      "category": "Gesture",
+      "aliases": [
+        "pointing to heaven",
+        "finger pointing upward",
+        "index finger raised",
+        "pointing finger",
+        "raised index finger"
+      ],
+      "meaning": "A single finger aimed at heaven directs attention to divine truth, prophecy, or the world beyond — 'look up, look past this.' It marks a figure as prophet, teacher, or philosopher concerned with eternal rather than earthly things.",
+      "figures": [
+        {
+          "name": "Saint John the Baptist",
+          "note": "points upward or toward Christ to announce the coming Messiah"
+        },
+        {
+          "name": "Plato (School of Athens)",
+          "note": "points to the heavens for his philosophy of eternal ideal forms"
+        }
+      ]
+    },
+    {
+      "id": "hand-palm-down-teaching",
+      "name": "hand extended, palm down",
+      "category": "Gesture",
+      "aliases": [
+        "palm turned downward",
+        "hand gesturing toward the earth",
+        "flat hand extended forward"
+      ],
+      "meaning": "An arm reached forward with the palm turned down and flat is a gesture of exposition indicating the here-and-now, observable world rather than the transcendent. It usually pairs with an upward-pointing counterpart to stage a contrast between two philosophies.",
+      "figures": [
+        {
+          "name": "Aristotle (School of Athens)",
+          "note": "gestures toward the earth for his empirical philosophy grounded in the physical world"
+        }
+      ]
+    },
+    {
+      "id": "hands-clasped-prayer",
+      "name": "hands clasped in prayer",
+      "category": "Gesture",
+      "aliases": [
+        "palms pressed together",
+        "praying hands",
+        "hands joined in prayer"
+      ],
+      "meaning": "Palms pressed together with fingers aligned or interlaced is the standard Western gesture of devout prayer, distinct from the older open-armed orans pose. Its origin lies in the feudal gesture of a vassal placing joined hands between a lord's — prayer as an act of homage.",
+      "figures": [
+        {
+          "name": "Donor portraits",
+          "note": "patrons who paid for an altarpiece kneel at its edge with hands clasped",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "downcast-eyes",
+      "name": "averted or downcast gaze",
+      "category": "Gesture",
+      "aliases": [
+        "eyes lowered",
+        "looking down",
+        "averted eyes"
+      ],
+      "meaning": "Eyes lowered or turned from the viewer signal humility, modesty, or penitence, distinguishing quiet inward reflection from the direct outward gaze used for authority or witness.",
+      "figures": [
+        {
+          "name": "The Penitent Magdalene",
+          "note": "downcast eyes reinforce sorrow and repentance"
+        },
+        {
+          "name": "The Virgin at the Annunciation",
+          "note": "modesty and submission at the angel's greeting"
+        }
+      ]
+    },
+    {
+      "id": "adlocutio-gesture",
+      "name": "raised hand, palm out (adlocutio)",
+      "category": "Gesture",
+      "aliases": [
+        "hand raised in address",
+        "hand raised in command",
+        "raised open palm facing outward"
+      ],
+      "meaning": "An arm raised with the palm facing outward and fingers together is the Roman gesture of address or command, used by emperors and generals speaking to assembled troops. It carries authority and public declaration rather than blessing — the fingers are not divided into the Trinitarian arrangement.",
+      "figures": [
+        {
+          "name": "Roman emperors",
+          "note": "the standard gesture of imperial address on coins and triumphal reliefs",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "dextrarum-iunctio",
+      "name": "joined right hands (dextrarum iunctio)",
+      "category": "Gesture",
+      "aliases": [
+        "clasped hands",
+        "hands joined together",
+        "two figures shaking hands"
+      ],
+      "meaning": "Two figures clasping right hands is the ancient Roman gesture of concord and marriage — a bond sealed between the parties. It passed into Christian betrothal and marriage imagery and into allegories of alliance or peace.",
+      "figures": [
+        {
+          "name": "Roman marriage sarcophagi",
+          "note": "the clasped-hands motif marking the union of husband and wife",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "noli-me-tangere-gesture",
+      "name": "drawing back from a touch",
+      "category": "Gesture",
+      "aliases": [
+        "noli me tangere",
+        "recoiling from outstretched hand",
+        "warding off a reaching hand"
+      ],
+      "meaning": "A risen figure pulling away from a kneeling woman's outstretched hand depicts 'Noli me tangere' ('Do not hold on to me'), Christ's words to Mary Magdalene in the garden after the Resurrection. The withheld touch marks a body no longer belonging to ordinary earthly contact.",
+      "figures": [
+        {
+          "name": "Christ and Mary Magdalene",
+          "note": "Christ often carries a gardener's hoe, since she first mistook him for the gardener"
+        }
+      ]
+    },
+    {
+      "id": "touching-the-wound",
+      "name": "finger probing a wound",
+      "category": "Gesture",
+      "aliases": [
+        "doubting thomas",
+        "finger in the side wound",
+        "touching christ's wound"
+      ],
+      "meaning": "A man placing his finger into the side wound of a risen figure is the Doubting Thomas — the apostle who refused to believe without physical proof. The gesture is about the demand for tangible evidence and its rebuke: 'blessed are they that have not seen, and yet have believed.'",
+      "figures": [
+        {
+          "name": "Saint Thomas the Apostle",
+          "note": "his defining moment and the origin of 'doubting Thomas'"
+        }
+      ]
+    },
+    {
+      "id": "finger-to-lips",
+      "name": "finger to the lips",
+      "category": "Gesture",
+      "aliases": [
+        "shushing gesture",
+        "finger over mouth",
+        "gesture for silence"
+      ],
+      "meaning": "A finger laid across the lips commands silence, secrecy, or discretion. In Renaissance allegory it can personify Silence itself or mark a mystery not to be spoken, drawing on the Greco-Egyptian god Harpocrates, whom classical writers misread as a god of silence.",
+      "figures": [
+        {
+          "name": "Personified Silence",
+          "note": "a common figure in emblem books and ceiling decoration"
+        }
+      ]
+    },
+    {
+      "id": "hand-to-cheek-melancholy",
+      "name": "head resting on the hand",
+      "category": "Gesture",
+      "aliases": [
+        "hand supporting the head",
+        "chin on fist",
+        "head propped on hand",
+        "brooding pose"
+      ],
+      "meaning": "A seated figure propping the head on one hand is the ancient sign of melancholy, grief, or deep thought. In Renaissance art it becomes the signature pose of the melancholic temperament, associated with genius, artistic inspiration, and creative paralysis alike.",
+      "figures": [
+        {
+          "name": "Melancholy personified",
+          "note": "Dürer's 'Melencolia I' fixed this pose for the brooding, gifted, blocked intellect"
+        },
+        {
+          "name": "Mourners",
+          "note": "the same pose marks grief at a deposition or entombment"
+        }
+      ]
+    },
+    {
+      "id": "covering-the-face",
+      "name": "covering the face with hands",
+      "category": "Gesture",
+      "aliases": [
+        "hands over face",
+        "hiding the face",
+        "face buried in hands"
+      ],
+      "meaning": "Hands raised to hide the face express grief too great to show, or shame. Classical writers praised a painter who veiled a father's face at his daughter's sacrifice because no depiction could equal the sorrow implied, and the device recurs whenever an artist wants emotion beyond depiction.",
+      "figures": [
+        {
+          "name": "Mourning figures",
+          "note": "at a Lamentation, Massacre of the Innocents, or Expulsion from Eden",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "pudica-gesture",
+      "name": "hands shielding the body (pudica)",
+      "category": "Gesture",
+      "aliases": [
+        "venus pudica",
+        "modesty gesture",
+        "covering breast and groin"
+      ],
+      "meaning": "A nude figure covering breast and groin with her hands is the 'pudica' (modest) pose inherited from classical Venus statues. The gesture simultaneously conceals and draws attention, and painters use it to frame nudity as chaste rather than lascivious.",
+      "figures": [
+        {
+          "name": "Venus / Aphrodite",
+          "note": "the classical origin of the pose"
+        },
+        {
+          "name": "Eve",
+          "note": "adopted for Eve's shame after the Fall"
+        }
+      ]
+    },
+    {
+      "id": "hands-bound",
+      "name": "bound hands",
+      "category": "Gesture",
+      "aliases": [
+        "tied wrists",
+        "hands tied with rope",
+        "wrists bound"
+      ],
+      "meaning": "Wrists tied with rope or cord mark a captive, prisoner, or figure delivered up for judgment and execution. In martyrdom imagery the binding emphasizes helplessness willingly accepted rather than resisted.",
+      "figures": [
+        {
+          "name": "Christ before Pilate",
+          "note": "bound during the Passion"
+        },
+        {
+          "name": "Saint Sebastian",
+          "note": "bound to a tree or column for his martyrdom"
+        }
+      ]
+    },
+    {
+      "id": "crossed-arms-on-chest",
+      "name": "arms crossed over the chest",
+      "category": "Gesture",
+      "aliases": [
+        "arms folded across breast",
+        "hands crossed on chest"
+      ],
+      "meaning": "Arms folded across the breast signal humble submission and acceptance of God's will. It is the standard attitude of the Virgin accepting the Annunciation and of the Immaculate Conception, and in Orthodox practice the posture for receiving communion.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "'be it unto me according to thy word' — assent at the Annunciation"
+        }
+      ]
+    },
+    {
+      "id": "contrapposto",
+      "name": "contrapposto stance",
+      "category": "Pose",
+      "aliases": [
+        "weight on one leg",
+        "hip shifted to one side",
+        "s-curve stance"
+      ],
+      "meaning": "A standing figure with weight shifted onto one leg, hips and shoulders counter-rotated into a relaxed S-curve. Invented in classical Greece and revived in the Renaissance, it signals naturalism, ease, and idealized grace as opposed to rigid frontal formality.",
+      "figures": [
+        {
+          "name": "Classical and Renaissance sculpture",
+          "note": "the defining stance of the idealized standing nude from Polykleitos to Michelangelo",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "veiled-head",
+      "name": "veiled or covered head",
+      "category": "Pose",
+      "aliases": [
+        "head covered by a veil",
+        "hood drawn over head",
+        "mantle pulled over the head"
+      ],
+      "meaning": "A head covered by veil, hood, or drawn mantle signals mourning, modesty, or ritual solemnity. Widows, penitents, and figures present at a death or sacrifice are commonly veiled; in Roman practice covering the head marked the moment of performing a rite.",
+      "figures": [
+        {
+          "name": "Mourning figures",
+          "note": "veiling at a Deposition or Entombment marks grief",
+          "generic": true
+        },
+        {
+          "name": "Roman sacrificants",
+          "note": "the officiant covers his head (capite velato) while sacrificing",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "kneeling-pose",
+      "name": "kneeling pose",
+      "category": "Pose",
+      "aliases": [
+        "figure on one knee",
+        "kneeling figure",
+        "genuflecting"
+      ],
+      "meaning": "A figure on one or both knees signals submission, homage, prayer, or adoration — lowering the body beneath another's level to mark reverence, whether religious devotion or earthly fealty.",
+      "figures": [
+        {
+          "name": "The Magi and shepherds",
+          "note": "kneeling marks worship of the infant Christ"
+        },
+        {
+          "name": "Donors",
+          "note": "patrons kneel at the margins of the sacred scene they commissioned",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "reclining-pose",
+      "name": "reclining pose",
+      "category": "Pose",
+      "aliases": [
+        "lying on one elbow",
+        "reclining figure",
+        "figure stretched out on a couch"
+      ],
+      "meaning": "A figure lying propped on one elbow evokes the ancient banquet posture used for feasting and philosophical conversation; in funerary art it shows the dead at eternal rest, and in later painting it becomes the pose of the reclining nude.",
+      "figures": [
+        {
+          "name": "Etruscan and Roman funerary effigies",
+          "note": "the deceased shown reclining as if at an unending banquet"
+        },
+        {
+          "name": "River gods",
+          "note": "personified rivers recline with an urn pouring water"
+        }
+      ]
+    },
+    {
+      "id": "enthroned-pose",
+      "name": "enthroned figure",
+      "category": "Pose",
+      "aliases": [
+        "seated on a throne",
+        "figure on a throne",
+        "maesta"
+      ],
+      "meaning": "A frontal figure seated on a throne, usually raised on steps and larger than surrounding figures, asserts sovereignty and majesty. In a sacred setting the throne turns a portrait into a statement of rule over heaven and earth.",
+      "figures": [
+        {
+          "name": "The Virgin and Child in Majesty",
+          "note": "the 'Maestà' type, with Mary enthroned as Queen of Heaven and seat of Wisdom"
+        },
+        {
+          "name": "Christ in Majesty",
+          "note": "enthroned as judge and ruler of all"
+        }
+      ]
+    },
+    {
+      "id": "trampling-underfoot",
+      "name": "trampling a figure underfoot",
+      "category": "Pose",
+      "aliases": [
+        "standing on a defeated figure",
+        "foot on a serpent",
+        "crushing underfoot"
+      ],
+      "meaning": "A victorious figure standing on a prostrate enemy, serpent, or demon is the visual formula for total conquest — evil not merely defeated but placed beneath the feet. Crushing a serpent's head specifically echoes the promise in Genesis that the woman's offspring would bruise the serpent.",
+      "figures": [
+        {
+          "name": "Saint Michael",
+          "note": "stands on Satan as dragon or demon"
+        },
+        {
+          "name": "The Immaculate Virgin",
+          "note": "treads on the serpent, and often a crescent moon"
+        }
+      ]
+    },
+    {
+      "id": "swooning-figure",
+      "name": "swooning or fainting figure",
+      "category": "Pose",
+      "aliases": [
+        "collapsing figure",
+        "fainting woman supported by others",
+        "figure sinking backward"
+      ],
+      "meaning": "A figure sinking backward, supported by companions, conveys grief so overwhelming it overcomes the body. In Passion scenes this is the 'Spasimo' — the Virgin fainting at the sight of her son — a motif that let painters give her a share in his suffering.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "swooning on the road to Calvary or beneath the cross"
+        }
+      ]
+    },
+    {
+      "id": "cephalophore",
+      "name": "figure carrying its own severed head",
+      "category": "Pose",
+      "aliases": [
+        "carrying own head",
+        "headless saint holding a head",
+        "cephalophore"
+      ],
+      "meaning": "A standing, headless figure holding its own head is a 'cephalophore.' The impossible image asserts that martyrdom did not end the saint's mission — several were said to have walked and preached after decapitation.",
+      "figures": [
+        {
+          "name": "Saint Denis",
+          "note": "carried his head from Montmartre after beheading; patron of Paris"
+        }
+      ]
+    },
+    {
+      "id": "sheltering-cloak",
+      "name": "figures sheltered under an outspread cloak",
+      "category": "Pose",
+      "aliases": [
+        "madonna of mercy",
+        "cloak spread over kneeling people",
+        "protective mantle"
+      ],
+      "meaning": "A large central figure holding open a cloak to shelter small kneeling people beneath it is the 'Madonna of Mercy' formula. Scale here is hierarchical rather than spatial — the protector is painted large because she matters most, not because she is nearer.",
+      "figures": [
+        {
+          "name": "The Virgin of Mercy",
+          "note": "shelters a confraternity, city, or religious order under her mantle"
+        },
+        {
+          "name": "Saint Ursula",
+          "note": "shelters her virgin companions the same way"
+        }
+      ]
+    },
+    {
+      "id": "crossed-legs-effigy",
+      "name": "tomb effigy with crossed legs",
+      "category": "Pose",
+      "aliases": [
+        "knight with crossed legs",
+        "cross-legged effigy"
+      ],
+      "meaning": "A recumbent armored effigy with legs crossed at the knee. Despite a persistent popular claim, this does NOT identify a crusader or record how many crusades he joined — it was simply a fashion in English tomb sculpture of roughly 1240–1350, and the notion of a crusading code was invented by later antiquarians.",
+      "figures": [
+        {
+          "name": "English medieval knights",
+          "note": "a carving convention of the period, not a biographical statement",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "three-nude-women",
+      "name": "three intertwined nude figures",
+      "category": "Pose",
+      "aliases": [
+        "three graces",
+        "three dancing women",
+        "trio of nude women with linked arms"
+      ],
+      "meaning": "Three nude women dancing or embracing with linked arms, usually two facing the viewer and one turned away, is a distinct classical grouping. They personify charm and generosity — read since antiquity as the giving, receiving, and returning of benefits.",
+      "figures": [
+        {
+          "name": "The Three Graces",
+          "note": "the standard composition for the trio from antiquity through the Renaissance"
+        }
+      ]
+    },
+    {
+      "id": "child-on-shoulder",
+      "name": "child carried on the shoulder across water",
+      "category": "Pose",
+      "aliases": [
+        "giant carrying a child through a river",
+        "man fording water with child on shoulders"
+      ],
+      "meaning": "A large figure wading through water with a small child on one shoulder, leaning on a staff, depicts the ferryman who unknowingly carried the Christ Child and found him impossibly heavy — the weight of the world's sin.",
+      "figures": [
+        {
+          "name": "Saint Christopher",
+          "note": "his name means 'Christ-bearer'; patron of travelers"
+        }
+      ]
+    },
+    {
+      "id": "halo",
+      "name": "halo / nimbus",
+      "category": "Attribute",
+      "aliases": [
+        "ring of light around the head",
+        "golden disc behind the head",
+        "nimbus"
+      ],
+      "meaning": "A ring or disc of light around the head marks sanctity — the figure is recognized as holy, blessed, or divine. Its shape carries further information: plain and round for saints, and other forms reserved for specific persons.",
+      "figures": [
+        {
+          "name": "Saints generally",
+          "note": "the universal shorthand for holiness across nearly all Christian art",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "cruciform-halo",
+      "name": "halo with a cross inside it",
+      "category": "Attribute",
+      "aliases": [
+        "cruciform nimbus",
+        "cross within the halo",
+        "halo containing a cross"
+      ],
+      "meaning": "A halo containing the arms of a cross is reserved for Christ alone (and by extension for the Lamb or the Trinity's persons). Seeing one settles the identity of a figure that might otherwise be read as any saint.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "the single most reliable identifier of Christ in Christian art"
+        }
+      ]
+    },
+    {
+      "id": "square-halo",
+      "name": "square or rectangular halo",
+      "category": "Attribute",
+      "aliases": [
+        "square nimbus",
+        "rectangular halo"
+      ],
+      "meaning": "A square halo marks a person who was still alive when the image was made — used chiefly for popes and donors in early medieval Rome. It carefully distinguishes the merely eminent from the canonized dead, who get round haloes.",
+      "figures": [
+        {
+          "name": "Living donors and popes",
+          "note": "an explicit signal that the sitter had not yet died, let alone been canonized",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "triangular-halo",
+      "name": "triangular halo",
+      "category": "Attribute",
+      "aliases": [
+        "three-sided nimbus",
+        "triangle behind the head"
+      ],
+      "meaning": "A three-sided halo signifies the Trinity and is reserved for God the Father. The geometry does the theological work: one figure, three equal sides.",
+      "figures": [
+        {
+          "name": "God the Father",
+          "note": "distinguishes him from Christ, who receives the cross-marked halo"
+        }
+      ]
+    },
+    {
+      "id": "mandorla",
+      "name": "almond-shaped body halo (mandorla)",
+      "category": "Attribute",
+      "aliases": [
+        "full-body aureole",
+        "almond of light around a figure",
+        "oval of light"
+      ],
+      "meaning": "An almond-shaped field of light enclosing an entire figure, not just the head. It signals a body in glory or in transit between heaven and earth, and so appears at moments of revelation or bodily ascent.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "at the Transfiguration, Ascension, and in Majesty"
+        },
+        {
+          "name": "The Virgin",
+          "note": "at her Assumption"
+        }
+      ]
+    },
+    {
+      "id": "wings",
+      "name": "wings",
+      "category": "Attribute",
+      "aliases": [
+        "feathered wings",
+        "winged figure",
+        "wings on the back"
+      ],
+      "meaning": "Wings mark a figure as more than human — an angel, a personification, or a divine messenger able to move between the earthly and heavenly realms. On an allegorical figure they usually indicate swiftness or the transcendence of ordinary limits.",
+      "figures": [
+        {
+          "name": "Angels and archangels",
+          "note": "the defining mark distinguishing them from human saints",
+          "generic": true
+        },
+        {
+          "name": "Victory / Fame",
+          "note": "wings emphasize swift arrival and spreading renown"
+        }
+      ]
+    },
+    {
+      "id": "winged-man",
+      "name": "winged man (evangelist symbol)",
+      "category": "Attribute",
+      "aliases": [
+        "man with wings",
+        "winged human figure"
+      ],
+      "meaning": "One of the four evangelist symbols. A winged human figure identifies the Gospel that opens by tracing Christ's human ancestry, and can be shown dictating to the writer.",
+      "figures": [
+        {
+          "name": "Saint Matthew the Evangelist",
+          "note": "his Gospel begins with the human genealogy of Christ"
+        }
+      ]
+    },
+    {
+      "id": "stigmata",
+      "name": "stigmata",
+      "category": "Attribute",
+      "aliases": [
+        "wounds on hands and feet",
+        "bleeding palms",
+        "marks of the five wounds"
+      ],
+      "meaning": "Wounds appearing on the hands, feet, and side, matching the injuries of the crucifixion, mark a figure as having received a mystical identification with Christ's suffering rather than an ordinary injury.",
+      "figures": [
+        {
+          "name": "Saint Francis of Assisi",
+          "note": "received them in a vision of a winged seraph; the first documented case"
+        },
+        {
+          "name": "Saint Catherine of Siena",
+          "note": "traditionally shown with invisible or rayed stigmata"
+        }
+      ]
+    },
+    {
+      "id": "flaming-heart",
+      "name": "flaming heart",
+      "category": "Attribute",
+      "aliases": [
+        "burning heart",
+        "heart on fire",
+        "heart with flames"
+      ],
+      "meaning": "A heart wrapped in flame stands for ardent divine love — charity burning rather than merely felt. Held in the hand it is an attribute; worn on the breast it can indicate the Sacred Heart devotion.",
+      "figures": [
+        {
+          "name": "Saint Augustine",
+          "note": "his usual attribute, sometimes pierced by an arrow"
+        },
+        {
+          "name": "Charity personified",
+          "note": "the flame marks love as the theological virtue"
+        }
+      ]
+    },
+    {
+      "id": "pierced-heart-swords",
+      "name": "heart pierced by swords",
+      "category": "Attribute",
+      "aliases": [
+        "seven swords in the heart",
+        "sword through the heart",
+        "daggers piercing a heart"
+      ],
+      "meaning": "A heart transfixed by one or (more often) seven blades signifies the sorrows of the Virgin, from Simeon's prophecy that 'a sword shall pierce through thy own soul.' Seven is the count of her traditional Sorrows, from the flight into Egypt to the entombment.",
+      "figures": [
+        {
+          "name": "The Mater Dolorosa",
+          "note": "Our Lady of Sorrows, shown weeping with swords at her breast"
+        }
+      ]
+    },
+    {
+      "id": "tonsure",
+      "name": "tonsure (shaved crown of the head)",
+      "category": "Attribute",
+      "aliases": [
+        "shaved head with ring of hair",
+        "monk's haircut",
+        "bald crown with hair around it"
+      ],
+      "meaning": "A shaved patch on the crown, leaving a ring of hair, marks a man as a monk or cleric. The exposed circle was read as a crown of thorns and a renunciation of vanity.",
+      "figures": [
+        {
+          "name": "Monastic saints",
+          "note": "combined with the habit's color, it helps identify the specific order",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "blindfold",
+      "name": "blindfold",
+      "category": "Attribute",
+      "aliases": [
+        "cloth over the eyes",
+        "blindfolded figure",
+        "bandaged eyes"
+      ],
+      "meaning": "Covered eyes carry opposite meanings depending on who wears them: impartiality and judgment made without regard to persons, or blind, undiscriminating impulse. Read the rest of the figure before deciding which.",
+      "figures": [
+        {
+          "name": "Justice",
+          "note": "impartiality — judgment blind to wealth or status"
+        },
+        {
+          "name": "Cupid",
+          "note": "the opposite reading: love strikes without reason"
+        },
+        {
+          "name": "Fortuna",
+          "note": "chance favors no one predictably"
+        },
+        {
+          "name": "Synagoga",
+          "note": "a personification of the Synagogue blindfolded to signify failure to recognize Christ — a hostile medieval trope"
+        }
+      ]
+    },
+    {
+      "id": "two-faces",
+      "name": "two faces (young and old)",
+      "category": "Attribute",
+      "aliases": [
+        "janus head",
+        "double-faced head",
+        "head looking both ways"
+      ],
+      "meaning": "A single head bearing two or three faces, typically one young and one aged looking in opposite directions, represents weighing past experience against future consequence before acting.",
+      "figures": [
+        {
+          "name": "Prudence",
+          "note": "her defining attribute, alongside mirror and serpent"
+        },
+        {
+          "name": "Janus",
+          "note": "the Roman god of doorways and beginnings, looking back and forward"
+        }
+      ]
+    },
+    {
+      "id": "winged-sandals",
+      "name": "winged sandals or helmet",
+      "category": "Attribute",
+      "aliases": [
+        "wings on the feet",
+        "winged cap",
+        "small wings at the ankles"
+      ],
+      "meaning": "Small wings on footwear or headgear signify supernatural speed — a figure who crosses between realms swiftly, especially as a divine messenger.",
+      "figures": [
+        {
+          "name": "Hermes / Mercury",
+          "note": "gives him his characteristic swiftness as messenger of the gods"
+        }
+      ]
+    },
+    {
+      "id": "forelock-bald-behind",
+      "name": "figure bald behind with a forelock",
+      "category": "Attribute",
+      "aliases": [
+        "lock of hair on the forehead",
+        "bald at the back of the head",
+        "occasion personified"
+      ],
+      "meaning": "A running figure with hair falling over the forehead but a bald back of the head personifies Opportunity: it can be seized as it approaches but never once it has passed. Often winged, balanced on a ball or wheel, and carrying a razor.",
+      "figures": [
+        {
+          "name": "Occasio / Kairos",
+          "note": "the source of the phrase 'seize opportunity by the forelock'"
+        }
+      ]
+    },
+    {
+      "id": "chi-rho",
+      "name": "Chi-Rho monogram",
+      "category": "Monogram",
+      "aliases": [
+        "XP symbol",
+        "P with an X through it",
+        "labarum"
+      ],
+      "meaning": "The superimposed Greek letters Chi (Χ) and Rho (Ρ), the first two of ΧΡΙΣΤΟΣ, form the oldest Christogram. Adopted by Constantine as a military standard, it functions as both an abbreviation of Christ's name and a sign of victory.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "often flanked by alpha and omega on sarcophagi and apse mosaics"
+        }
+      ]
+    },
+    {
+      "id": "ihs-monogram",
+      "name": "IHS monogram",
+      "category": "Monogram",
+      "aliases": [
+        "IHS letters",
+        "IHS in a sunburst",
+        "sacred monogram"
+      ],
+      "meaning": "The letters IHS abbreviate ΙΗΣΟΥΣ, the Greek spelling of Jesus, using its first three letters. Later readings expanded it into Latin phrases such as 'Iesus Hominum Salvator,' but the origin is simply the name.",
+      "figures": [
+        {
+          "name": "Saint Bernardino of Siena",
+          "note": "holds a tablet with IHS in a blazing sun, the emblem he preached with"
+        },
+        {
+          "name": "The Jesuits",
+          "note": "adopted it as the emblem of the Society of Jesus"
+        }
+      ]
+    },
+    {
+      "id": "inri-titulus",
+      "name": "INRI inscription",
+      "category": "Monogram",
+      "aliases": [
+        "INRI board",
+        "titulus above the cross",
+        "sign nailed to the cross"
+      ],
+      "meaning": "The board fixed above the cross reading INRI — 'Iesus Nazarenus Rex Iudaeorum,' Jesus of Nazareth, King of the Jews. Written as a legal charge, it is preserved in Christian art as an unintended proclamation of kingship.",
+      "figures": [
+        {
+          "name": "The Crucifixion",
+          "note": "the placard Pilate ordered fixed to the cross"
+        }
+      ]
+    },
+    {
+      "id": "alpha-omega",
+      "name": "alpha and omega",
+      "category": "Monogram",
+      "aliases": [
+        "A and Ω",
+        "first and last letters of the greek alphabet"
+      ],
+      "meaning": "The first and last letters of the Greek alphabet, flanking a figure or Christogram, declare 'I am the beginning and the end' — divinity encompassing all of time.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "usually paired with the Chi-Rho or shown beside Christ in Majesty"
+        }
+      ]
+    },
+    {
+      "id": "crown-of-thorns",
+      "name": "crown of thorns",
+      "category": "Object",
+      "aliases": [
+        "thorn crown",
+        "wreath of thorns",
+        "circle of thorns on the head"
+      ],
+      "meaning": "A twisted ring of thorn branches, forced onto the head as a parody of a royal wreath during the mockery before the crucifixion. It fuses kingship and humiliation into one object and is a central instrument of the Passion.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "worn from the mockery through the crucifixion"
+        },
+        {
+          "name": "Penitent saints",
+          "note": "occasionally held or worn in imitation of Christ's suffering"
+        }
+      ]
+    },
+    {
+      "id": "nails-passion",
+      "name": "three nails",
+      "category": "Object",
+      "aliases": [
+        "iron nails",
+        "crucifixion nails",
+        "large spikes"
+      ],
+      "meaning": "Three long iron nails belong to the Arma Christi, the instruments of the Passion, displayed as objects of devotion. The count of three reflects the common medieval convention of feet crossed and pinned by a single nail.",
+      "figures": [
+        {
+          "name": "The Passion of Christ",
+          "note": "held by angels or arranged around the cross in devotional images"
+        }
+      ]
+    },
+    {
+      "id": "hammer-and-pincers",
+      "name": "hammer and pincers",
+      "category": "Object",
+      "aliases": [
+        "mallet and tongs",
+        "hammer and tongs by a cross"
+      ],
+      "meaning": "A hammer to drive the nails in and pincers to draw them out, paired among the instruments of the Passion. Together they compress the crucifixion and the deposition into two tools.",
+      "figures": [
+        {
+          "name": "The Passion of Christ",
+          "note": "part of the Arma Christi, often held by attending angels"
+        }
+      ]
+    },
+    {
+      "id": "lance-longinus",
+      "name": "lance or spear (piercing the side)",
+      "category": "Object",
+      "aliases": [
+        "holy lance",
+        "spear thrust into the side",
+        "soldier's spear at the cross"
+      ],
+      "meaning": "The spear that pierced the side of the crucified Christ, releasing blood and water. As a Passion instrument it stands for the wound that confirmed death and, in Eucharistic reading, the source of the sacraments.",
+      "figures": [
+        {
+          "name": "Saint Longinus",
+          "note": "the centurion who made the thrust and was converted by it"
+        }
+      ]
+    },
+    {
+      "id": "sponge-on-reed",
+      "name": "sponge on a reed",
+      "category": "Object",
+      "aliases": [
+        "sponge on a stick",
+        "sponge raised on a pole",
+        "vinegar sponge"
+      ],
+      "meaning": "A sponge soaked in vinegar and raised on a long reed to the mouth of the crucified — offered as drink and received as one more indignity. It belongs to the instruments of the Passion, usually shown crossed with the lance.",
+      "figures": [
+        {
+          "name": "The Crucifixion",
+          "note": "typically paired with the lance to flank the cross"
+        }
+      ]
+    },
+    {
+      "id": "column-and-scourge",
+      "name": "column with scourge or whip",
+      "category": "Object",
+      "aliases": [
+        "flagellation column",
+        "whipping post",
+        "short pillar with a whip"
+      ],
+      "meaning": "A short column with a whip or bundle of rods is the site and instrument of the Flagellation, where Christ was bound and scourged before the crucifixion. Distinguish it from the tall architectural column that accompanies Fortitude.",
+      "figures": [
+        {
+          "name": "The Flagellation",
+          "note": "among the Arma Christi; the column was venerated as a relic in Rome"
+        }
+      ]
+    },
+    {
+      "id": "veronica-veil",
+      "name": "cloth bearing an imprinted face",
+      "category": "Object",
+      "aliases": [
+        "veil with the face of christ",
+        "sudarium",
+        "veronica's cloth",
+        "cloth held open showing a face"
+      ],
+      "meaning": "A cloth held open by its two upper corners, displaying a man's face imprinted on it, is the veil said to have been offered to wipe Christ's face on the road to Calvary and to have retained the image. It stands for an image made without human hands.",
+      "figures": [
+        {
+          "name": "Saint Veronica",
+          "note": "shown holding the cloth open toward the viewer"
+        }
+      ]
+    },
+    {
+      "id": "thirty-pieces-silver",
+      "name": "thirty pieces of silver",
+      "category": "Object",
+      "aliases": [
+        "bag of silver coins",
+        "scattered coins of betrayal",
+        "purse of thirty coins"
+      ],
+      "meaning": "A small bag or scatter of coins numbering thirty is the price of betrayal, paid to Judas and later flung back into the temple. Coins in a betrayal scene read as guilt, not wealth.",
+      "figures": [
+        {
+          "name": "Judas Iscariot",
+          "note": "often shown clutching the purse, sometimes with a demon at his ear"
+        }
+      ]
+    },
+    {
+      "id": "latin-cross",
+      "name": "Latin cross",
+      "category": "Object",
+      "aliases": [
+        "upright cross",
+        "plain cross",
+        "cross with a long lower arm"
+      ],
+      "meaning": "A cross with a longer lower arm, the standard Western form. Held by a saint it signifies faith and the acceptance of suffering; planted in a landscape it marks consecrated ground.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "the instrument of the crucifixion and the central Christian sign"
+        }
+      ]
+    },
+    {
+      "id": "tau-cross",
+      "name": "tau (T-shaped) cross",
+      "category": "Object",
+      "aliases": [
+        "T-shaped cross",
+        "T-shaped staff",
+        "cross shaped like the letter T"
+      ],
+      "meaning": "A cross without an upper arm, shaped like the letter T. It is a specific identifying emblem rather than a generic cross, tied to one hermit-saint and the hospital order that took his name.",
+      "figures": [
+        {
+          "name": "Saint Anthony the Abbot",
+          "note": "carried as his staff's crosshead; adopted by the Antonine order"
+        }
+      ]
+    },
+    {
+      "id": "saltire-cross",
+      "name": "X-shaped (saltire) cross",
+      "category": "Object",
+      "aliases": [
+        "diagonal cross",
+        "cross shaped like an X",
+        "st andrew's cross"
+      ],
+      "meaning": "A cross of two diagonal beams forming an X. It identifies a specific apostle's martyrdom, who by tradition asked not to die on a cross of the same shape as Christ's, and survives as the flag of Scotland.",
+      "figures": [
+        {
+          "name": "Saint Andrew",
+          "note": "his defining attribute; brother of Peter and patron of Scotland"
+        }
+      ]
+    },
+    {
+      "id": "inverted-cross",
+      "name": "upside-down cross",
+      "category": "Object",
+      "aliases": [
+        "inverted cross",
+        "cross turned upside down"
+      ],
+      "meaning": "A Latin cross inverted. In Christian iconography this is emphatically not a sign of blasphemy but of humility: it recalls an apostle who asked to be crucified head downward, considering himself unworthy of dying as his master had.",
+      "figures": [
+        {
+          "name": "Saint Peter",
+          "note": "his martyrdom under Nero; the inverted cross is a papal emblem"
+        }
+      ]
+    },
+    {
+      "id": "resurrection-banner",
+      "name": "white banner with a red cross",
+      "category": "Object",
+      "aliases": [
+        "cross banner on a staff",
+        "pennant with a red cross",
+        "victory flag"
+      ],
+      "meaning": "A slender staff topped with a white pennant bearing a red cross signals triumph over death. It appears in the hands of the risen Christ, the Lamb of God, and saints associated with resurrection or crusade.",
+      "figures": [
+        {
+          "name": "The Risen Christ",
+          "note": "carried at the Resurrection and the Harrowing of Hell"
+        },
+        {
+          "name": "The Lamb of God",
+          "note": "the Agnus Dei is shown supporting this banner"
+        }
+      ]
+    },
+    {
+      "id": "skull",
+      "name": "skull",
+      "category": "Object",
+      "aliases": [
+        "human skull",
+        "cranium",
+        "death's head"
+      ],
+      "meaning": "A human skull is a memento mori — a blunt reminder of mortality and the brevity of earthly life, prompting reflection and repentance. It appears with penitent figures in the wilderness, with scholars at their desks, and at the center of vanitas still life.",
+      "figures": [
+        {
+          "name": "Saint Jerome",
+          "note": "kept in his study as a scholar's reminder of death"
+        },
+        {
+          "name": "Saint Mary Magdalene",
+          "note": "present in scenes of her penitence in the wilderness"
+        },
+        {
+          "name": "Golgotha",
+          "note": "a skull at the foot of the cross marks 'the place of the skull' and Adam's grave"
+        }
+      ]
+    },
+    {
+      "id": "hourglass",
+      "name": "hourglass",
+      "category": "Object",
+      "aliases": [
+        "sand timer",
+        "sandglass"
+      ],
+      "meaning": "An hourglass makes time visibly running out, and so is a direct emblem of mortality closely paired with the skull. Its symmetry also lets it stand for the balance of life and death.",
+      "figures": [
+        {
+          "name": "Father Time / Saturn",
+          "note": "carried alongside the scythe as an attribute of Time"
+        },
+        {
+          "name": "Vanitas still life",
+          "note": "a core emblem of the genre"
+        }
+      ]
+    },
+    {
+      "id": "extinguished-candle",
+      "name": "extinguished candle / smoke",
+      "category": "Object",
+      "aliases": [
+        "snuffed candle",
+        "smoking wick",
+        "candle just blown out"
+      ],
+      "meaning": "A candle newly snuffed, its smoke still rising, marks a life or moment just ended — vitality visibly passing away. A lit candle by contrast can signify the presence of Christ or the soul still burning.",
+      "figures": [
+        {
+          "name": "Vanitas still life",
+          "note": "a standard emblem of the genre's meditation on mortality"
+        }
+      ]
+    },
+    {
+      "id": "soap-bubbles",
+      "name": "soap bubbles",
+      "category": "Object",
+      "aliases": [
+        "bubbles",
+        "child blowing bubbles"
+      ],
+      "meaning": "Bubbles, beautiful and certain to burst within seconds, stand for the fragility of life and worldly beauty. The Latin tag 'homo bulla' — man is a bubble — makes the point explicit.",
+      "figures": [
+        {
+          "name": "Vanitas still life",
+          "note": "usually paired with a skull or hourglass"
+        }
+      ]
+    },
+    {
+      "id": "book",
+      "name": "book",
+      "category": "Object",
+      "aliases": [
+        "open book",
+        "codex",
+        "volume held in the hand",
+        "bound book"
+      ],
+      "meaning": "A book signals learning, scripture, or authorship. Open, it suggests active teaching or study and its text may be legible and pointed; closed, contemplation or completed wisdom.",
+      "figures": [
+        {
+          "name": "The four Evangelists",
+          "note": "each holds or writes the Gospel attributed to them"
+        },
+        {
+          "name": "Saint Jerome",
+          "note": "signifies his translation of the Bible into Latin"
+        }
+      ]
+    },
+    {
+      "id": "scroll",
+      "name": "scroll",
+      "category": "Object",
+      "aliases": [
+        "rolled parchment",
+        "unfurled scroll",
+        "banderole",
+        "ribbon with writing"
+      ],
+      "meaning": "A scroll usually marks an older or prophetic text, distinguishing prophets of the Hebrew Bible from apostles, who typically hold codices. A scroll floating through a scene as a ribbon (banderole) carries the figure's spoken words.",
+      "figures": [
+        {
+          "name": "Old Testament prophets",
+          "note": "the scroll marks the older covenant against the apostles' bound books",
+          "generic": true
+        },
+        {
+          "name": "The Archangel Gabriel",
+          "note": "may carry a banderole reading 'Ave Maria'"
+        }
+      ]
+    },
+    {
+      "id": "quill-pen",
+      "name": "quill pen and inkwell",
+      "category": "Object",
+      "aliases": [
+        "quill",
+        "feather pen",
+        "writing pen",
+        "inkpot",
+        "pen and ink"
+      ],
+      "meaning": "A feather pen, often with an inkwell and knife for sharpening, marks a figure as author, scribe, or evangelist caught mid-composition. It turns a portrait into a claim about authorship of the text beside it.",
+      "figures": [
+        {
+          "name": "The four Evangelists",
+          "note": "shown writing their Gospels, frequently at divine dictation"
+        },
+        {
+          "name": "Saint Jerome",
+          "note": "at work on the Vulgate translation in his study"
+        }
+      ]
+    },
+    {
+      "id": "keys",
+      "name": "keys (two, crossed)",
+      "category": "Object",
+      "aliases": [
+        "crossed keys",
+        "pair of keys",
+        "gold and silver keys",
+        "large key",
+        "keys"
+      ],
+      "meaning": "A pair of crossed keys, conventionally one gold and one silver, represents the 'keys of the kingdom of heaven' — authority to bind and loose, admit and exclude. They remain the emblem of the papacy.",
+      "figures": [
+        {
+          "name": "Saint Peter",
+          "note": "his defining emblem, from Christ's grant of the keys"
+        }
+      ]
+    },
+    {
+      "id": "sword",
+      "name": "sword",
+      "category": "Object",
+      "aliases": [
+        "blade",
+        "longsword",
+        "drawn sword"
+      ],
+      "meaning": "A sword can mark martyrdom by beheading, spiritual warfare, or the enforcement of justice — the reading depends on who holds it and what accompanies it. A sword through the neck or held beside a kneeling figure points to execution.",
+      "figures": [
+        {
+          "name": "Saint Paul",
+          "note": "both his beheading and the 'sword of the Spirit,' the Word of God"
+        },
+        {
+          "name": "Justice",
+          "note": "paired with scales: the power to enforce judgment"
+        },
+        {
+          "name": "Saint Michael",
+          "note": "a flaming sword for battle against Satan"
+        }
+      ]
+    },
+    {
+      "id": "scales-balance",
+      "name": "scales / balance",
+      "category": "Object",
+      "aliases": [
+        "balance",
+        "weighing scales",
+        "set of scales"
+      ],
+      "meaning": "A balance held level represents impartial judgment — weighing right against wrong. In a Last Judgment it is literal: souls are placed in the pans, sometimes with a demon pulling down one side.",
+      "figures": [
+        {
+          "name": "Justice",
+          "note": "paired with a sword"
+        },
+        {
+          "name": "Saint Michael",
+          "note": "weighs souls at the Last Judgment"
+        }
+      ]
+    },
+    {
+      "id": "crown",
+      "name": "crown",
+      "category": "Object",
+      "aliases": [
+        "royal crown",
+        "diadem",
+        "circlet"
+      ],
+      "meaning": "A crown marks royal birth or rule, but in martyr imagery it stands instead for the heavenly 'crown of glory' won by death. A crown laid aside or trampled signals renunciation of worldly rank.",
+      "figures": [
+        {
+          "name": "Saint Catherine of Alexandria",
+          "note": "reflects her royal birth"
+        },
+        {
+          "name": "The Virgin",
+          "note": "crowned as Queen of Heaven at her Coronation"
+        }
+      ]
+    },
+    {
+      "id": "palm-branch",
+      "name": "palm branch",
+      "category": "Object",
+      "aliases": [
+        "palm frond",
+        "palm leaf"
+      ],
+      "meaning": "A palm frond is the near-universal attribute of Christian martyrdom, signifying victory over death. Because almost any martyr may carry one, it tells you how a saint died but rarely which saint it is.",
+      "figures": [
+        {
+          "name": "Martyr saints generally",
+          "note": "the standard generic mark of martyrdom",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "broken-wheel",
+      "name": "broken or spiked wheel",
+      "category": "Object",
+      "aliases": [
+        "spiked wheel",
+        "shattered wheel",
+        "wheel with blades",
+        "wheel"
+      ],
+      "meaning": "A wheel studded with spikes, shown broken, recalls a torture device that miraculously shattered before it could kill, forcing execution by another means. It is highly specific rather than generic.",
+      "figures": [
+        {
+          "name": "Saint Catherine of Alexandria",
+          "note": "her signature attribute; the source of the 'catherine wheel'"
+        }
+      ]
+    },
+    {
+      "id": "gridiron",
+      "name": "gridiron",
+      "category": "Object",
+      "aliases": [
+        "iron grill",
+        "grill for roasting",
+        "metal grate"
+      ],
+      "meaning": "An iron grate used for roasting marks a martyrdom by fire on a grill. Tradition gives the martyr a famous line to his executioners — that he was done on one side and might be turned — which made him the patron of cooks.",
+      "figures": [
+        {
+          "name": "Saint Lawrence",
+          "note": "his defining attribute, usually carried or standing beside him"
+        }
+      ]
+    },
+    {
+      "id": "arrows",
+      "name": "arrows (piercing a figure)",
+      "category": "Object",
+      "aliases": [
+        "arrows in the body",
+        "pierced by arrows",
+        "shot with arrows",
+        "arrows",
+        "arrow"
+      ],
+      "meaning": "A body pierced by several arrows marks martyrdom by archery, the figure typically bound and serene rather than contorted. Arrows also stand for plague, which is why such images were invoked against epidemics.",
+      "figures": [
+        {
+          "name": "Saint Sebastian",
+          "note": "his defining martyrdom — though he survived the arrows and was later clubbed to death"
+        },
+        {
+          "name": "Saint Ursula",
+          "note": "killed by an arrow at Cologne"
+        }
+      ]
+    },
+    {
+      "id": "eyes-on-plate",
+      "name": "eyes on a plate or dish",
+      "category": "Object",
+      "aliases": [
+        "pair of eyes on a dish",
+        "eyeballs on a platter",
+        "eyes held on a tray"
+      ],
+      "meaning": "A pair of eyes displayed on a dish, separate from the intact face of the figure holding them, is an unmistakable attribute pointing to a martyrdom involving blinding. The saint became patron of eyesight and of the blind.",
+      "figures": [
+        {
+          "name": "Saint Lucy",
+          "note": "her name derives from 'lux,' light — the pun is part of the point"
+        }
+      ]
+    },
+    {
+      "id": "breasts-on-plate",
+      "name": "severed breasts on a plate",
+      "category": "Object",
+      "aliases": [
+        "breasts on a dish",
+        "two round objects on a platter held by a woman"
+      ],
+      "meaning": "Two severed breasts carried on a dish record a specific torture inflicted before death. Because the shapes were later mistaken for loaves or bells, the saint's feast is associated with round breads and with the blessing of bells.",
+      "figures": [
+        {
+          "name": "Saint Agatha",
+          "note": "patron against breast disease, fire, and volcanic eruption"
+        }
+      ]
+    },
+    {
+      "id": "tongs-with-tooth",
+      "name": "pincers holding a tooth",
+      "category": "Object",
+      "aliases": [
+        "tooth held in tongs",
+        "pliers with a tooth",
+        "extracted tooth"
+      ],
+      "meaning": "A pair of pincers gripping a single tooth records a martyrdom by dental extraction and makes the saint patron of dentists and of those in toothache.",
+      "figures": [
+        {
+          "name": "Saint Apollonia",
+          "note": "her teeth were shattered or drawn out during her torture"
+        }
+      ]
+    },
+    {
+      "id": "flaying-knife-and-skin",
+      "name": "knife and flayed human skin",
+      "category": "Object",
+      "aliases": [
+        "flaying knife",
+        "empty human skin",
+        "curved knife held by a saint",
+        "skin draped over an arm"
+      ],
+      "meaning": "A short curved blade paired with a limp, empty human skin records martyrdom by flaying. Artists sometimes painted their own features into the hanging skin as a signature.",
+      "figures": [
+        {
+          "name": "Saint Bartholomew",
+          "note": "flayed alive; patron of tanners and leatherworkers"
+        }
+      ]
+    },
+    {
+      "id": "stones-held",
+      "name": "stones carried or resting on the head",
+      "category": "Object",
+      "aliases": [
+        "rocks on the shoulders",
+        "stones held in the hand",
+        "stones balanced on the head",
+        "stones"
+      ],
+      "meaning": "Loose stones carried in a book or balanced improbably on the head and shoulders record a death by stoning. The impossible balance is a conventional way of showing the instrument rather than the moment.",
+      "figures": [
+        {
+          "name": "Saint Stephen",
+          "note": "the first Christian martyr, shown as a young deacon"
+        }
+      ]
+    },
+    {
+      "id": "severed-head-platter",
+      "name": "severed head on a platter",
+      "category": "Object",
+      "aliases": [
+        "head on a dish",
+        "head served on a tray",
+        "decapitated head on a plate"
+      ],
+      "meaning": "A human head presented on a serving dish depicts an execution granted as a courtly favour rather than a battlefield death — the collision of banquet and beheading is the horror of the image.",
+      "figures": [
+        {
+          "name": "Saint John the Baptist",
+          "note": "his head brought to Salome after her dance before Herod"
+        }
+      ]
+    },
+    {
+      "id": "millstone",
+      "name": "millstone",
+      "category": "Object",
+      "aliases": [
+        "stone wheel around the neck",
+        "grinding stone"
+      ],
+      "meaning": "A heavy circular grinding stone, often hung at a figure's neck, records a martyrdom by drowning. It draws on the Gospel warning about a millstone hung about the neck of one who harms the innocent.",
+      "figures": [
+        {
+          "name": "Saint Vincent of Saragossa",
+          "note": "cast into the sea with a millstone"
+        },
+        {
+          "name": "Saint Christina",
+          "note": "thrown into a lake bound to a millstone"
+        }
+      ]
+    },
+    {
+      "id": "wool-comb",
+      "name": "iron wool comb",
+      "category": "Object",
+      "aliases": [
+        "carding comb",
+        "iron comb with spikes",
+        "spiked comb"
+      ],
+      "meaning": "A spiked iron comb used to card wool, repurposed as an instrument of torture that tore the flesh. It makes its saint the patron of wool-combers as well as of ailments of the throat.",
+      "figures": [
+        {
+          "name": "Saint Blaise",
+          "note": "invoked against throat illness; his feast includes the blessing of throats"
+        }
+      ]
+    },
+    {
+      "id": "windlass",
+      "name": "windlass with entrails",
+      "category": "Object",
+      "aliases": [
+        "winch",
+        "capstan",
+        "spool being turned"
+      ],
+      "meaning": "A nautical winch around which a martyr's intestines were said to have been wound. The resemblance to a sailor's capstan made the saint a patron of mariners, whose name survives in the electrical glow called St Elmo's fire.",
+      "figures": [
+        {
+          "name": "Saint Erasmus (Elmo)",
+          "note": "patron of sailors and of abdominal pain"
+        }
+      ]
+    },
+    {
+      "id": "ointment-jar",
+      "name": "ointment or alabaster jar",
+      "category": "Object",
+      "aliases": [
+        "alabaster jar",
+        "jar of perfume",
+        "small lidded vessel",
+        "unguent pot"
+      ],
+      "meaning": "A small lidded vessel for perfumed oil recalls an act of anointing — poured over feet in devotion, or brought to a tomb to prepare a body for burial.",
+      "figures": [
+        {
+          "name": "Saint Mary Magdalene",
+          "note": "her defining attribute, from her anointing of Christ's feet"
+        },
+        {
+          "name": "The Three Marys",
+          "note": "carry jars to the empty tomb on Easter morning"
+        }
+      ]
+    },
+    {
+      "id": "chalice",
+      "name": "chalice",
+      "category": "Object",
+      "aliases": [
+        "communion cup",
+        "goblet",
+        "cup raised in the hand",
+        "cup"
+      ],
+      "meaning": "A stemmed cup stands for the Eucharist and the blood of Christ. Paired with a wafer it signifies the sacrament; held by a personification it marks Faith; catching blood beneath the cross it makes the crucifixion the origin of the Mass.",
+      "figures": [
+        {
+          "name": "Faith personified",
+          "note": "holds chalice and cross"
+        },
+        {
+          "name": "Saint Barbara",
+          "note": "a chalice and host allude to dying without last rites"
+        }
+      ]
+    },
+    {
+      "id": "chalice-serpent",
+      "name": "chalice with a serpent",
+      "category": "Object",
+      "aliases": [
+        "cup with a snake",
+        "goblet with a small dragon",
+        "snake emerging from a cup"
+      ],
+      "meaning": "A cup with a small snake rising from it records a poisoned drink survived unharmed — the venom made visible as it leaves the vessel, proof of divine protection.",
+      "figures": [
+        {
+          "name": "Saint John the Evangelist",
+          "note": "made to drink poison and unaffected by it"
+        }
+      ]
+    },
+    {
+      "id": "monstrance",
+      "name": "monstrance",
+      "category": "Object",
+      "aliases": [
+        "sunburst vessel with a white disc",
+        "ostensory",
+        "radiant vessel on a stand"
+      ],
+      "meaning": "A sunburst-shaped vessel on a stem displaying a white wafer behind glass, made to show the consecrated host for adoration. Held up by a saint it usually records the repelling of a threat by the sacrament alone.",
+      "figures": [
+        {
+          "name": "Saint Clare of Assisi",
+          "note": "held it up to turn back soldiers threatening her convent"
+        }
+      ]
+    },
+    {
+      "id": "censer",
+      "name": "censer / thurible",
+      "category": "Object",
+      "aliases": [
+        "incense burner on chains",
+        "swinging censer",
+        "thurible"
+      ],
+      "meaning": "A pierced metal vessel swung on chains to burn incense; the rising smoke stands for prayer ascending. Angels swing censers in heavenly scenes to mark the space as liturgical.",
+      "figures": [
+        {
+          "name": "Angels",
+          "note": "censing the Virgin or the altar in devotional images",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "crozier",
+      "name": "crozier (crook-topped staff)",
+      "category": "Object",
+      "aliases": [
+        "bishop's staff",
+        "curved pastoral staff",
+        "shepherd's crook staff"
+      ],
+      "meaning": "A tall staff with a spiral crook at the top, shaped after a shepherd's crook, marks a bishop or abbot as pastor of a flock. With a mitre it is the standard pairing for episcopal rank.",
+      "figures": [
+        {
+          "name": "Bishop saints",
+          "note": "Nicholas, Ambrose, Augustine, Martin and many others",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "three-gold-balls",
+      "name": "three gold balls or orbs",
+      "category": "Object",
+      "aliases": [
+        "three golden spheres",
+        "three coins or purses",
+        "three gold orbs on a book"
+      ],
+      "meaning": "Three small golden spheres recall secret dowries dropped through a window to save three sisters from destitution. The story made the saint a gift-giver and, indirectly, the pawnbroker's sign.",
+      "figures": [
+        {
+          "name": "Saint Nicholas",
+          "note": "the origin of both this attribute and the later Santa Claus tradition"
+        }
+      ]
+    },
+    {
+      "id": "pilgrim-attributes",
+      "name": "pilgrim's staff and scallop shell",
+      "category": "Object",
+      "aliases": [
+        "pilgrim staff",
+        "walking staff with a gourd",
+        "broad hat with a shell badge"
+      ],
+      "meaning": "A long staff, a water gourd, a satchel, and a scallop badge on the hat or cloak identify a pilgrim, historically one returning from the shrine of Santiago de Compostela.",
+      "figures": [
+        {
+          "name": "Saint James the Greater",
+          "note": "patron of the Compostela pilgrimage, whose badge the shell became"
+        },
+        {
+          "name": "Saint Roch",
+          "note": "a pilgrim who tended plague victims"
+        }
+      ]
+    },
+    {
+      "id": "scallop-shell",
+      "name": "scallop shell",
+      "category": "Object",
+      "aliases": [
+        "shell",
+        "cockle shell",
+        "fan-shaped shell"
+      ],
+      "meaning": "A large fan-shaped shell carries two unrelated meanings: a goddess's birth from the sea, or a pilgrim's badge. A nude figure rising from water points to the first; a robed traveler with a staff to the second. It is also used as a baptismal vessel.",
+      "figures": [
+        {
+          "name": "Venus",
+          "note": "born of sea foam and borne ashore on a shell"
+        },
+        {
+          "name": "Saint James the Greater",
+          "note": "the badge of the Camino de Santiago"
+        }
+      ]
+    },
+    {
+      "id": "tower",
+      "name": "tower",
+      "category": "Object",
+      "aliases": [
+        "stone tower",
+        "small tower held in the hand",
+        "tower with windows"
+      ],
+      "meaning": "A tower held as an attribute marks a specific imprisonment by a father or captor rather than a generic building. Count the windows if visible — three were said to have been cut into it to honour the Trinity.",
+      "figures": [
+        {
+          "name": "Saint Barbara",
+          "note": "patron of miners, gunners, and those at risk of sudden death"
+        }
+      ]
+    },
+    {
+      "id": "anchor",
+      "name": "anchor",
+      "category": "Object",
+      "aliases": [
+        "ship's anchor",
+        "figure leaning on an anchor"
+      ],
+      "meaning": "An anchor signifies hope — 'an anchor of the soul, both sure and stedfast' — and steadfastness under storm. Its resemblance to a cross made it an early covert Christian sign, and it also marks martyrdom by drowning.",
+      "figures": [
+        {
+          "name": "Hope personified",
+          "note": "her standard attribute, often with eyes raised heavenward"
+        },
+        {
+          "name": "Saint Clement",
+          "note": "said to have been cast into the sea tied to an anchor"
+        }
+      ]
+    },
+    {
+      "id": "ship",
+      "name": "ship",
+      "category": "Object",
+      "aliases": [
+        "boat",
+        "sailing vessel",
+        "small boat with figures"
+      ],
+      "meaning": "A ship carrying passengers through rough water is an old image of the Church bearing souls safely across a hostile world — the reason a church's main space is still called the nave, from 'navis.'",
+      "figures": [
+        {
+          "name": "Saint Ursula",
+          "note": "sails with her companions to their martyrdom at Cologne"
+        },
+        {
+          "name": "The calming of the storm",
+          "note": "the disciples' boat on the Sea of Galilee"
+        }
+      ]
+    },
+    {
+      "id": "musical-instrument",
+      "name": "musical instrument (organ, lute, harp)",
+      "category": "Object",
+      "aliases": [
+        "portative organ",
+        "lute",
+        "harp",
+        "viol",
+        "instrument held by a figure"
+      ],
+      "meaning": "An instrument in a saint's hands marks patronage of sacred music; among angels it signals the harmony of heaven; and in a vanitas still life it stands for pleasure that ends the moment the sound stops.",
+      "figures": [
+        {
+          "name": "Saint Cecilia",
+          "note": "patron of music, usually at a small portable organ"
+        },
+        {
+          "name": "King David",
+          "note": "with a harp, as psalmist"
+        }
+      ]
+    },
+    {
+      "id": "trumpet",
+      "name": "trumpet",
+      "category": "Object",
+      "aliases": [
+        "horn",
+        "long trumpet raised to the lips",
+        "clarion"
+      ],
+      "meaning": "A trumpet raised by a winged figure proclaims news to the world — triumph, renown, or the summons of the Last Judgment. Fame is sometimes given two, one for praise and one for infamy.",
+      "figures": [
+        {
+          "name": "Fame personified",
+          "note": "spreading reputation across the world"
+        },
+        {
+          "name": "Angels of the Last Judgment",
+          "note": "sounding to wake the dead",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "cornucopia",
+      "name": "cornucopia (horn of plenty)",
+      "category": "Object",
+      "aliases": [
+        "horn of plenty",
+        "horn overflowing with fruit",
+        "horn spilling flowers"
+      ],
+      "meaning": "A curved horn overflowing with fruit, flowers, and grain signifies abundance and prosperity. It derives from a horn of the goat that suckled the infant Jupiter, given the power to supply whatever its holder wished.",
+      "figures": [
+        {
+          "name": "Abundance / Ceres",
+          "note": "the standard attribute of plenty and the harvest"
+        },
+        {
+          "name": "Fortuna",
+          "note": "carries it to show that fortune dispenses goods at random"
+        }
+      ]
+    },
+    {
+      "id": "money-purse",
+      "name": "money purse / coins",
+      "category": "Object",
+      "aliases": [
+        "bag of money",
+        "coins",
+        "purse",
+        "money bag"
+      ],
+      "meaning": "A bag of money or scattered coins can mean wealth, charity given away, avarice, or payment for treachery — what the figure is doing with it decides which. Coins being handed out read very differently from coins clutched.",
+      "figures": [
+        {
+          "name": "Saint Lawrence",
+          "note": "distributed the church's treasure to the poor"
+        },
+        {
+          "name": "Saint Matthew",
+          "note": "recalls his former trade as a tax collector"
+        },
+        {
+          "name": "Avarice personified",
+          "note": "hoards or counts the coins"
+        }
+      ]
+    },
+    {
+      "id": "mirror",
+      "name": "mirror",
+      "category": "Object",
+      "aliases": [
+        "looking glass",
+        "hand mirror",
+        "figure holding a mirror"
+      ],
+      "meaning": "A mirror splits sharply by context: self-knowledge and honest reflection in an allegory of virtue, or vanity and self-absorption in a moralizing or erotic scene. A spotless mirror is also a Marian emblem of purity.",
+      "figures": [
+        {
+          "name": "Prudence",
+          "note": "self-knowledge as the basis of wise judgment"
+        },
+        {
+          "name": "Venus / Vanity",
+          "note": "self-regarding beauty and its emptiness"
+        }
+      ]
+    },
+    {
+      "id": "wheel-of-fortune",
+      "name": "wheel of fortune",
+      "category": "Object",
+      "aliases": [
+        "turning wheel with figures on it",
+        "great wheel raising and dropping people"
+      ],
+      "meaning": "A large wheel carrying figures up one side and casting them down the other is the standard device for the instability of worldly success. Its four positions are often labelled: I shall reign, I reign, I have reigned, I am without rule.",
+      "figures": [
+        {
+          "name": "Fortuna",
+          "note": "turns the wheel, frequently blindfolded"
+        }
+      ]
+    },
+    {
+      "id": "scythe",
+      "name": "scythe",
+      "category": "Object",
+      "aliases": [
+        "sickle",
+        "curved blade on a long handle",
+        "reaping blade"
+      ],
+      "meaning": "A long curved harvesting blade turns time and death into a reaper cutting down everything living, without discrimination. Paired with an hourglass it becomes unmistakable.",
+      "figures": [
+        {
+          "name": "Father Time / Saturn",
+          "note": "his defining attribute as the devourer of all things"
+        },
+        {
+          "name": "Death personified",
+          "note": "the origin of the modern Grim Reaper",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "hourglass-wings",
+      "name": "hourglass with wings",
+      "category": "Object",
+      "aliases": [
+        "winged hourglass",
+        "flying hourglass"
+      ],
+      "meaning": "An hourglass given wings makes the point that time does not merely pass but flies — 'tempus fugit.' Common on tombs and in vanitas painting.",
+      "figures": [
+        {
+          "name": "Vanitas and funerary art",
+          "note": "a compact statement of time's speed and mortality",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "ouroboros",
+      "name": "snake biting its own tail",
+      "category": "Object",
+      "aliases": [
+        "ouroboros",
+        "circular serpent",
+        "snake in a ring"
+      ],
+      "meaning": "A serpent bent into a ring to swallow its own tail signifies eternity, cyclical time, and endless renewal — a figure with no beginning and no end.",
+      "figures": [
+        {
+          "name": "Eternity personified",
+          "note": "also used in alchemical imagery for unity and recurrence",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "column-pillar",
+      "name": "column (leaning on or breaking)",
+      "category": "Object",
+      "aliases": [
+        "pillar",
+        "broken column",
+        "figure leaning on a column",
+        "column"
+      ],
+      "meaning": "A tall column supported or deliberately broken signifies moral strength — the power to bear weight or to overcome resistance. A broken column on a tomb instead marks a life cut short.",
+      "figures": [
+        {
+          "name": "Fortitude",
+          "note": "recalling Samson's destruction of the temple pillars"
+        }
+      ]
+    },
+    {
+      "id": "two-vessels-pouring",
+      "name": "pouring between two vessels",
+      "category": "Gesture",
+      "aliases": [
+        "pouring water into wine",
+        "decanting between two jugs",
+        "mixing two jugs"
+      ],
+      "meaning": "A figure carefully pouring liquid from one container into another — classically diluting wine with water — is the allegorical action of moderation and measured self-restraint.",
+      "figures": [
+        {
+          "name": "Temperance",
+          "note": "her defining action, sometimes joined by a bridle or a clock"
+        }
+      ]
+    },
+    {
+      "id": "compass-dividers",
+      "name": "compass / dividers",
+      "category": "Object",
+      "aliases": [
+        "pair of dividers",
+        "drawing compass",
+        "measuring compass"
+      ],
+      "meaning": "A pair of dividers stands for measurement, reason, and design — the tool of geometry, architecture, and astronomy. Used of God it presents creation as an act of precise design; lying idle it belongs to melancholy.",
+      "figures": [
+        {
+          "name": "Geometry / Architecture personified",
+          "note": "the standard attribute of measured knowledge"
+        },
+        {
+          "name": "God the Creator",
+          "note": "the 'divine architect' measuring out the world"
+        }
+      ]
+    },
+    {
+      "id": "armillary-sphere",
+      "name": "armillary sphere",
+      "category": "Object",
+      "aliases": [
+        "sphere of metal rings",
+        "celestial globe with rings",
+        "astronomical instrument"
+      ],
+      "meaning": "A skeletal globe of interlocking rings modelling the heavens marks astronomy, learning, and cosmic order. In portraits it advertises the sitter's education or patronage of science.",
+      "figures": [
+        {
+          "name": "Astronomy personified",
+          "note": "one of the seven liberal arts"
+        }
+      ]
+    },
+    {
+      "id": "globe-orb",
+      "name": "globe or orb",
+      "category": "Object",
+      "aliases": [
+        "sphere held in the hand",
+        "orb with a cross",
+        "world globe"
+      ],
+      "meaning": "A sphere in the hand signifies dominion over the world. Surmounted by a cross it becomes the imperial or royal orb, asserting rule held under God; beneath a figure's feet it can instead mark the world renounced.",
+      "figures": [
+        {
+          "name": "Christ (Salvator Mundi)",
+          "note": "holds the globe as saviour and ruler of the world"
+        },
+        {
+          "name": "Emperors and kings",
+          "note": "the orb as a regalia of sovereignty"
+        }
+      ]
+    },
+    {
+      "id": "oil-lamp",
+      "name": "oil lamp",
+      "category": "Object",
+      "aliases": [
+        "lamp",
+        "small burning lamp",
+        "clay lamp"
+      ],
+      "meaning": "A small oil lamp signifies vigilance and readiness, from the parable of the wise and foolish virgins whose lamps were kept filled or allowed to fail. It also marks the eternal light of a sanctuary.",
+      "figures": [
+        {
+          "name": "The Wise and Foolish Virgins",
+          "note": "a lit lamp marks the wise; a spilled or dark one the foolish",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "torch",
+      "name": "torch",
+      "category": "Object",
+      "aliases": [
+        "burning torch",
+        "flaming brand",
+        "inverted torch"
+      ],
+      "meaning": "A raised burning torch signifies truth revealed, passion, or life; a torch turned downward and extinguished is a classical sign of a life ended and is common on tombs.",
+      "figures": [
+        {
+          "name": "Cupid",
+          "note": "an upright torch kindles love; an inverted one ends it"
+        },
+        {
+          "name": "Death personified",
+          "note": "the reversed, quenched torch of the extinguished life",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "rosary",
+      "name": "rosary",
+      "category": "Object",
+      "aliases": [
+        "prayer beads",
+        "string of beads",
+        "beads with a cross"
+      ],
+      "meaning": "A string of beads for counting repeated, meditative prayers. Held by a saint it points to Marian devotion; hanging from a belt it simply marks the figure as religious.",
+      "figures": [
+        {
+          "name": "Saint Dominic",
+          "note": "credited by tradition with promoting the rosary"
+        }
+      ]
+    },
+    {
+      "id": "beehive",
+      "name": "beehive",
+      "category": "Object",
+      "aliases": [
+        "hive",
+        "skep",
+        "swarm of bees"
+      ],
+      "meaning": "A beehive signifies eloquence — speech as sweet as honey — and also industrious, well-ordered community. A hive at a saint's feet usually points to a legend of bees settling on his mouth in infancy.",
+      "figures": [
+        {
+          "name": "Saint Ambrose",
+          "note": "bees were said to have swarmed on his lips, foretelling his eloquence"
+        }
+      ]
+    },
+    {
+      "id": "broken-cup",
+      "name": "broken cup",
+      "category": "Object",
+      "aliases": [
+        "shattered goblet",
+        "cracked cup",
+        "cup breaking apart"
+      ],
+      "meaning": "A cup shattering, sometimes with a snake leaving it, records poisoned wine destroyed by a blessing before it could be drunk — deliverance made visible in the moment of breaking.",
+      "figures": [
+        {
+          "name": "Saint Benedict",
+          "note": "blessed a poisoned cup offered by rebellious monks and it broke apart"
+        }
+      ]
+    },
+    {
+      "id": "model-of-a-building",
+      "name": "small model of a church or city",
+      "category": "Object",
+      "aliases": [
+        "miniature church held in the hands",
+        "model building",
+        "tiny city in the palm"
+      ],
+      "meaning": "A miniature building cradled in the arms identifies a founder, patron, or protector — the donor who paid for the church, or the saint under whose protection a city is placed.",
+      "figures": [
+        {
+          "name": "Donors and founder-bishops",
+          "note": "presenting the building they endowed",
+          "generic": true
+        },
+        {
+          "name": "Patron saints of cities",
+          "note": "holding the town they guard",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "gorgoneion",
+      "name": "gorgon head",
+      "category": "Object",
+      "aliases": [
+        "medusa head",
+        "head with snakes for hair",
+        "face surrounded by serpents"
+      ],
+      "meaning": "A frontal face wreathed in snakes, mouth open. Fixed to a shield or breastplate it is apotropaic — meant to petrify an attacker with the same gaze that once turned onlookers to stone.",
+      "figures": [
+        {
+          "name": "Athena / Minerva",
+          "note": "wears it on the aegis over her breast"
+        },
+        {
+          "name": "Perseus",
+          "note": "displays the severed head he took"
+        }
+      ]
+    },
+    {
+      "id": "thunderbolt",
+      "name": "thunderbolt / lightning bolt",
+      "category": "Object",
+      "aliases": [
+        "lightning bolt",
+        "forked bolt held in the hand",
+        "jagged bolt"
+      ],
+      "meaning": "A stylised forked bolt, often held ready to hurl, is the weapon and emblem of sovereign power over sky and storm — the ultimate sanction of the king of the gods.",
+      "figures": [
+        {
+          "name": "Zeus / Jupiter",
+          "note": "his defining attribute, usually with an eagle nearby"
+        }
+      ]
+    },
+    {
+      "id": "trident",
+      "name": "trident",
+      "category": "Object",
+      "aliases": [
+        "three-pronged spear",
+        "three-pointed fork"
+      ],
+      "meaning": "A three-pronged spear is the specific instrument of command over the sea, storms, and earthquakes, derived from a fisherman's tool.",
+      "figures": [
+        {
+          "name": "Poseidon / Neptune",
+          "note": "his defining attribute, usually amid waves and sea creatures"
+        }
+      ]
+    },
+    {
+      "id": "caduceus",
+      "name": "caduceus (staff with two snakes)",
+      "category": "Object",
+      "aliases": [
+        "winged staff with two snakes",
+        "herald's wand",
+        "rod with two serpents"
+      ],
+      "meaning": "A short staff entwined by two snakes and usually topped with a pair of wings — a herald's wand signifying safe passage, negotiation, commerce, and eloquence. It is frequently mistaken for a medical emblem; the true medical sign is the single-snake rod of Asclepius.",
+      "figures": [
+        {
+          "name": "Hermes / Mercury",
+          "note": "messenger of the gods, patron of merchants, travelers, and thieves"
+        }
+      ]
+    },
+    {
+      "id": "rod-of-asclepius",
+      "name": "staff with a single snake",
+      "category": "Object",
+      "aliases": [
+        "rod of asclepius",
+        "staff entwined by one serpent",
+        "single snake on a stick"
+      ],
+      "meaning": "A plain staff with one serpent coiled around it and no wings is the emblem of healing and medicine — distinct from the two-snake winged caduceus of commerce, with which it is routinely confused.",
+      "figures": [
+        {
+          "name": "Asclepius",
+          "note": "the Greek god of medicine; his sanctuaries kept live snakes"
+        }
+      ]
+    },
+    {
+      "id": "thyrsus",
+      "name": "thyrsus (fennel staff)",
+      "category": "Object",
+      "aliases": [
+        "staff topped with a pine cone",
+        "ivy-wound staff",
+        "wand with a pine cone"
+      ],
+      "meaning": "A staff wound with ivy or vine and tipped with a pine cone — a specific ritual object of ecstatic wine-god worship, not a generic walking staff.",
+      "figures": [
+        {
+          "name": "Dionysus / Bacchus and his followers",
+          "note": "carried by the god and by maenads and satyrs in his train"
+        }
+      ]
+    },
+    {
+      "id": "club",
+      "name": "club",
+      "category": "Object",
+      "aliases": [
+        "wooden club",
+        "cudgel",
+        "knotted club"
+      ],
+      "meaning": "A heavy wooden club signifies raw physical strength and victory won by force rather than skill or cunning.",
+      "figures": [
+        {
+          "name": "Hercules",
+          "note": "his signature weapon, carried with the Nemean lion's skin"
+        },
+        {
+          "name": "Saint Jude",
+          "note": "a club marks his martyrdom"
+        }
+      ]
+    },
+    {
+      "id": "laurel-wreath",
+      "name": "laurel wreath",
+      "category": "Object",
+      "aliases": [
+        "crown of laurel leaves",
+        "laurel crown",
+        "wreath of leaves on the head"
+      ],
+      "meaning": "A circlet of laurel signifies victory, honour, and poetic or artistic achievement — awarded to victors, poets, and emperors alike. Because laurel is evergreen it also implies fame that does not fade.",
+      "figures": [
+        {
+          "name": "Apollo",
+          "note": "worn in memory of Daphne, who became a laurel tree to escape him"
+        },
+        {
+          "name": "Victory / poets",
+          "note": "the origin of both 'laureate' and 'baccalaureate'"
+        }
+      ]
+    },
+    {
+      "id": "crescent-moon",
+      "name": "crescent moon",
+      "category": "Object",
+      "aliases": [
+        "moon under the feet",
+        "crescent on the brow",
+        "new moon"
+      ],
+      "meaning": "A crescent marks either the goddess of the moon and the hunt, or — beneath a woman's feet — the apocalyptic 'woman clothed with the sun, and the moon under her feet.' Position decides the reading: on the brow versus underfoot.",
+      "figures": [
+        {
+          "name": "The Immaculate Virgin",
+          "note": "stands on the crescent, crowned with twelve stars"
+        },
+        {
+          "name": "Artemis / Diana",
+          "note": "wears it on her forehead as goddess of the moon"
+        }
+      ]
+    },
+    {
+      "id": "star-crown",
+      "name": "crown of stars",
+      "category": "Object",
+      "aliases": [
+        "twelve stars around the head",
+        "ring of stars",
+        "stars above the head"
+      ],
+      "meaning": "A ring of stars — canonically twelve — encircling a woman's head identifies the apocalyptic woman of Revelation, read in Christian art as the Virgin. The number matches the twelve tribes and twelve apostles.",
+      "figures": [
+        {
+          "name": "The Immaculate Conception",
+          "note": "paired with the crescent moon and rays of sun"
+        }
+      ]
+    },
+    {
+      "id": "lion",
+      "name": "lion",
+      "category": "Animal",
+      "aliases": [
+        "big cat",
+        "lion at rest",
+        "male lion"
+      ],
+      "meaning": "A lion's meaning depends heavily on context: tamed ferocity beside a scholar, evangelist symbolism when winged, royal or Christ-like majesty, or the virtue of courage. Check for wings and for what else shares the scene before deciding.",
+      "figures": [
+        {
+          "name": "Saint Jerome",
+          "note": "a tame lion recalls the thorn he drew from its paw"
+        },
+        {
+          "name": "Fortitude",
+          "note": "a lion at her feet represents strength mastered by virtue"
+        },
+        {
+          "name": "Hercules",
+          "note": "wears the Nemean lion's pelt as a cloak and hood"
+        }
+      ]
+    },
+    {
+      "id": "winged-lion",
+      "name": "winged lion",
+      "category": "Animal",
+      "aliases": [
+        "lion with wings",
+        "flying lion",
+        "lion with a book"
+      ],
+      "meaning": "One of the four evangelist symbols, distinct from an ordinary lion — look for the wings, and often a book beneath the paw. Also the civic emblem of Venice.",
+      "figures": [
+        {
+          "name": "Saint Mark the Evangelist",
+          "note": "patron of Venice, whose relics the city claimed"
+        }
+      ]
+    },
+    {
+      "id": "winged-ox",
+      "name": "winged ox",
+      "category": "Animal",
+      "aliases": [
+        "ox with wings",
+        "winged bull",
+        "flying bull"
+      ],
+      "meaning": "One of the four evangelist symbols. The ox, a sacrificial animal, identifies the Gospel that most emphasises sacrifice and priesthood.",
+      "figures": [
+        {
+          "name": "Saint Luke the Evangelist",
+          "note": "also patron of painters and physicians"
+        }
+      ]
+    },
+    {
+      "id": "eagle",
+      "name": "eagle",
+      "category": "Animal",
+      "aliases": [
+        "bird of prey with spread wings",
+        "eagle with a book"
+      ],
+      "meaning": "An eagle marks either the soaring, visionary quality of one Gospel, or in classical settings the king of the gods and his sovereign power. It was also believed to gaze directly at the sun, making it a symbol of contemplation and of the Ascension.",
+      "figures": [
+        {
+          "name": "Saint John the Evangelist",
+          "note": "for the lofty theology of his Gospel and Revelation"
+        },
+        {
+          "name": "Zeus / Jupiter",
+          "note": "his sacred bird; also the bird that carried off Ganymede"
+        }
+      ]
+    },
+    {
+      "id": "dove",
+      "name": "dove",
+      "category": "Animal",
+      "aliases": [
+        "white bird",
+        "descending bird",
+        "pigeon",
+        "bird with spread wings above a figure"
+      ],
+      "meaning": "A white dove descending, usually with rays of light, is the Holy Spirit; carrying an olive twig it announces the end of the Flood and peace; and in a pair beside a goddess it belongs to love. Seven doves around a figure represent the gifts of the Spirit.",
+      "figures": [
+        {
+          "name": "The Holy Spirit",
+          "note": "descends at the Annunciation, the Baptism, and Pentecost"
+        },
+        {
+          "name": "Saint Gregory the Great",
+          "note": "a dove at his ear dictates his writings"
+        },
+        {
+          "name": "Venus",
+          "note": "doves draw her chariot and attend her"
+        }
+      ]
+    },
+    {
+      "id": "lamb",
+      "name": "lamb (Agnus Dei)",
+      "category": "Animal",
+      "aliases": [
+        "sheep",
+        "young lamb",
+        "lamb with a banner",
+        "lamb with a halo"
+      ],
+      "meaning": "A lamb, particularly one with a halo carrying a small cross or banner, represents Christ as the sacrificial 'Lamb of God' — innocence offered for others. A lamb carried on the shoulders instead makes the carrier the Good Shepherd.",
+      "figures": [
+        {
+          "name": "Saint John the Baptist",
+          "note": "points to a lamb, having named Christ the Lamb of God"
+        },
+        {
+          "name": "Saint Agnes",
+          "note": "a lamb accompanies her, punning on her name"
+        }
+      ]
+    },
+    {
+      "id": "fish",
+      "name": "fish",
+      "category": "Animal",
+      "aliases": [
+        "fish symbol",
+        "two fish",
+        "fish held in the hand"
+      ],
+      "meaning": "A fish was an early covert sign for Christ: the Greek word ΙΧΘΥΣ forms an acrostic of 'Jesus Christ, Son of God, Saviour.' Fish also evoke baptismal water, the miraculous feeding, and the apostles as 'fishers of men'.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "the ichthys, used as a discreet identifier in periods of persecution"
+        },
+        {
+          "name": "Saint Raphael and Tobias",
+          "note": "carry the fish whose gall restored the father's sight"
+        }
+      ]
+    },
+    {
+      "id": "pelican",
+      "name": "pelican piercing its breast",
+      "category": "Animal",
+      "aliases": [
+        "pelican in her piety",
+        "bird feeding young with its own blood",
+        "bird pecking its chest"
+      ],
+      "meaning": "A pelican wounding her own breast to feed her young was believed to revive them with her blood, making her an image of Christ's self-sacrifice and of the Eucharist. Frequently carved on altars and lecterns.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "'the pelican in her piety,' a standard Eucharistic emblem"
+        }
+      ]
+    },
+    {
+      "id": "phoenix",
+      "name": "phoenix in flames",
+      "category": "Animal",
+      "aliases": [
+        "bird rising from fire",
+        "burning bird",
+        "bird in a nest of flames"
+      ],
+      "meaning": "A bird consumed by fire and reborn from its own ashes signifies resurrection and immortality. Early Christian writers seized on the legend as a natural argument for the resurrection of the body.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "an emblem of the Resurrection"
+        }
+      ]
+    },
+    {
+      "id": "unicorn",
+      "name": "unicorn",
+      "category": "Animal",
+      "aliases": [
+        "horse with a single horn",
+        "one-horned animal",
+        "white horned beast"
+      ],
+      "meaning": "A single-horned beast said to be untameable except by a virgin, in whose lap it would lay its head. It signifies chastity and purity, and in Marian imagery the Incarnation — the untamable made gentle in Mary's lap.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "the 'hunt of the unicorn' allegorises the Incarnation"
+        },
+        {
+          "name": "Chastity personified",
+          "note": "draws her chariot in triumph imagery"
+        }
+      ]
+    },
+    {
+      "id": "stag",
+      "name": "stag or deer",
+      "category": "Animal",
+      "aliases": [
+        "deer",
+        "hart",
+        "antlered deer",
+        "stag with a cross in its antlers"
+      ],
+      "meaning": "A stag drinking or running signifies the soul longing for God — 'as the hart panteth after the water brooks.' A stag with a glowing crucifix between its antlers records a conversion vision experienced while hunting.",
+      "figures": [
+        {
+          "name": "Saint Eustace and Saint Hubert",
+          "note": "both converted by a stag bearing a crucifix in its antlers"
+        },
+        {
+          "name": "Artemis / Diana",
+          "note": "attends the goddess of the hunt; Actaeon is turned into one"
+        }
+      ]
+    },
+    {
+      "id": "dog",
+      "name": "dog",
+      "category": "Animal",
+      "aliases": [
+        "hound",
+        "small dog at the feet",
+        "dog carrying bread"
+      ],
+      "meaning": "A dog's meaning shifts with what it is doing: fidelity in a portrait — especially at a wife's feet in a marriage picture — a miraculous provider in a saint's legend, or a pun on a founder's name.",
+      "figures": [
+        {
+          "name": "Saint Roch",
+          "note": "a dog brought him bread while he suffered plague in isolation"
+        },
+        {
+          "name": "Saint Dominic",
+          "note": "a dog with a torch puns on 'Domini canis,' hound of the Lord"
+        },
+        {
+          "name": "Marriage portraits",
+          "note": "signifies marital fidelity",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "rooster",
+      "name": "rooster / cock",
+      "category": "Animal",
+      "aliases": [
+        "cockerel",
+        "crowing rooster",
+        "cock"
+      ],
+      "meaning": "A crowing cock marks the moment a predicted failure comes true and is instantly recognised — remorse arriving with daybreak. It is also an emblem of vigilance and of the dawn, and belongs among the instruments of the Passion.",
+      "figures": [
+        {
+          "name": "Saint Peter",
+          "note": "recalls his three denials of Christ before the cock crowed"
+        }
+      ]
+    },
+    {
+      "id": "raven",
+      "name": "raven or crow",
+      "category": "Animal",
+      "aliases": [
+        "black bird",
+        "crow",
+        "raven carrying bread"
+      ],
+      "meaning": "A black bird bringing food records miraculous provision in the wilderness, echoing the ravens that fed Elijah; carrying something away it can instead mean the removal of danger. Otherwise ravens read as ill omen and death.",
+      "figures": [
+        {
+          "name": "Saint Benedict",
+          "note": "a raven carried off a poisoned loaf at his command"
+        },
+        {
+          "name": "Saint Paul the Hermit",
+          "note": "fed daily by a raven bringing bread"
+        }
+      ]
+    },
+    {
+      "id": "goldfinch",
+      "name": "goldfinch",
+      "category": "Animal",
+      "aliases": [
+        "small bird with a red face",
+        "little bird held by a child",
+        "finch"
+      ],
+      "meaning": "A small bird with a red patch on its face, held or tethered by the Christ Child. Because it feeds among thorns and thistles it was linked to the crown of thorns, so the child's plaything foreshadows the Passion.",
+      "figures": [
+        {
+          "name": "The Christ Child",
+          "note": "an extremely common motif in Italian Madonna and Child paintings"
+        }
+      ]
+    },
+    {
+      "id": "peacock",
+      "name": "peacock",
+      "category": "Animal",
+      "aliases": [
+        "bird with a fanned tail",
+        "peacock feathers",
+        "eyed tail feathers"
+      ],
+      "meaning": "A peacock's eye-marked tail signifies watchfulness and majesty; in early Christian art its flesh was believed incorruptible, making it an emblem of immortality. In later moralising pictures it can also mean pride.",
+      "figures": [
+        {
+          "name": "Hera / Juno",
+          "note": "her sacred bird; the eyes are those of her hundred-eyed watchman Argus"
+        }
+      ]
+    },
+    {
+      "id": "owl",
+      "name": "owl",
+      "category": "Animal",
+      "aliases": [
+        "night bird",
+        "owl perched nearby"
+      ],
+      "meaning": "An owl signifies wisdom and clear sight in darkness in the classical tradition. In Northern European painting the same bird can mean the opposite — night, folly, or those who prefer darkness to light — so the setting matters.",
+      "figures": [
+        {
+          "name": "Athena / Minerva",
+          "note": "her sacred bird and the emblem of Athens"
+        }
+      ]
+    },
+    {
+      "id": "serpent-snake",
+      "name": "serpent / snake",
+      "category": "Animal",
+      "aliases": [
+        "snake",
+        "coiled serpent",
+        "snake around a tree"
+      ],
+      "meaning": "A snake's meaning depends entirely on what it is doing: temptation and the Fall when coiled in a tree, prudence and cunning applied to good ends when held by a virtue, healing when wound on a staff, and evil defeated when crushed underfoot.",
+      "figures": [
+        {
+          "name": "The Temptation of Eve",
+          "note": "coiled around the tree, sometimes given a human head"
+        },
+        {
+          "name": "Prudence",
+          "note": "'be wise as serpents' — shrewdness in the service of virtue"
+        }
+      ]
+    },
+    {
+      "id": "dragon",
+      "name": "dragon",
+      "category": "Animal",
+      "aliases": [
+        "winged serpent",
+        "monstrous beast",
+        "small dragon at the feet"
+      ],
+      "meaning": "A dragon represents Satan, sin, or chaos to be conquered — speared, trampled, or led on a leash as an allegory of good defeating evil. A dragon subdued rather than killed indicates a saint who tamed rather than fought it.",
+      "figures": [
+        {
+          "name": "Saint George",
+          "note": "slain to rescue a princess; faith conquering sin"
+        },
+        {
+          "name": "Saint Michael",
+          "note": "cast down underfoot in the war in heaven"
+        },
+        {
+          "name": "Saint Margaret of Antioch",
+          "note": "emerges unharmed from the dragon that swallowed her"
+        }
+      ]
+    },
+    {
+      "id": "pig",
+      "name": "pig",
+      "category": "Animal",
+      "aliases": [
+        "boar",
+        "swine",
+        "small pig with a bell"
+      ],
+      "meaning": "A pig at a hermit's feet, often with a bell at its neck, refers to the hospital order permitted to let its pigs forage freely in medieval towns. In other settings a pig signifies gluttony or lust.",
+      "figures": [
+        {
+          "name": "Saint Anthony the Abbot",
+          "note": "his pig and bell come from the Antonine order's privileges"
+        }
+      ]
+    },
+    {
+      "id": "hare-rabbit",
+      "name": "hare or rabbit",
+      "category": "Animal",
+      "aliases": [
+        "rabbit",
+        "hare",
+        "small rabbit at the feet"
+      ],
+      "meaning": "Rabbits, proverbially fertile, usually signify lust and fecundity. A white rabbit at the Virgin's feet reverses this into purity — desire mastered rather than indulged.",
+      "figures": [
+        {
+          "name": "Venus",
+          "note": "rabbits accompany her as emblems of desire"
+        },
+        {
+          "name": "The Virgin Mary",
+          "note": "a white rabbit signifies chastity overcoming the flesh"
+        }
+      ]
+    },
+    {
+      "id": "cat",
+      "name": "cat",
+      "category": "Animal",
+      "aliases": [
+        "housecat",
+        "cat under a table",
+        "cat in the foreground"
+      ],
+      "meaning": "In European painting cats generally carry a negative charge — deceit, stealth, lust, or heresy. A cat lurking at the Last Supper or in an Annunciation is usually a deliberate note of menace rather than domestic detail.",
+      "figures": [
+        {
+          "name": "Judas",
+          "note": "a cat is sometimes placed near him at the Last Supper"
+        }
+      ]
+    },
+    {
+      "id": "monkey",
+      "name": "monkey or ape",
+      "category": "Animal",
+      "aliases": [
+        "ape",
+        "chained monkey",
+        "small monkey"
+      ],
+      "meaning": "A monkey, often chained, stands for sin, folly, and base appetite — the human being reduced to imitation and impulse. Chained it can signify vice restrained.",
+      "figures": [
+        {
+          "name": "Allegories of folly",
+          "note": "also the ape as 'imitator' of art and nature",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "fly",
+      "name": "fly",
+      "category": "Animal",
+      "aliases": [
+        "housefly",
+        "insect on a surface",
+        "fly painted on a flower"
+      ],
+      "meaning": "A fly rendered with startling realism signifies decay, mortality, and sometimes evil — the insect of corruption placed on fresh flowers or fruit. It doubles as a display of the painter's skill, appearing to sit on the picture's surface.",
+      "figures": [
+        {
+          "name": "Vanitas and still life",
+          "note": "a reminder that what is depicted is already rotting",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "butterfly",
+      "name": "butterfly",
+      "category": "Animal",
+      "aliases": [
+        "moth",
+        "butterfly on a flower"
+      ],
+      "meaning": "A butterfly emerging transformed from the chrysalis stands for the soul and for resurrection. The Greek word 'psyche' means both soul and butterfly, which is why the personified Soul is given butterfly wings.",
+      "figures": [
+        {
+          "name": "Psyche",
+          "note": "shown with butterfly rather than feathered wings"
+        }
+      ]
+    },
+    {
+      "id": "ox-and-ass",
+      "name": "ox and ass at a manger",
+      "category": "Animal",
+      "aliases": [
+        "ox and donkey",
+        "cow and donkey beside a crib",
+        "animals at the manger"
+      ],
+      "meaning": "An ox and a donkey flanking a newborn in a feeding trough are not in the Gospel accounts at all; they enter Nativity imagery from the prophet Isaiah — 'the ox knoweth his owner, and the ass his master's crib' — as witnesses recognising what people did not.",
+      "figures": [
+        {
+          "name": "The Nativity",
+          "note": "a near-universal fixture of the scene despite its non-scriptural origin"
+        }
+      ]
+    },
+    {
+      "id": "wolf",
+      "name": "wolf",
+      "category": "Animal",
+      "aliases": [
+        "grey wolf",
+        "wolf beside a saint"
+      ],
+      "meaning": "A wolf usually signifies rapacity and threat — the predator of the flock, and so of heresy or the devil. A wolf shown docile beside a saint reverses this, marking violence reconciled rather than destroyed.",
+      "figures": [
+        {
+          "name": "Saint Francis of Assisi",
+          "note": "made peace with the wolf that terrorised Gubbio"
+        },
+        {
+          "name": "Romulus and Remus",
+          "note": "the she-wolf suckling the twins, emblem of Rome"
+        }
+      ]
+    },
+    {
+      "id": "ermine",
+      "name": "ermine",
+      "category": "Animal",
+      "aliases": [
+        "stoat",
+        "white weasel",
+        "small white animal held in the arms"
+      ],
+      "meaning": "A small white weasel-like animal, believed to prefer death to soiling its white coat. It therefore signifies purity and moral incorruptibility, and its fur marks nobility on a robe.",
+      "figures": [
+        {
+          "name": "Purity personified",
+          "note": "the motto 'rather death than dishonour' attaches to it",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "fox",
+      "name": "fox",
+      "category": "Animal",
+      "aliases": [
+        "red fox",
+        "fox in a scene"
+      ],
+      "meaning": "A fox signifies cunning, fraud, and — in religious contexts — heresy, from the 'little foxes that spoil the vines' of the Song of Songs, read as heretics damaging the Church.",
+      "figures": [
+        {
+          "name": "Allegories of deceit",
+          "note": "also the trickster fox of medieval beast fable",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "dolphin",
+      "name": "dolphin",
+      "category": "Animal",
+      "aliases": [
+        "dolphins in waves",
+        "leaping sea creature"
+      ],
+      "meaning": "A dolphin signifies swiftness, salvation, and safe passage, from ancient stories of dolphins rescuing shipwrecked sailors. A dolphin wound around an anchor is a well-known emblem for 'make haste slowly.'",
+      "figures": [
+        {
+          "name": "Poseidon / Neptune",
+          "note": "dolphins draw or accompany his chariot"
+        },
+        {
+          "name": "Venus",
+          "note": "dolphins attend her birth from the sea"
+        }
+      ]
+    },
+    {
+      "id": "lily",
+      "name": "lily",
+      "category": "Plant",
+      "aliases": [
+        "white lily",
+        "madonna lily",
+        "lily stem",
+        "trumpet-shaped white flower"
+      ],
+      "meaning": "A white lily signifies purity and virginity. In an Annunciation it is the specific sign that conception occurs without loss of virginity; carried by other saints it marks chastity of life.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "her flower, and the reason for the name 'madonna lily'"
+        },
+        {
+          "name": "The Archangel Gabriel",
+          "note": "carries it when announcing the Incarnation"
+        },
+        {
+          "name": "Saint Anthony of Padua",
+          "note": "holds a lily with the Christ Child"
+        }
+      ]
+    },
+    {
+      "id": "rose",
+      "name": "rose",
+      "category": "Plant",
+      "aliases": [
+        "roses",
+        "red rose",
+        "white rose",
+        "rose garland"
+      ],
+      "meaning": "A red rose signifies love and, in martyrdom, blood shed; a white rose purity. Mary is called the 'rose without thorns' because she was held to be free of original sin, so a thornless rose is a deliberate theological detail.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "the rose garden and rosary both take their name from her flower"
+        },
+        {
+          "name": "Venus",
+          "note": "the rose is sacred to her as the flower of love"
+        }
+      ]
+    },
+    {
+      "id": "iris",
+      "name": "iris",
+      "category": "Plant",
+      "aliases": [
+        "fleur-de-lis flower",
+        "sword lily",
+        "blue iris"
+      ],
+      "meaning": "An iris, whose blade-shaped leaves gave it the name 'sword lily,' stands for the Virgin's sorrows — the sword foretold as piercing her soul. In Netherlandish painting it often substitutes for the lily.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "combines her purity with the prophecy of grief"
+        }
+      ]
+    },
+    {
+      "id": "columbine",
+      "name": "columbine",
+      "category": "Plant",
+      "aliases": [
+        "aquilegia",
+        "dove-shaped flower",
+        "blue columbine"
+      ],
+      "meaning": "A columbine takes its name from the Latin for dove, which its inverted petals resemble. It therefore signifies the Holy Spirit, and a plant of seven blooms represents the Spirit's seven gifts.",
+      "figures": [
+        {
+          "name": "The Holy Spirit",
+          "note": "frequently placed in Annunciation and Nativity foregrounds"
+        }
+      ]
+    },
+    {
+      "id": "pomegranate",
+      "name": "pomegranate",
+      "category": "Plant",
+      "aliases": [
+        "split pomegranate",
+        "red fruit full of seeds",
+        "fruit with many seeds"
+      ],
+      "meaning": "A pomegranate split to show its packed seeds signifies the unity of the many within one Church, and — because it was Persephone's fruit and returns each spring — resurrection and eternal life. Held by the Christ Child it points to the Passion and what follows it.",
+      "figures": [
+        {
+          "name": "The Christ Child",
+          "note": "a common alternative to the goldfinch in Madonna paintings"
+        },
+        {
+          "name": "Persephone",
+          "note": "the seeds that bound her to the underworld for part of each year"
+        }
+      ]
+    },
+    {
+      "id": "apple",
+      "name": "apple",
+      "category": "Plant",
+      "aliases": [
+        "round fruit held in the hand",
+        "golden apple",
+        "fruit from a tree"
+      ],
+      "meaning": "An apple signifies the Fall and original sin — the Latin pun between 'malum' (evil) and 'malum' (apple) helped fix the association. In the Christ Child's or the Virgin's hand it reverses into redemption; a single golden apple instead belongs to a beauty contest among goddesses.",
+      "figures": [
+        {
+          "name": "Adam and Eve",
+          "note": "the fruit of the tree of knowledge, though Genesis never names it"
+        },
+        {
+          "name": "The Judgment of Paris",
+          "note": "the golden apple inscribed 'to the fairest'"
+        }
+      ]
+    },
+    {
+      "id": "grapes-vine",
+      "name": "grapes / vine",
+      "category": "Plant",
+      "aliases": [
+        "bunch of grapes",
+        "grapevine",
+        "vine leaves",
+        "wine grapes"
+      ],
+      "meaning": "Grapes and vine leaves signify wine, harvest abundance, and ecstatic release in classical contexts; in Christian ones they carry the Eucharist and Christ's words 'I am the true vine.' Grapes paired with wheat are unmistakably Eucharistic.",
+      "figures": [
+        {
+          "name": "Dionysus / Bacchus",
+          "note": "his defining plant and drink"
+        },
+        {
+          "name": "Christ",
+          "note": "the true vine; the blood of the Eucharist"
+        }
+      ]
+    },
+    {
+      "id": "wheat-ears",
+      "name": "ears of wheat",
+      "category": "Plant",
+      "aliases": [
+        "sheaf of wheat",
+        "corn ears",
+        "stalks of grain"
+      ],
+      "meaning": "Stalks of wheat signify bread and so, with grapes, the Eucharist. In classical settings wheat belongs to the goddess of agriculture and to summer among the seasons.",
+      "figures": [
+        {
+          "name": "Christ / the Eucharist",
+          "note": "the bread of the sacrament, paired with the vine"
+        },
+        {
+          "name": "Ceres / Demeter",
+          "note": "goddess of grain and the harvest"
+        }
+      ]
+    },
+    {
+      "id": "olive-branch",
+      "name": "olive branch",
+      "category": "Plant",
+      "aliases": [
+        "olive twig",
+        "sprig of olive",
+        "branch carried by a dove"
+      ],
+      "meaning": "An olive branch signifies peace and reconciliation, from the twig the dove carried back to the ark. In classical contexts it also stands for wisdom and a goddess's gift to her city.",
+      "figures": [
+        {
+          "name": "The dove of Noah",
+          "note": "announcing the receding flood and God's peace"
+        },
+        {
+          "name": "Athena / Minerva",
+          "note": "her gift of the olive tree to Athens"
+        }
+      ]
+    },
+    {
+      "id": "thistle",
+      "name": "thistle",
+      "category": "Plant",
+      "aliases": [
+        "spiny plant",
+        "prickly weed",
+        "thistle flower"
+      ],
+      "meaning": "A thistle signifies earthly sorrow and the curse of labour — 'thorns also and thistles shall it bring forth to thee' — and by extension Christ's Passion, since thorns crowned him.",
+      "figures": [
+        {
+          "name": "The Passion",
+          "note": "often paired with the goldfinch, which feeds on thistles"
+        }
+      ]
+    },
+    {
+      "id": "carnation",
+      "name": "carnation / pink",
+      "category": "Plant",
+      "aliases": [
+        "pink flower with fringed petals",
+        "clove pink",
+        "carnation held between fingers"
+      ],
+      "meaning": "A carnation signifies betrothal and love, and in devotional pictures the Passion — its old name 'nail flower' likened the buds to the nails of the crucifixion. A carnation in a portrait usually marks an engagement.",
+      "figures": [
+        {
+          "name": "Betrothal portraits",
+          "note": "held between finger and thumb to signal a marriage contract",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "violet",
+      "name": "violet",
+      "category": "Plant",
+      "aliases": [
+        "small purple flower",
+        "violets growing low"
+      ],
+      "meaning": "A violet, low-growing and half-hidden, signifies humility and modesty — the virtue that does not display itself. It is a frequent attribute of the Virgin's humility.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "'the violet of humility' in devotional literature"
+        }
+      ]
+    },
+    {
+      "id": "strawberry",
+      "name": "strawberry",
+      "category": "Plant",
+      "aliases": [
+        "strawberry plant",
+        "small red berries with white flowers"
+      ],
+      "meaning": "A strawberry, which flowers white and fruits red on the same plant and has no stone or thorn, signifies righteousness and the fruits of the Spirit. Its three-part leaf was also read as the Trinity.",
+      "figures": [
+        {
+          "name": "Paradise imagery",
+          "note": "carpets the foreground of 'garden of paradise' paintings",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "cypress",
+      "name": "cypress tree",
+      "category": "Plant",
+      "aliases": [
+        "tall dark evergreen",
+        "columnar tree",
+        "cypresses in a landscape"
+      ],
+      "meaning": "A cypress signifies death and mourning — it was planted in classical burial grounds and, once cut, does not regrow. Because it is evergreen it simultaneously suggests life beyond death.",
+      "figures": [
+        {
+          "name": "Funerary imagery",
+          "note": "still the characteristic tree of Mediterranean cemeteries",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "ivy",
+      "name": "ivy",
+      "category": "Plant",
+      "aliases": [
+        "climbing ivy",
+        "ivy leaves",
+        "creeping vine on a wall"
+      ],
+      "meaning": "Ivy clings and stays green through winter, so it signifies fidelity, undying attachment, and eternal life. It is also sacred to the god of wine and wreathes his followers.",
+      "figures": [
+        {
+          "name": "Dionysus / Bacchus",
+          "note": "ivy crowns the god and his revellers"
+        }
+      ]
+    },
+    {
+      "id": "oak",
+      "name": "oak leaves or acorns",
+      "category": "Plant",
+      "aliases": [
+        "oak branch",
+        "acorns",
+        "oak wreath"
+      ],
+      "meaning": "Oak signifies strength, endurance, and steadfast faith. A civic crown of oak leaves was the Roman award for saving a citizen's life, so it can also mark protection and public virtue.",
+      "figures": [
+        {
+          "name": "Zeus / Jupiter",
+          "note": "the oak is his sacred tree"
+        }
+      ]
+    },
+    {
+      "id": "myrtle",
+      "name": "myrtle",
+      "category": "Plant",
+      "aliases": [
+        "myrtle branch",
+        "myrtle wreath",
+        "small glossy evergreen leaves"
+      ],
+      "meaning": "Myrtle is sacred to the goddess of love and signifies enduring love and marriage — evergreen, and so a promise that affection does not fade. It is a traditional component of bridal wreaths.",
+      "figures": [
+        {
+          "name": "Venus / Aphrodite",
+          "note": "her sacred plant, often framing her in painting"
+        }
+      ]
+    },
+    {
+      "id": "poppy",
+      "name": "poppy",
+      "category": "Plant",
+      "aliases": [
+        "red poppy",
+        "poppy heads",
+        "opium poppy"
+      ],
+      "meaning": "A poppy signifies sleep, and by extension death — the sleep from which one does not wake. In Christian use its red also connects it to the Passion, and in classical use to the goddess of the harvest and to the god of dreams.",
+      "figures": [
+        {
+          "name": "Sleep and Death personified",
+          "note": "the drowsy flower of the underworld",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "palm-tree",
+      "name": "palm tree",
+      "category": "Plant",
+      "aliases": [
+        "date palm",
+        "palm in a landscape"
+      ],
+      "meaning": "A whole palm tree signifies victory, righteousness, and paradise — 'the righteous shall flourish like the palm tree.' Distinguish it from a cut palm frond carried in the hand, which specifically marks martyrdom.",
+      "figures": [
+        {
+          "name": "The Rest on the Flight into Egypt",
+          "note": "a palm bends to offer its dates to the Holy Family"
+        }
+      ]
+    },
+    {
+      "id": "enclosed-garden",
+      "name": "walled or enclosed garden",
+      "category": "Plant",
+      "aliases": [
+        "hortus conclusus",
+        "garden behind a wall",
+        "fenced garden with flowers"
+      ],
+      "meaning": "A garden shut in by a wall or fence, often with a sealed fountain, is the 'hortus conclusus' of the Song of Songs — 'a garden enclosed is my sister, my spouse.' It is a figure for the Virgin's intact virginity.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "usually shown seated within it, sometimes with a unicorn"
+        }
+      ]
+    },
+    {
+      "id": "red-robe",
+      "name": "red robe",
+      "category": "Color",
+      "aliases": [
+        "red garment",
+        "crimson cloak",
+        "scarlet mantle",
+        "figure dressed in red"
+      ],
+      "meaning": "Red signifies the blood of martyrdom, divine love, and burning zeal. It is also the colour of cardinals and, in Christ's case, of the mock royal robe of the Passion and the garment of the Resurrection.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "wears red beneath a blue mantle, or the mock purple-red of the mockery"
+        },
+        {
+          "name": "Martyrs",
+          "note": "red vestments mark martyrs' feasts in the liturgical calendar",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "blue-mantle",
+      "name": "blue mantle",
+      "category": "Color",
+      "aliases": [
+        "blue cloak",
+        "ultramarine robe",
+        "figure in a blue mantle"
+      ],
+      "meaning": "Blue signifies heaven, truth, and constancy. Because true ultramarine was ground from lapis lazuli imported at enormous cost, giving a figure a blue mantle was also a visible statement of expense and honour.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "her near-universal colour; contracts often specified the grade of blue to be used"
+        }
+      ]
+    },
+    {
+      "id": "white-garment",
+      "name": "white garment",
+      "category": "Color",
+      "aliases": [
+        "white robe",
+        "white dress",
+        "figure dressed in white",
+        "shining white clothing"
+      ],
+      "meaning": "White signifies purity, innocence, and glory. Dazzling white marks transfigured or resurrected bodies and the robes of the redeemed; it is also the habit colour of several religious orders.",
+      "figures": [
+        {
+          "name": "The Risen Christ and angels",
+          "note": "'his raiment was white as the light' at the Transfiguration"
+        }
+      ]
+    },
+    {
+      "id": "green-garment",
+      "name": "green garment",
+      "category": "Color",
+      "aliases": [
+        "green robe",
+        "green cloak",
+        "figure dressed in green"
+      ],
+      "meaning": "Green signifies hope, renewal, and spring growth — life regenerating. It is the liturgical colour of ordinary time and a frequent attribute colour for the virtue of Hope.",
+      "figures": [
+        {
+          "name": "Hope personified",
+          "note": "green with an anchor, gazing upward"
+        }
+      ]
+    },
+    {
+      "id": "purple-garment",
+      "name": "purple garment",
+      "category": "Color",
+      "aliases": [
+        "purple robe",
+        "violet cloak",
+        "figure dressed in purple"
+      ],
+      "meaning": "Purple signifies imperial rank and, in the liturgy, penitence and mourning. Because true Tyrian purple was ruinously expensive it was restricted to emperors, which is what makes the purple robe of the mockery a cruel joke.",
+      "figures": [
+        {
+          "name": "Christ mocked",
+          "note": "dressed in purple as a false king before the crucifixion"
+        }
+      ]
+    },
+    {
+      "id": "black-garment",
+      "name": "black garment",
+      "category": "Color",
+      "aliases": [
+        "black robe",
+        "black clothing",
+        "figure dressed in black"
+      ],
+      "meaning": "Black signifies death, mourning, and renunciation of the world; it is the habit colour of several orders and, in Spanish and Dutch portraiture, a mark of sober piety and considerable wealth — good black dye was expensive.",
+      "figures": [
+        {
+          "name": "Benedictines and Dominicans",
+          "note": "the 'black monks'; Dominicans wear a black cloak over white"
+        }
+      ]
+    },
+    {
+      "id": "gold-ground",
+      "name": "gold background",
+      "category": "Color",
+      "aliases": [
+        "gold leaf background",
+        "flat gold behind the figures",
+        "golden field"
+      ],
+      "meaning": "A flat, spaceless field of gold leaf behind a figure removes the scene from ordinary place and time, standing for divine, eternal light rather than any sky. Its abandonment for landscape backgrounds marks one of the great shifts into Renaissance painting.",
+      "figures": [
+        {
+          "name": "Byzantine and medieval panel painting",
+          "note": "the standard setting for sacred figures before naturalistic space",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "yellow-garment",
+      "name": "yellow garment",
+      "category": "Color",
+      "aliases": [
+        "yellow robe",
+        "figure dressed in yellow",
+        "saffron cloak"
+      ],
+      "meaning": "Yellow is unstable in meaning: gold-yellow can signify divine light and revelation, but a dull or acid yellow frequently marks treachery, envy, and deceit — most notoriously as the colour given to Judas in Italian painting.",
+      "figures": [
+        {
+          "name": "Judas Iscariot",
+          "note": "conventionally robed in yellow to mark him as the betrayer"
+        }
+      ]
+    },
+    {
+      "id": "cardinals-hat",
+      "name": "cardinal's hat",
+      "category": "Garment",
+      "aliases": [
+        "red galero",
+        "wide-brimmed red hat with tassels",
+        "red hat with tassels"
+      ],
+      "meaning": "A broad-brimmed red hat with hanging tassels marks the rank of cardinal. It is often included anachronistically, applied to figures who lived long before the office existed as a mark of later honour.",
+      "figures": [
+        {
+          "name": "Saint Jerome",
+          "note": "given the hat retrospectively; he was never a cardinal in the modern sense"
+        }
+      ]
+    },
+    {
+      "id": "mitre",
+      "name": "bishop's mitre",
+      "category": "Garment",
+      "aliases": [
+        "tall pointed hat",
+        "bishop's hat",
+        "two-peaked headdress"
+      ],
+      "meaning": "A tall, cleft, peaked cap worn by bishops and abbots. Paired with a crozier it is the standard signal of episcopal rank, and can be shown laid aside to indicate humility or an office refused.",
+      "figures": [
+        {
+          "name": "Bishop saints",
+          "note": "Nicholas, Augustine, Martin, Ambrose and others",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "papal-tiara",
+      "name": "papal tiara",
+      "category": "Garment",
+      "aliases": [
+        "triple crown",
+        "beehive-shaped crown with three tiers",
+        "pope's crown"
+      ],
+      "meaning": "A tall conical crown ringed by three coronets identifies the pope. The three tiers were read as three orders of authority, and the tiara appears with crossed keys as the papal arms.",
+      "figures": [
+        {
+          "name": "Saint Peter and papal saints",
+          "note": "anachronistic for Peter but used to assert his primacy"
+        }
+      ]
+    },
+    {
+      "id": "dalmatic",
+      "name": "deacon's dalmatic",
+      "category": "Garment",
+      "aliases": [
+        "deacon's robe",
+        "wide-sleeved tunic with vertical stripes",
+        "richly embroidered tunic"
+      ],
+      "meaning": "A wide-sleeved tunic with vertical bands, worn over the alb, marks a deacon rather than a priest or bishop. Young saints in dalmatics are almost always the martyr-deacons.",
+      "figures": [
+        {
+          "name": "Saint Stephen and Saint Lawrence",
+          "note": "both deacons, usually shown young and beardless in dalmatics"
+        }
+      ]
+    },
+    {
+      "id": "franciscan-habit",
+      "name": "brown habit with a knotted cord",
+      "category": "Garment",
+      "aliases": [
+        "brown monk's robe with rope belt",
+        "grey habit with knotted cord",
+        "rope belt with three knots"
+      ],
+      "meaning": "A coarse brown or grey habit tied with a knotted rope identifies a Franciscan. The three knots stand for the vows of poverty, chastity, and obedience, and the cheap undyed cloth is itself the point.",
+      "figures": [
+        {
+          "name": "Saint Francis and Saint Anthony of Padua",
+          "note": "the order's founder and its most popular preacher"
+        }
+      ]
+    },
+    {
+      "id": "dominican-habit",
+      "name": "white habit with a black cloak",
+      "category": "Garment",
+      "aliases": [
+        "white robe under a black cape",
+        "black and white monastic dress"
+      ],
+      "meaning": "A white tunic and scapular under a black hooded cloak identifies a Dominican — the 'black friars' of preaching and, later, of the Inquisition.",
+      "figures": [
+        {
+          "name": "Saint Dominic and Saint Thomas Aquinas",
+          "note": "the order's founder and its greatest theologian"
+        }
+      ]
+    },
+    {
+      "id": "camel-hair-garment",
+      "name": "camel hair garment",
+      "category": "Garment",
+      "aliases": [
+        "rough animal skin tunic",
+        "hair shirt",
+        "shaggy fur garment"
+      ],
+      "meaning": "A rough garment of animal hair signals ascetic hardship and life in the wilderness — deliberate austerity rather than poverty imposed.",
+      "figures": [
+        {
+          "name": "Saint John the Baptist",
+          "note": "his described dress while preaching in the desert"
+        }
+      ]
+    },
+    {
+      "id": "ermine-trimmed-robe",
+      "name": "ermine-trimmed robe",
+      "category": "Garment",
+      "aliases": [
+        "white fur with black spots",
+        "fur-trimmed cloak",
+        "spotted white fur collar"
+      ],
+      "meaning": "White fur dotted with black tail-tips marks the highest rank — reserved by sumptuary law in many places to royalty, high nobility, and judges. It signals status and, through the animal's reputation, incorruptibility.",
+      "figures": [
+        {
+          "name": "Royal and noble portraits",
+          "note": "still used in coronation and judicial dress",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "turban",
+      "name": "turban",
+      "category": "Garment",
+      "aliases": [
+        "wrapped headdress",
+        "cloth wound around the head",
+        "exotic headwear"
+      ],
+      "meaning": "A wound cloth headdress is used by European painters to mark a figure as Eastern, ancient, or foreign — applied to Old Testament patriarchs, magi, and Roman officials alike as a generic sign of 'elsewhere and long ago' rather than accurate costume.",
+      "figures": [
+        {
+          "name": "The Magi",
+          "note": "marks them as wise men from the East"
+        },
+        {
+          "name": "Old Testament figures",
+          "note": "a conventional signal of antiquity and the Orient",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "armor",
+      "name": "armor",
+      "category": "Garment",
+      "aliases": [
+        "plate armor",
+        "breastplate",
+        "knight in armor",
+        "cuirass"
+      ],
+      "meaning": "Armor marks a soldier, a soldier-saint, or spiritual warfare — 'the whole armour of God.' On an allegorical figure it usually signifies fortitude or just war rather than actual soldiering.",
+      "figures": [
+        {
+          "name": "Saint George and Saint Michael",
+          "note": "the two great armored dragon-slayers"
+        },
+        {
+          "name": "Ares / Mars",
+          "note": "fully armed as the god of war"
+        }
+      ]
+    },
+    {
+      "id": "annunciation-scene",
+      "name": "Annunciation",
+      "category": "Scene",
+      "aliases": [
+        "angel appearing to a kneeling woman",
+        "angel with a lily approaching a woman at a book",
+        "annunciation"
+      ],
+      "meaning": "A winged messenger approaches a woman interrupted at her reading, usually with a lily, a descending dove, and rays of light. It depicts the announcement that she will bear Christ, and the whole scene turns on her assent.",
+      "figures": [
+        {
+          "name": "The Archangel Gabriel and the Virgin Mary",
+          "note": "the most frequently painted moment in Christian art"
+        }
+      ]
+    },
+    {
+      "id": "nativity-scene",
+      "name": "Nativity",
+      "category": "Scene",
+      "aliases": [
+        "newborn in a manger",
+        "birth of christ",
+        "infant in a stable with animals"
+      ],
+      "meaning": "A newborn laid in a feeding trough in a stable or cave, attended by his mother, an ox and an ass, and often shepherds. Light frequently radiates from the child himself, making him the source of illumination in the scene.",
+      "figures": [
+        {
+          "name": "The Holy Family",
+          "note": "Joseph is often placed to one side, aged and asleep or in shadow"
+        }
+      ]
+    },
+    {
+      "id": "adoration-magi",
+      "name": "Adoration of the Magi",
+      "category": "Scene",
+      "aliases": [
+        "three kings bringing gifts",
+        "wise men kneeling before a child",
+        "magi with gold frankincense and myrrh"
+      ],
+      "meaning": "Three richly dressed travellers present gold, frankincense, and myrrh to a child on his mother's lap, the eldest usually kneeling and bare-headed. The gifts were read as kingship, divinity, and death — the myrrh a burial spice foreshadowing the Passion.",
+      "figures": [
+        {
+          "name": "The Magi",
+          "note": "shown as three ages of man and, from the late Middle Ages, three continents"
+        }
+      ]
+    },
+    {
+      "id": "baptism-of-christ",
+      "name": "Baptism of Christ",
+      "category": "Scene",
+      "aliases": [
+        "figure standing in a river being baptized",
+        "water poured over a man's head in a river",
+        "dove descending over a river"
+      ],
+      "meaning": "A man stands in a river while another pours water over his head, a dove descends, and the heavens open. It marks the start of Christ's public ministry and is one of the clearest depictions of the Trinity together.",
+      "figures": [
+        {
+          "name": "Christ and Saint John the Baptist",
+          "note": "John in camel hair, often with a shallow bowl or shell"
+        }
+      ]
+    },
+    {
+      "id": "last-supper",
+      "name": "Last Supper",
+      "category": "Scene",
+      "aliases": [
+        "thirteen men at a long table",
+        "final meal with disciples",
+        "supper with bread and wine"
+      ],
+      "meaning": "Thirteen men at a table sharing bread and wine — simultaneously the institution of the Eucharist and the announcement that one present will betray. Painters usually choose which of the two moments to depict, and the betrayer is often isolated by pose, shadow, or a money bag.",
+      "figures": [
+        {
+          "name": "Christ and the twelve apostles",
+          "note": "Judas marked by the purse, a shadow, or yellow robes"
+        }
+      ]
+    },
+    {
+      "id": "agony-in-the-garden",
+      "name": "Agony in the Garden",
+      "category": "Scene",
+      "aliases": [
+        "man praying at night while others sleep",
+        "kneeling figure with an angel holding a cup",
+        "gethsemane"
+      ],
+      "meaning": "A figure kneels in prayer at night while his companions sleep nearby, sometimes with an angel presenting a chalice. It depicts the moment of dread before arrest — the cup being the suffering asked to pass.",
+      "figures": [
+        {
+          "name": "Christ at Gethsemane",
+          "note": "the sleeping apostles are Peter, James, and John"
+        }
+      ]
+    },
+    {
+      "id": "crucifixion-scene",
+      "name": "Crucifixion",
+      "category": "Scene",
+      "aliases": [
+        "man nailed to a cross",
+        "figure on a cross with mourners",
+        "calvary",
+        "man on a cross",
+        "figure nailed to a cross"
+      ],
+      "meaning": "A figure fixed to a cross, usually with the INRI board above, mourners at the foot, and a darkened sky. A skull at the base marks the site as 'the place of the skull'; a chalice catching blood makes the scene the origin of the Mass.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "flanked by the Virgin and Saint John, with the Magdalene often at the foot"
+        }
+      ]
+    },
+    {
+      "id": "deposition-scene",
+      "name": "Deposition / Descent from the Cross",
+      "category": "Scene",
+      "aliases": [
+        "body being lowered from a cross",
+        "men on ladders taking down a body",
+        "descent from the cross"
+      ],
+      "meaning": "The dead body lowered from the cross with ladders and a winding sheet, supported by helpers below. The composition typically stresses dead weight and the awkward physical labour of grief.",
+      "figures": [
+        {
+          "name": "Joseph of Arimathea and Nicodemus",
+          "note": "the two men who requested and prepared the body"
+        }
+      ]
+    },
+    {
+      "id": "pieta-scene",
+      "name": "Pietà",
+      "category": "Scene",
+      "aliases": [
+        "dead man across a seated woman's lap",
+        "mother holding dead son",
+        "lamentation over the body"
+      ],
+      "meaning": "A seated woman holding the dead body of a grown man across her lap. Unlike the Deposition it depicts no narrative moment in the Gospels but a devotional image invented to invite contemplation of shared suffering — deliberately echoing a mother holding an infant.",
+      "figures": [
+        {
+          "name": "The Virgin and the dead Christ",
+          "note": "a German devotional invention that spread across Europe"
+        }
+      ]
+    },
+    {
+      "id": "resurrection-scene",
+      "name": "Resurrection",
+      "category": "Scene",
+      "aliases": [
+        "figure rising from a tomb",
+        "man stepping out of a sarcophagus",
+        "risen christ with a banner"
+      ],
+      "meaning": "A figure rises or steps from an opened tomb, usually carrying a white banner with a red cross, while guards sleep or recoil below. The wounds remain visible — the risen body is the same body.",
+      "figures": [
+        {
+          "name": "The Risen Christ",
+          "note": "often shown mid-air above the sarcophagus"
+        }
+      ]
+    },
+    {
+      "id": "last-judgment",
+      "name": "Last Judgment",
+      "category": "Scene",
+      "aliases": [
+        "souls divided to left and right",
+        "christ judging with the blessed and damned",
+        "resurrection of the dead"
+      ],
+      "meaning": "A great composition with a judge enthroned at centre, the blessed rising on his right and the damned dragged down on his left, angels sounding trumpets and often weighing souls. Its rigid left-right division makes the whole picture an argument.",
+      "figures": [
+        {
+          "name": "Christ the Judge",
+          "note": "typically showing his wounds; the Virgin and Baptist intercede beside him"
+        }
+      ]
+    },
+    {
+      "id": "coronation-of-the-virgin",
+      "name": "Coronation of the Virgin",
+      "category": "Scene",
+      "aliases": [
+        "woman being crowned in heaven",
+        "crowning of mary",
+        "figure placing a crown on a kneeling woman"
+      ],
+      "meaning": "A woman kneels or is enthroned in heaven while Christ, or the Trinity, sets a crown on her head. It closes the Marian cycle by making her Queen of Heaven after the Assumption.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "surrounded by musical angels and ranks of saints"
+        }
+      ]
+    },
+    {
+      "id": "sacra-conversazione",
+      "name": "Sacra Conversazione",
+      "category": "Scene",
+      "aliases": [
+        "madonna enthroned with standing saints",
+        "virgin and child surrounded by saints in one space",
+        "holy conversation"
+      ],
+      "meaning": "The Virgin and Child enthroned with saints gathered informally around them in a single unified space — figures from different centuries sharing one room without narrative. It replaced the older format of saints boxed into separate panels.",
+      "figures": [
+        {
+          "name": "The Virgin, Child, and attendant saints",
+          "note": "the saints are identified by their individual attributes"
+        }
+      ]
+    },
+    {
+      "id": "madonna-and-child",
+      "name": "Madonna and Child",
+      "category": "Scene",
+      "aliases": [
+        "woman holding an infant",
+        "mother and child enthroned",
+        "virgin and child",
+        "woman holding a baby"
+      ],
+      "meaning": "A seated woman holding an infant, the central devotional image of Western art. Variants carry distinct meanings: the child reaching for the breast, the two cheeks pressed together in tenderness, or the mother gesturing formally toward him as 'the way'.",
+      "figures": [
+        {
+          "name": "The Virgin and Christ Child",
+          "note": "objects in the child's hand — goldfinch, pomegranate, fruit — usually foreshadow the Passion"
+        }
+      ]
+    },
+    {
+      "id": "vanitas-still-life",
+      "name": "vanitas still life",
+      "category": "Scene",
+      "aliases": [
+        "arrangement of skull books and candle",
+        "still life with skull",
+        "table of objects with a skull"
+      ],
+      "meaning": "An arrangement of objects assembled to argue that everything shown is passing: a skull and hourglass for death, snuffed candles and bubbles for brevity, books and instruments for learning and pleasure that end, coins and jewels for wealth left behind.",
+      "figures": [
+        {
+          "name": "Dutch and Flemish still life",
+          "note": "the genre's name comes from 'vanity of vanities, all is vanity'",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "judgment-of-paris",
+      "name": "Judgment of Paris",
+      "category": "Scene",
+      "aliases": [
+        "young man choosing between three goddesses",
+        "shepherd handing an apple to one of three women",
+        "three nude goddesses before a seated youth"
+      ],
+      "meaning": "A young herdsman is asked to award a golden apple to the fairest of three goddesses, each offering a bribe — power, victory, or the most beautiful woman. His choice of the third sets off the Trojan War, so the scene is about desire's consequences.",
+      "figures": [
+        {
+          "name": "Paris, Juno, Minerva, and Venus",
+          "note": "identify the goddesses by peacock, armour and owl, and Cupid respectively"
+        }
+      ]
+    },
+    {
+      "id": "bacchanal",
+      "name": "bacchanal",
+      "category": "Scene",
+      "aliases": [
+        "drunken revel with satyrs",
+        "wine feast with dancing figures",
+        "revelry with grapes and wine"
+      ],
+      "meaning": "A riotous outdoor revel of drinkers, dancers, satyrs, and maenads around the wine god. Painters used it as licensed territory for depicting abandon, nudity, and intoxication under classical cover.",
+      "figures": [
+        {
+          "name": "Dionysus / Bacchus and his train",
+          "note": "look for the thyrsus, ivy crowns, panthers, and sleeping figures"
+        }
+      ]
+    },
+    {
+      "id": "angel",
+      "name": "angel",
+      "category": "Attribute",
+      "aliases": [
+        "winged messenger",
+        "heavenly messenger",
+        "angelic figure"
+      ],
+      "meaning": "A winged human figure serving as messenger, guardian, or attendant of the divine. Angels mark a scene as taking place across the boundary between heaven and earth, and their number, dress, and activity — announcing, censing, playing music, or bearing instruments of the Passion — tell you what kind of moment it is.",
+      "figures": [
+        {
+          "name": "The Archangel Gabriel",
+          "note": "the messenger of the Annunciation, usually with a lily"
+        },
+        {
+          "name": "The Archangel Michael",
+          "note": "armed and armored, weighing souls or defeating the dragon"
+        }
+      ]
+    },
+    {
+      "id": "putto",
+      "name": "putto / cherub",
+      "category": "Attribute",
+      "aliases": [
+        "winged baby",
+        "chubby winged child",
+        "cherub",
+        "winged infant"
+      ],
+      "meaning": "A plump winged infant, borrowed from classical art. In sacred pictures putti attend the divine and soften it; in secular ones they accompany love and abundance. A winged child's head with no body represents a cherub as pure intellect without physical needs.",
+      "figures": [
+        {
+          "name": "Sacred and secular decoration",
+          "note": "distinct from Cupid, who carries a bow and arrows",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "seraph",
+      "name": "six-winged angel (seraph)",
+      "category": "Attribute",
+      "aliases": [
+        "seraph",
+        "angel with six wings",
+        "seraphim"
+      ],
+      "meaning": "An angel with three pairs of wings, often red and covering its own face and feet, belongs to the highest rank of the heavenly hierarchy. Its appearance signals a vision of the divine presence rather than an ordinary errand.",
+      "figures": [
+        {
+          "name": "Saint Francis of Assisi",
+          "note": "received the stigmata from a crucified seraph"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/global.css';
+---
+
+<Base>
+  <div class="app">
+    <div id="offline-strip" class="offline-strip" hidden>
+      You're offline — analysis needs a connection, but the app shell is cached.
+    </div>
+
+    <header class="masthead">
+      <h1>Iconographer</h1>
+      <p class="subtitle">
+        Point your camera at a piece of art to discover the meaning behind its icons; this
+        focuses primarily on Christian iconography, plus classical mythology and allegory.
+      </p>
+    </header>
+
+    <main>
+      <!-- ------------------------------------------------ SCAN (idle) -->
+      <section id="scan-screen" class="scan-screen">
+        <svg class="scan-emblem" viewBox="0 0 96 96" fill="none" aria-hidden="true">
+          <circle cx="48" cy="48" r="30" stroke="var(--gold)" stroke-width="2" />
+          <circle cx="48" cy="48" r="40" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="3 5" />
+          <path
+            d="M48 30v36M30 48h36"
+            stroke="var(--gold)"
+            stroke-width="2"
+            stroke-linecap="round"
+            opacity="0.5"
+          />
+          <circle cx="48" cy="48" r="6" fill="var(--gold)" />
+        </svg>
+
+        <button id="scan-btn" class="btn-scan" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+            <circle cx="12" cy="13" r="4" />
+          </svg>
+          Scan artwork
+        </button>
+
+        <button id="library-btn" class="btn-secondary" type="button">Choose from library</button>
+
+        <!-- Camera-first native input. capture="environment" opens the rear camera on iOS. -->
+        <input
+          id="file-input"
+          class="visually-hidden"
+          type="file"
+          accept="image/*"
+          capture="environment"
+        />
+
+        <p class="scan-hint">
+          Best results with a clear, straight-on photo of a single figure or scene.
+        </p>
+
+        <!-- Install hint. Hidden by default and revealed only on iOS, only when
+             not already installed, and only until dismissed — see app.ts. -->
+        <aside id="install-hint" class="install-hint" hidden>
+          <button id="install-dismiss" class="install-dismiss" type="button" aria-label="Dismiss">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+
+          <p class="install-title">Keep it on your Home Screen</p>
+
+          <p id="install-body" class="install-body">
+            Tap
+            <span class="share-glyph" aria-label="the Share button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3v11" />
+                <path d="M8.6 6.4 12 3l3.4 3.4" />
+                <path d="M7 11H5.5A1.5 1.5 0 0 0 4 12.5v6A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 18.5 11H17" />
+              </svg>
+            </span>
+            in Safari, then <strong>Add to Home Screen</strong> — it opens full-screen, without
+            the browser bar.
+          </p>
+        </aside>
+      </section>
+
+      <!-- ------------------------------------------------ LOADING -->
+      <section id="loading-screen" class="loading-screen" hidden>
+        <div class="spinner" role="status" aria-label="Analyzing"></div>
+        <p>Reading the iconography…</p>
+      </section>
+
+      <!-- ------------------------------------------------ RESULT -->
+      <section id="result-screen" class="result-screen" hidden>
+        <div id="result-body"></div>
+        <div class="result-actions">
+          <button id="again-btn" class="btn-secondary" type="button">Scan another</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    import '../scripts/app.ts';
+  </script>
+</Base>

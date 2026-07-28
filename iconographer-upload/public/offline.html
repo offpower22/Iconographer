@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Iconographer — Offline</title>
+    <style>
+      html, body { margin: 0; height: 100%; }
+      body {
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        gap: 16px; text-align: center; padding: 32px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+        color: #211b14; background: #f4efe6;
+      }
+      h1 { font-family: 'Iowan Old Style', Palatino, Georgia, serif; font-weight: 500; margin: 0; }
+      p { color: #574c3d; max-width: 32ch; line-height: 1.5; margin: 0; }
+      button {
+        margin-top: 8px; border: none; cursor: pointer; color: #fff8ea;
+        background: linear-gradient(180deg, #a67c34, #7c5a20);
+        padding: 14px 28px; border-radius: 999px; font-size: 16px; font-weight: 600;
+      }
+      @media (prefers-color-scheme: dark) {
+        body { color: #ece3d4; background: #1a1410; }
+        p { color: #c4b9a5; }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>You're offline</h1>
+    <p>
+      Iconographer needs a connection to analyze an image. The app itself is cached and ready —
+      reconnect to scan an artwork.
+    </p>
+    <button onclick="location.href='/'">Try again</button>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "iconographer",
+  "version": "1.0.0",
+  "description": "A camera-first PWA that identifies iconographic symbols in artworks and explains their meaning.",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "gen:icons": "node scripts/generate-icons.mjs"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^6.5.5",
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

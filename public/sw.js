@@ -6,7 +6,7 @@
    - Navigations that fail offline fall back to a cached offline page.
 */
 
-const VERSION = 'v2';
+const VERSION = 'v3';
 const SHELL_CACHE = `iconographer-shell-${VERSION}`;
 
 /**
@@ -28,7 +28,7 @@ const SHELL_ASSETS = [
   '/',
   '/offline.html',
   '/manifest.webmanifest',
-  '/favicon.svg',
+  '/icons/icon-32.png',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
   '/icons/apple-touch-icon-180.png'

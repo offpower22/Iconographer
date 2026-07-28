@@ -93,11 +93,10 @@ body {
 }
 .masthead .subtitle {
   font-family: var(--serif);
-  font-style: italic;
   color: var(--ink-soft);
   font-size: 15px;
   margin: 8px auto 0;
-  max-width: 30ch;
+  max-width: 34ch;
   line-height: 1.4;
 }
 
@@ -200,6 +199,75 @@ main {
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+/* ------------------------------------------------ install hint (iOS only)
+   Deliberately quiet: sits in the page flow rather than overlaying anything,
+   no modal, no animation on load, and dismissible for good. */
+.install-hint {
+  position: relative;
+  max-width: 34ch;
+  margin: 4px auto 0;
+  padding: 14px 34px 15px 16px;
+  text-align: left;
+  background: color-mix(in srgb, var(--gold) 7%, var(--card));
+  border: 1px solid color-mix(in srgb, var(--gold) 28%, var(--line));
+  border-radius: 12px;
+}
+.install-title {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 5px;
+}
+.install-body {
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.install-body strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Inline iOS share glyph, sized to sit on the text baseline. */
+.share-glyph {
+  display: inline-flex;
+  vertical-align: -4px;
+  margin: 0 1px;
+}
+.share-glyph svg {
+  width: 17px;
+  height: 17px;
+  color: var(--gold);
+}
+
+.install-dismiss {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  color: var(--ink-faint);
+  cursor: pointer;
+}
+.install-dismiss svg {
+  width: 13px;
+  height: 13px;
+}
+.install-dismiss:active {
+  background: var(--parchment-deep);
 }
 
 /* ------------------------------------------------------ loading screen */
@@ -433,15 +501,3 @@ main {
   padding-top: calc(6px + var(--safe-top));
 }
 
-/* ------------------------------------------------------ footer */
-.foot {
-  text-align: center;
-  font-size: 11px;
-  color: var(--ink-faint);
-  padding: 8px 16px 20px;
-  line-height: 1.5;
-}
-.foot a {
-  color: var(--gold);
-  text-decoration: none;
-}

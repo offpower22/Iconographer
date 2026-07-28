@@ -1,8 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 import '../styles/global.css';
-import { symbolCount } from '../lib/iconography';
-const count = symbolCount();
 ---
 
 <Base>
@@ -13,7 +11,10 @@ const count = symbolCount();
 
     <header class="masthead">
       <h1>Iconographer</h1>
-      <p class="subtitle">Point your camera at an artwork to uncover the meaning of its icons.</p>
+      <p class="subtitle">
+        Point your camera at a piece of art to discover the meaning behind its icons; this
+        focuses primarily on Christian iconography, plus classical mythology and allegory.
+      </p>
     </header>
 
     <main>
@@ -55,6 +56,33 @@ const count = symbolCount();
         <p class="scan-hint">
           Best results with a clear, straight-on photo of a single figure or scene.
         </p>
+
+        <!-- Install hint. Hidden by default and revealed only on iOS, only when
+             not already installed, and only until dismissed — see app.ts. -->
+        <aside id="install-hint" class="install-hint" hidden>
+          <button id="install-dismiss" class="install-dismiss" type="button" aria-label="Dismiss">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+
+          <p class="install-title">Keep it on your Home Screen</p>
+
+          <p id="install-body" class="install-body">
+            Tap
+            <span class="share-glyph" aria-label="the Share button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3v11" />
+                <path d="M8.6 6.4 12 3l3.4 3.4" />
+                <path d="M7 11H5.5A1.5 1.5 0 0 0 4 12.5v6A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 18.5 11H17" />
+              </svg>
+            </span>
+            in Safari, then <strong>Add to Home Screen</strong> — it opens full-screen, without
+            the browser bar.
+          </p>
+        </aside>
       </section>
 
       <!-- ------------------------------------------------ LOADING -->
@@ -71,11 +99,6 @@ const count = symbolCount();
         </div>
       </section>
     </main>
-
-    <footer class="foot">
-      Cross-referenced against {count} iconographic symbols, gestures &amp; attributes.
-      Explanations are grounded in a curated reference set — never invented.
-    </footer>
   </div>
 
   <script>

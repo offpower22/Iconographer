@@ -57,6 +57,84 @@ window.addEventListener('online', updateOnlineStatus);
 window.addEventListener('offline', updateOnlineStatus);
 updateOnlineStatus();
 
+// --- install hint -----------------------------------------------------------
+// iOS gives no beforeinstallprompt event, so Add to Home Screen has to be
+// taught rather than triggered. The whole trick to not being obnoxious is
+// showing it *only* when it is actually actionable.
+
+const INSTALL_DISMISSED_KEY = 'iconographer:install-hint-dismissed';
+
+function isIOS(): boolean {
+  const ua = navigator.userAgent;
+  if (/iPad|iPhone|iPod/.test(ua)) return true;
+  // iPadOS 13+ reports itself as "Macintosh"; touch points disambiguate it.
+  return /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+}
+
+/** Already installed — running from the Home Screen icon, not the browser. */
+function isStandalone(): boolean {
+  return (
+    (window.navigator as Navigator & { standalone?: boolean }).standalone === true ||
+    window.matchMedia('(display-mode: standalone)').matches
+  );
+}
+
+/**
+ * Third-party iOS browsers render with WebKit but only Safari exposes a real
+ * Add to Home Screen, so the instructions have to differ there.
+ */
+function isIOSSafari(): boolean {
+  return isIOS() && !/CriOS|FxiOS|EdgiOS|OPiOS|Mercury/i.test(navigator.userAgent);
+}
+
+/** localStorage throws in some private-browsing configurations. */
+function safeGet(key: string): string | null {
+  try {
+    return localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+function safeSet(key: string, value: string): void {
+  try {
+    localStorage.setItem(key, value);
+  } catch {
+    /* ignore — the hint simply reappears next visit */
+  }
+}
+
+/** Should the hint be offered at all? */
+function shouldOfferInstall(): boolean {
+  return isIOS() && !isStandalone() && safeGet(INSTALL_DISMISSED_KEY) !== '1';
+}
+
+function setUpInstallHint(): void {
+  const hint = document.querySelector<HTMLElement>('#install-hint');
+  const body = document.querySelector<HTMLElement>('#install-body');
+  const dismiss = document.querySelector<HTMLButtonElement>('#install-dismiss');
+  if (!hint || !body || !dismiss) return;
+
+  // Wire dismissal unconditionally — independent of whether we end up showing
+  // the hint, so the behavior is identical however it became visible.
+  dismiss.addEventListener('click', () => {
+    hint.hidden = true;
+    safeSet(INSTALL_DISMISSED_KEY, '1');
+  });
+
+  if (!shouldOfferInstall()) return;
+
+  if (!isIOSSafari()) {
+    // Telling someone in Chrome-for-iOS to tap Share would send them nowhere.
+    body.innerHTML =
+      'Open this page in <strong>Safari</strong> to add Iconographer to your Home Screen — ' +
+      'it then opens full-screen, without the browser bar.';
+  }
+
+  hint.hidden = false;
+}
+
+setUpInstallHint();
+
 // --- capture --------------------------------------------------------------
 
 scanBtn.addEventListener('click', () => {

@@ -112,7 +112,8 @@ function setUpInstallHint(): void {
   const hint = document.querySelector<HTMLElement>('#install-hint');
   const body = document.querySelector<HTMLElement>('#install-body');
   const dismiss = document.querySelector<HTMLButtonElement>('#install-dismiss');
-  if (!hint || !body || !dismiss) return;
+  const steps = document.querySelector<HTMLDetailsElement>('#install-steps');
+  if (!hint || !body || !dismiss || !steps) return;
 
   // Wire dismissal unconditionally — independent of whether we end up showing
   // the hint, so the behavior is identical however it became visible.
@@ -124,16 +125,78 @@ function setUpInstallHint(): void {
   if (!shouldOfferInstall()) return;
 
   if (!isIOSSafari()) {
-    // Telling someone in Chrome-for-iOS to tap Share would send them nowhere.
+    // Telling someone in Chrome-for-iOS to tap Share would send them nowhere,
+    // and a numbered "tap Share" walkthrough would be actively wrong there —
+    // drop the whole disclosure, not just its default-collapsed contents.
     body.innerHTML =
       'Open this page in <strong>Safari</strong> to add Iconographer to your Home Screen — ' +
       'it then opens full-screen, without the browser bar.';
+    steps.hidden = true;
   }
 
   hint.hidden = false;
 }
 
 setUpInstallHint();
+
+// --- Android / Chromium install ---------------------------------------------
+// Unlike iOS, Chromium browsers can trigger the real native install prompt
+// from a click — beforeinstallprompt only fires once Chrome has independently
+// verified the manifest + service worker make the site installable, so this
+// needs no UA sniffing or guessing at all.
+
+interface BeforeInstallPromptEvent extends Event {
+  prompt(): Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+}
+
+const INSTALL_DISMISSED_ANDROID_KEY = 'iconographer:install-hint-android-dismissed';
+let deferredInstallPrompt: BeforeInstallPromptEvent | null = null;
+
+function setUpAndroidInstallHint(): void {
+  const hint = document.querySelector<HTMLElement>('#install-hint-android');
+  const dismiss = document.querySelector<HTMLButtonElement>('#install-dismiss-android');
+  const trigger = document.querySelector<HTMLButtonElement>('#install-trigger-android');
+  if (!hint || !dismiss || !trigger) return;
+
+  dismiss.addEventListener('click', () => {
+    hint.hidden = true;
+    safeSet(INSTALL_DISMISSED_ANDROID_KEY, '1');
+  });
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // Chrome's default mini-infobar would otherwise show alongside ours.
+    e.preventDefault();
+    deferredInstallPrompt = e as BeforeInstallPromptEvent;
+
+    if (isStandalone() || safeGet(INSTALL_DISMISSED_ANDROID_KEY) === '1') return;
+    hint.hidden = false;
+  });
+
+  trigger.addEventListener('click', async () => {
+    if (!deferredInstallPrompt) return;
+    trigger.disabled = true;
+    try {
+      await deferredInstallPrompt.prompt();
+      await deferredInstallPrompt.userChoice;
+    } finally {
+      // The native dialog resolves the question either way — accepted or
+      // dismissed, a single-use prompt can't be shown again, so treat both
+      // outcomes as "handled" rather than nagging on the next visit.
+      deferredInstallPrompt = null;
+      hint.hidden = true;
+      safeSet(INSTALL_DISMISSED_ANDROID_KEY, '1');
+    }
+  });
+
+  // Covers install via Chrome's own address-bar icon while our hint was open.
+  window.addEventListener('appinstalled', () => {
+    hint.hidden = true;
+    safeSet(INSTALL_DISMISSED_ANDROID_KEY, '1');
+  });
+}
+
+setUpAndroidInstallHint();
 
 // --- capture --------------------------------------------------------------
 

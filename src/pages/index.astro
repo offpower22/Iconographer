@@ -82,6 +82,69 @@ import '../styles/global.css';
             in Safari, then <strong>Add to Home Screen</strong> — it opens full-screen, without
             the browser bar.
           </p>
+
+          <!-- Opt-in detail. Native <details> so it needs no extra JS and stays
+               keyboard/screen-reader accessible. Hidden entirely (not just
+               collapsed) on non-Safari iOS browsers — see app.ts. -->
+          <details id="install-steps" class="install-steps">
+            <summary class="install-steps-toggle">Explain steps</summary>
+
+            <ol class="install-steps-list">
+              <li>
+                <span class="step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3v11" />
+                    <path d="M8.6 6.4 12 3l3.4 3.4" />
+                    <path d="M7 11H5.5A1.5 1.5 0 0 0 4 12.5v6A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 18.5 11H17" />
+                  </svg>
+                </span>
+                <span>Tap the <strong>Share</strong> button in Safari's toolbar.</span>
+              </li>
+              <li>
+                <span class="step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="4" />
+                    <path d="M12 8.5v7M8.5 12h7" />
+                  </svg>
+                </span>
+                <span>Scroll down and tap <strong>Add to Home Screen</strong>.</span>
+              </li>
+              <li>
+                <span class="step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12.5 9.5 17 19 7" />
+                  </svg>
+                </span>
+                <span>Tap <strong>Add</strong> in the top-right corner to confirm.</span>
+              </li>
+            </ol>
+          </details>
+        </aside>
+
+        <!-- Android/Chromium install hint. Chrome fires beforeinstallprompt
+             only when it has independently judged the site installable, so
+             this needs no UA sniffing — see app.ts. Unlike iOS, Android
+             supports triggering the real native prompt from a button. -->
+        <aside id="install-hint-android" class="install-hint" hidden>
+          <button id="install-dismiss-android" class="install-dismiss" type="button" aria-label="Dismiss">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+
+          <p class="install-title">Install as an app</p>
+          <p class="install-body">
+            Add Iconographer to your Home Screen for a faster, full-screen experience —
+            no browser bar, works offline.
+          </p>
+
+          <button id="install-trigger-android" class="btn-secondary install-trigger" type="button">
+            Install app
+          </button>
         </aside>
       </section>
 

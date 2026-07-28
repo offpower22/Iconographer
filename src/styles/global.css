@@ -184,6 +184,12 @@ main {
 .btn-secondary:active {
   background: var(--parchment-deep);
 }
+.install-trigger {
+  margin-top: 12px;
+  border-color: color-mix(in srgb, var(--gold) 45%, var(--line));
+  color: var(--gold-deep);
+  font-weight: 600;
+}
 
 .scan-hint {
   font-size: 13px;
@@ -244,6 +250,76 @@ main {
   width: 17px;
   height: 17px;
   color: var(--gold);
+}
+
+/* Opt-in "Explain steps" disclosure — quiet by default, detailed on request. */
+.install-steps {
+  margin-top: 9px;
+}
+.install-steps-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold-deep);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+.install-steps-toggle::-webkit-details-marker {
+  display: none;
+}
+.install-steps-toggle::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+.install-steps[open] .install-steps-toggle::before {
+  transform: rotate(45deg);
+}
+
+.install-steps-list {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 10px 0 0;
+  border-top: 1px dashed var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.install-steps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.install-steps-list strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+.step-icon {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--parchment-deep);
+  color: var(--gold-deep);
+}
+.step-icon svg {
+  width: 13px;
+  height: 13px;
 }
 
 .install-dismiss {

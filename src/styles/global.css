@@ -127,10 +127,20 @@ main {
   text-align: center;
   padding: 24px 0;
 }
+.scan-emblem-wrap {
+  position: relative;
+  width: min(360px, 90vw);
+  aspect-ratio: 1400 / 1178;
+}
 .scan-emblem {
-  width: 96px;
-  height: 96px;
-  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* The rings and dimming are already part of this image (hand-composed) —
+     the only thing applied here is the edge fade, via mask, so it dissolves
+     into the page background instead of showing a hard rectangle. */
+  -webkit-mask-image: radial-gradient(ellipse, black 35%, transparent 75%);
+  mask-image: radial-gradient(ellipse, black 35%, transparent 75%);
 }
 .scan-lede {
   font-family: var(--serif);
@@ -141,32 +151,35 @@ main {
   margin: 0;
 }
 
-/* Big primary action */
+/* Same shape/size/type treatment as .btn-secondary — transparent fill, same
+   padding and type — the only difference is a blue/white gradient rim instead
+   of a plain border, so it reads as the primary action without a loud fill.
+   Sized up from .btn-secondary (bigger text, more padding) so it still reads
+   as the primary action despite the quieter transparent fill. */
 .btn-scan {
   appearance: none;
-  border: none;
   cursor: pointer;
   font-family: var(--sans);
+  font-size: 17px;
   font-weight: 600;
-  font-size: 18px;
-  letter-spacing: 0.01em;
-  color: #fff8ea;
-  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-deep) 100%);
-  padding: 18px 40px;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
+  color: var(--ink);
+  padding: 16px 36px;
+  border-radius: 14px;
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(var(--parchment), var(--parchment)) padding-box,
+    linear-gradient(135deg, #6ea6f2 0%, #ffffff 50%, #6ea6f2 100%) border-box;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  transition: transform 0.12s ease, filter 0.12s ease;
+  gap: 10px;
+  transition: transform 0.12s ease;
 }
 .btn-scan:active {
   transform: scale(0.97);
-  filter: brightness(1.05);
 }
 .btn-scan svg {
-  width: 24px;
-  height: 24px;
+  width: 21px;
+  height: 21px;
 }
 
 .btn-secondary {

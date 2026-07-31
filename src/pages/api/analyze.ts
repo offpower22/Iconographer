@@ -78,8 +78,10 @@ export const POST: APIRoute = async ({ request }) => {
   // Tradition ('uncertain' becomes undefined) is used only as a tie-breaker
   // between equally-good matches, never to exclude anything outright.
   const traditionHint = vision.tradition === 'uncertain' ? undefined : vision.tradition;
-  const symbols = matchSymbols(vision.detectedElements, traditionHint);
-  const matchedRaw = new Set(symbols.map((s) => s.matchedElement.toLowerCase()));
+  const { matches: symbols, matchedElements } = matchSymbols(vision.detectedElements, traditionHint);
+  // Keyed off everything that resolved, not just what earned a card, so a
+  // second phrase for an already-shown symbol isn't reported as unrecognized.
+  const matchedRaw = new Set(matchedElements.map((el) => el.toLowerCase()));
   const unmatchedElements = vision.detectedElements
     .map((d) => d.element)
     .filter((el) => !matchedRaw.has(el.toLowerCase()));

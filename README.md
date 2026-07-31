@@ -17,7 +17,7 @@ only as soft secondary context, and withheld whenever the evidence is thin.
    concrete visual elements — each with a bounding box — returned as strict JSON. Gemini is
    explicitly told *not* to interpret meaning.
 4. Each detected element is matched against a local reference set
-   ([`data/symbols.json`](data/symbols.json) — 179 Christian symbols across gestures, poses,
+   ([`data/symbols.json`](data/symbols.json) — 206 Christian symbols across gestures, poses,
    objects, animals, plants, garments, colors, monograms, and scene types).
 5. The frontend crops each matched symbol out of your photo using its bounding box and shows
    one card per symbol: the crop, the standalone meaning, and any figures that symbol is

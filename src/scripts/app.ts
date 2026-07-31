@@ -239,8 +239,8 @@ const UPLOAD_MAX_EDGE = 1600;
 /**
  * Shrink the photo to a modest JPEG before uploading. This matters on a real
  * phone for three reasons:
- *   - a 12MP iPhone photo is often 3–5 MB, and Vercel's serverless request body
- *     limit is ~4.5 MB, so full-size uploads fail at the platform edge;
+ *   - a 12MP iPhone photo is often 3–5 MB, which runs up against both the
+ *     serverless request body limit and our own 8 MB cap in /api/analyze;
  *   - it normalizes iOS HEIC into JPEG, which the vision API always accepts;
  *   - it is dramatically faster on cellular.
  * Crops are unaffected — those are taken from the full-resolution image already

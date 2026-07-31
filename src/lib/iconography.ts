@@ -83,7 +83,7 @@ const STOPWORDS = new Set([
   'figure', 'gesture', 'pose',
   // generic head-nouns
   'robe', 'garment', 'cloak', 'mantle', 'dress', 'clothing', 'hat',
-  'flower', 'tree', 'fruit', 'bird', 'animal', 'staff', 'stick'
+  'flower', 'tree', 'fruit', 'leaf', 'bird', 'animal', 'staff', 'stick'
 ]);
 
 /** All stemmed tokens, in order — used for word-boundary containment. */
@@ -141,14 +141,27 @@ function matchQuality(detected: string, candidate: string): 0 | 1 | 2 | 3 {
   return coverage >= 0.5 ? 1 : 0;
 }
 
+export interface MatchResult {
+  matches: SymbolMatch[];
+  /**
+   * Every detected phrase that resolved to a reference entry — including ones
+   * whose symbol was already surfaced by an earlier phrase and so produced no
+   * second card. Callers need this to report what was genuinely unrecognized:
+   * judging by the cards alone would file "nimbus" under "not in reference
+   * set" simply because "halo" got there first.
+   */
+  matchedElements: string[];
+}
+
 /**
  * Match each detected element against the symbol vocabulary directly.
  * One detected element -> at most one symbol (the closest match). No figure
  * ranking involved here, so there's no "shorter attribute list wins" bug —
  * each symbol is judged purely on its own name.
  */
-export function matchSymbols(detected: DetectedElement[], detectedTradition?: Tradition): SymbolMatch[] {
+export function matchSymbols(detected: DetectedElement[], detectedTradition?: Tradition): MatchResult {
   const results: SymbolMatch[] = [];
+  const matchedElements: string[] = [];
   const seenIds = new Set<string>();
 
   for (const d of detected) {
@@ -231,10 +244,15 @@ export function matchSymbols(detected: DetectedElement[], detectedTradition?: Tr
     // pick one arbitrarily — the element still surfaces as "also detected".
     if (tied) best = null;
 
+    if (!best) continue;
+
+    // Recognized, whether or not it earns a card of its own.
+    matchedElements.push(d.element);
+
     // Skip symbols already surfaced by an earlier detected element in this
     // scan — two phrases pointing at the same reference entry shouldn't
     // produce two identical cards.
-    if (best && !seenIds.has(best.id)) {
+    if (!seenIds.has(best.id)) {
       seenIds.add(best.id);
       results.push({
         id: best.id,
@@ -249,7 +267,7 @@ export function matchSymbols(detected: DetectedElement[], detectedTradition?: Tr
     }
   }
 
-  return results;
+  return { matches: results, matchedElements };
 }
 
 /**

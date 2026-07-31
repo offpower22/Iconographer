@@ -6,7 +6,7 @@
    - Navigations that fail offline fall back to a cached offline page.
 */
 
-const VERSION = 'v3';
+const VERSION = 'v4';
 const SHELL_CACHE = `iconographer-shell-${VERSION}`;
 
 /**
@@ -83,11 +83,22 @@ self.addEventListener('fetch', (event) => {
           caches.open(SHELL_CACHE).then((c) => c.put(request, copy));
           return res;
         })
-        .catch(() =>
-          caches
-            .match(request)
-            .then((cached) => cached || caches.match('/') || caches.match('/offline.html'))
-        )
+        // Each fallback must be awaited in turn. Chaining them with `||` looks
+        // equivalent but never works: caches.match() returns a Promise, which
+        // is always truthy, so the first call would win even when it resolves
+        // to undefined — leaving offline.html unreachable and handing
+        // respondWith an undefined value.
+        .catch(async () => {
+          return (
+            (await caches.match(request)) ||
+            (await caches.match('/')) ||
+            (await caches.match('/offline.html')) ||
+            new Response('You are offline.', {
+              status: 503,
+              headers: { 'Content-Type': 'text/plain; charset=utf-8' }
+            })
+          );
+        })
     );
     return;
   }
@@ -104,7 +115,12 @@ self.addEventListener('fetch', (event) => {
           }
           return res;
         })
-        .catch(() => cached);
+        // `cached` is necessarily undefined on this branch, and respondWith
+        // rejects an undefined value — return a real Response instead.
+        .catch(
+          () =>
+            new Response('', { status: 504, statusText: 'Offline and not cached' })
+        );
     })
   );
 });

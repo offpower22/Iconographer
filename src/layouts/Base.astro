@@ -21,11 +21,10 @@ const isProd = import.meta.env.PROD;
     <meta charset="utf-8" />
     <meta name="description" content={description} />
 
-    <!-- Viewport: cover the notch/home-indicator area so the app is truly full-bleed. -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
-    />
+    <!-- Viewport: cover the notch/home-indicator area so the app is truly full-bleed.
+         Pinch-zoom is deliberately left enabled: this is an app for looking closely
+         at paintings, and blocking zoom would both defeat that and fail WCAG 1.4.4. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
     <!-- PWA manifest -->
     <link rel="manifest" href="/manifest.webmanifest" />

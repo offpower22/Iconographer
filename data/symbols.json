@@ -1,6 +1,6 @@
 {
   "$schema": "./symbols.schema.json",
-  "version": 4,
+  "version": 5,
   "note": "Reference data for Iconographer, a Christian iconography app. Each entry is a single symbol -- a gesture, pose, object, animal, plant, garment, color, monogram, or scene type -- with a meaning that stands on its own. 'figures' is optional context (which Christian figures/scenes this symbol is commonly associated with), never required to explain the symbol. 'aliases' catches plain-English phrasings a vision model is likely to use. Expand freely; keep 'name' and 'aliases' lowercase and specific.",
   "symbols": [
     {
@@ -8,6 +8,7 @@
       "name": "benediction gesture (Latin)",
       "category": "Gesture",
       "aliases": [
+        "benediction gesture",
         "blessing gesture",
         "hand raised in blessing",
         "blessing hand",
@@ -32,13 +33,14 @@
       "name": "benediction gesture (Greek/Byzantine)",
       "category": "Gesture",
       "aliases": [
+        "benediction gesture",
         "two fingers raised in blessing",
         "fingers raised in blessing",
         "byzantine blessing gesture",
         "icon blessing hand",
         "orthodox blessing"
       ],
-      "meaning": "In Eastern Orthodox icons the blessing hand is shaped so the fingers spell the Greek letters ΙϹ ΧϹ — an abbreviation of 'Jesus Christ.' The gesture is simultaneously a blessing and a monogram naming the one who gives it.",
+      "meaning": "In Eastern Orthodox icons the blessing hand is shaped so the fingers spell the Greek letters ΙϹ ΧϹ — an abbreviation of 'Jesus Christ.' The gesture is simultaneously a blessing and a monogram naming the one who gives it, directed outward at the viewer as sacred favor conferred on them.",
       "figures": [
         {
           "name": "Christ (Orthodox icons)",
@@ -566,7 +568,7 @@
           "note": "at the Transfiguration, Ascension, and in Majesty"
         },
         {
-          "name": "The Virgin",
+          "name": "The Virgin Mary",
           "note": "at her Assumption"
         }
       ]
@@ -918,6 +920,7 @@
       "name": "Latin cross",
       "category": "Object",
       "aliases": [
+        "cross",
         "upright cross",
         "plain cross",
         "cross with a long lower arm"
@@ -935,6 +938,7 @@
       "name": "tau (T-shaped) cross",
       "category": "Object",
       "aliases": [
+        "tau cross",
         "T-shaped cross",
         "T-shaped staff",
         "cross shaped like the letter T"
@@ -952,6 +956,7 @@
       "name": "X-shaped (saltire) cross",
       "category": "Object",
       "aliases": [
+        "X-shaped cross",
         "diagonal cross",
         "cross shaped like an X",
         "st andrew's cross"
@@ -1219,7 +1224,7 @@
           "note": "reflects her royal birth"
         },
         {
-          "name": "The Virgin",
+          "name": "The Virgin Mary",
           "note": "crowned as Queen of Heaven at her Coronation"
         }
       ]
@@ -1746,7 +1751,7 @@
           "note": "distributed the church's treasure to the poor"
         },
         {
-          "name": "Saint Matthew",
+          "name": "Saint Matthew the Evangelist",
           "note": "recalls his former trade as a tax collector"
         },
         {
@@ -2329,7 +2334,7 @@
       "meaning": "In European painting cats generally carry a negative charge — deceit, stealth, lust, or heresy. A cat lurking at the Last Supper or in an Annunciation is usually a deliberate note of menace rather than domestic detail.",
       "figures": [
         {
-          "name": "Judas",
+          "name": "Judas Iscariot",
           "note": "a cat is sometimes placed near him at the Last Supper"
         }
       ]
@@ -3101,6 +3106,8 @@
       "name": "Crucifixion",
       "category": "Scene",
       "aliases": [
+        "christ crucified",
+        "christ on the cross",
         "man nailed to a cross",
         "figure on a cross with mourners",
         "calvary",
@@ -3313,6 +3320,584 @@
           "note": "received the stigmata from a crucified seraph"
         }
       ]
+    },
+    {
+      "id": "hand-of-god",
+      "name": "hand of God (Manus Dei)",
+      "category": "Attribute",
+      "aliases": [
+        "hand emerging from clouds",
+        "disembodied hand",
+        "hand reaching down from above",
+        "hand from the sky",
+        "hand in the clouds"
+      ],
+      "meaning": "A single hand reaching out of a cloud or out of the top edge of the picture stands for God the Father at moments when he acts but is not shown in person. It is often haloed or held in the blessing shape, and it carries the same benediction outward that a full figure would — divine favor conferred on the scene below and on the viewer.",
+      "figures": [
+        {
+          "name": "God the Father",
+          "note": "the standard way of showing the Father without depicting him bodily"
+        },
+        {
+          "name": "Christ",
+          "note": "appears above the Jordan at the Baptism, marking the Father's approval"
+        }
+      ]
+    },
+    {
+      "id": "tongues-of-fire",
+      "name": "tongues of fire",
+      "category": "Attribute",
+      "aliases": [
+        "flames above the heads",
+        "small flames over heads",
+        "flame above the head",
+        "tongues of flame",
+        "fire resting on heads"
+      ],
+      "meaning": "Small flames hovering just above the heads of a gathered group mark Pentecost, when the Holy Spirit descended on the apostles and gave them speech in every language. The flame is the Spirit made visible; where it rests, it signals a person seized and commissioned by God.",
+      "figures": [
+        {
+          "name": "The Apostles",
+          "note": "the whole company receives the flame together at Pentecost"
+        },
+        {
+          "name": "The Holy Spirit",
+          "note": "shown as fire rather than as the usual dove"
+        }
+      ]
+    },
+    {
+      "id": "divine-rays",
+      "name": "rays of light from above",
+      "category": "Attribute",
+      "aliases": [
+        "beams of light from above",
+        "golden rays",
+        "shaft of light",
+        "streaming light from the sky"
+      ],
+      "meaning": "Straight beams descending from heaven, from a dove, or from an opening in the clouds are the visible track of grace entering the world. They connect a divine source to whatever they fall on, naming that person or moment as chosen.",
+      "figures": [
+        {
+          "name": "The Virgin at the Annunciation",
+          "note": "the ray carries the Incarnation to her, often with the dove riding it"
+        },
+        {
+          "name": "The Holy Spirit",
+          "note": "light is the Spirit's ordinary vehicle in painting"
+        }
+      ]
+    },
+    {
+      "id": "peacock",
+      "name": "peacock",
+      "category": "Animal",
+      "aliases": [
+        "bird with a fanned tail",
+        "bird with eyed tail feathers",
+        "peacock feathers"
+      ],
+      "meaning": "The peacock was believed to have flesh that would not decay, which made it an emblem of immortality and the resurrection of the body — one of the oldest animal symbols in Christian art. The many eyes in its tail were read separately as the all-seeing Church.",
+      "figures": [
+        {
+          "name": "Paradise imagery",
+          "note": "flanking a fountain or vine in early Christian and Byzantine work",
+          "generic": true
+        },
+        {
+          "name": "The Risen Christ",
+          "note": "incorruptible flesh as a figure of the Resurrection"
+        }
+      ]
+    },
+    {
+      "id": "goat",
+      "name": "goat",
+      "category": "Animal",
+      "aliases": [
+        "goats",
+        "he-goat",
+        "herd of goats"
+      ],
+      "meaning": "In the Last Judgment the goats are separated from the sheep and sent to the left hand of the judge — they are the damned. Away from that scene a goat can carry the older sense of lust or the scapegoat that bears away sin.",
+      "figures": [
+        {
+          "name": "Christ the Judge",
+          "note": "divides sheep from goats at the Judgment"
+        },
+        {
+          "name": "Angels of the Last Judgment",
+          "note": "drive the goats toward the left",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "horse",
+      "name": "horse",
+      "category": "Animal",
+      "aliases": [
+        "horse and rider",
+        "mounted rider",
+        "white horse",
+        "man on horseback"
+      ],
+      "meaning": "A horse marks its rider as a soldier, a noble, or a figure of power, and in saints' images it usually belongs to a military martyr shown in action rather than in repose. Four horses ridden together belong to the Apocalypse.",
+      "figures": [
+        {
+          "name": "Saint George",
+          "note": "mounted as he spears the dragon"
+        },
+        {
+          "name": "Saint Martin",
+          "note": "on horseback as he cuts his cloak for the beggar"
+        }
+      ]
+    },
+    {
+      "id": "ladder",
+      "name": "ladder",
+      "category": "Object",
+      "aliases": [
+        "ladder against a cross",
+        "ladder leaning",
+        "wooden ladder"
+      ],
+      "meaning": "Propped against the cross, the ladder is one of the Instruments of the Passion — the means by which the body was brought down. Standing free and reaching into the sky it is instead Jacob's ladder, the traffic between earth and heaven.",
+      "figures": [
+        {
+          "name": "The Passion of Christ",
+          "note": "counted among the Arma Christi"
+        },
+        {
+          "name": "Joseph of Arimathea and Nicodemus",
+          "note": "climb it to lower the body at the Deposition"
+        }
+      ]
+    },
+    {
+      "id": "bread-loaves",
+      "name": "bread or loaves",
+      "category": "Object",
+      "aliases": [
+        "loaves of bread",
+        "bread",
+        "round loaf",
+        "basket of loaves"
+      ],
+      "meaning": "Bread is the body of Christ in the Eucharist, and on a table with wine it turns a meal into the institution of that sacrament. Multiplied in baskets it recalls the feeding of the five thousand; carried by a saint it is usually alms for the poor.",
+      "figures": [
+        {
+          "name": "Christ / the Eucharist",
+          "note": "the bread broken at the Last Supper"
+        },
+        {
+          "name": "Charity personified",
+          "note": "distributed loaves stand for works of mercy"
+        }
+      ]
+    },
+    {
+      "id": "greek-cross",
+      "name": "Greek cross",
+      "category": "Object",
+      "aliases": [
+        "equal-armed cross",
+        "cross with four equal arms",
+        "square cross"
+      ],
+      "meaning": "A cross whose four arms are of equal length reads as the sign of faith in the abstract rather than the instrument of a particular death. It is the form used for consecration crosses, for crosses held by martyrs as a badge of their witness, and for the ground plan of Eastern churches.",
+      "figures": [
+        {
+          "name": "Martyr saints generally",
+          "note": "held small in the hand as the token of martyrdom",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "fig-leaf",
+      "name": "fig leaf",
+      "category": "Plant",
+      "aliases": [
+        "leaf covering the body",
+        "fig leaves",
+        "single large leaf"
+      ],
+      "meaning": "The fig leaf is what Adam and Eve reach for once they know they are naked, so it marks the moment innocence is lost rather than the nakedness itself. Later hands sometimes added one to an existing painting, which is a fact about the picture's history rather than its subject.",
+      "figures": [
+        {
+          "name": "Adam and Eve",
+          "note": "taken up immediately after the Fall"
+        }
+      ]
+    },
+    {
+      "id": "anastasis",
+      "name": "Anastasis (Harrowing of Hell)",
+      "category": "Scene",
+      "aliases": [
+        "christ pulling figures from tombs",
+        "figures lifted out of a pit",
+        "man standing on broken doors",
+        "christ grasping a figure by the wrist"
+      ],
+      "meaning": "Christ stands on the shattered gates of Hell and hauls Adam and Eve up out of their tombs by the wrist — not by the hand, since they are being taken rather than helped. This, not the empty tomb, is the Resurrection image of the Orthodox Church, and the broken locks and hinges scattered underfoot are the point of it.",
+      "figures": [
+        {
+          "name": "The Risen Christ",
+          "note": "shown in the act of emptying Hell"
+        },
+        {
+          "name": "Adam and Eve",
+          "note": "the first of the dead to be raised"
+        }
+      ],
+      "tradition": "byzantine"
+    },
+    {
+      "id": "deesis",
+      "name": "Deesis",
+      "category": "Scene",
+      "aliases": [
+        "christ flanked by two pleading figures",
+        "three-figure intercession group",
+        "two figures turned inward toward christ"
+      ],
+      "meaning": "Christ sits at the centre with the Virgin at his right and John the Baptist at his left, both turned inward with their hands raised toward him in petition. The composition is a picture of intercession itself: the two people best placed to ask are shown asking, on behalf of everyone looking at it.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "enthroned as judge, being petitioned"
+        },
+        {
+          "name": "The Virgin Mary",
+          "note": "the principal intercessor, always at Christ's right"
+        },
+        {
+          "name": "Saint John the Baptist",
+          "note": "the second intercessor, at Christ's left"
+        }
+      ],
+      "tradition": "byzantine"
+    },
+    {
+      "id": "hodegetria",
+      "name": "Hodegetria (the Virgin pointing)",
+      "category": "Scene",
+      "aliases": [
+        "virgin pointing to the child",
+        "mother gesturing toward the infant",
+        "woman holding a child and indicating him"
+      ],
+      "meaning": "The Virgin carries the Child on one arm and points to him with her free hand — 'she who shows the way.' Her look is directed out at the viewer rather than at her son, because the image is an instruction: attend to him, not to me.",
+      "figures": [
+        {
+          "name": "The Virgin and Christ Child",
+          "note": "the most widely copied Byzantine Marian type"
+        }
+      ],
+      "tradition": "byzantine"
+    },
+    {
+      "id": "eleousa",
+      "name": "Eleousa (Virgin of Tenderness)",
+      "category": "Scene",
+      "aliases": [
+        "virgin and child cheek to cheek",
+        "mother and child faces touching",
+        "woman pressing her face to an infant"
+      ],
+      "meaning": "Mother and Child press their cheeks together and she draws him in close. The tenderness is not sentimental: in these icons the Virgin's expression is already grieving, and the embrace is read as her foreknowledge of the Passion.",
+      "figures": [
+        {
+          "name": "The Virgin and Christ Child",
+          "note": "the affectionate counterpart to the Hodegetria"
+        },
+        {
+          "name": "The Mater Dolorosa",
+          "note": "the sorrow anticipated while the child is still an infant"
+        }
+      ],
+      "tradition": "byzantine"
+    },
+    {
+      "id": "christ-pantocrator",
+      "name": "Christ Pantocrator",
+      "category": "Scene",
+      "aliases": [
+        "frontal bust of christ with a book",
+        "christ holding a book and blessing",
+        "christ ruler of all"
+      ],
+      "meaning": "A frontal half-length Christ blesses with his right hand and holds the gospels in his left, with a cruciform halo and the letters IC XC beside his head. 'Pantocrator' means ruler of all, and the image is deliberately confrontational — it looks directly out, and the two sides of the face are often painted differently to hold mercy and judgment together.",
+      "figures": [
+        {
+          "name": "Christ Pantocrator",
+          "note": "the central image of the Orthodox church, usually in the dome"
+        }
+      ],
+      "tradition": "byzantine"
+    },
+    {
+      "id": "dormition",
+      "name": "Dormition of the Virgin",
+      "category": "Scene",
+      "aliases": [
+        "woman lying on a bier surrounded by mourners",
+        "christ holding a swaddled infant over a deathbed",
+        "deathbed with apostles around it"
+      ],
+      "meaning": "The Virgin lies on a bier with the apostles gathered around her while Christ stands behind holding a small swaddled figure — her soul, shown as an infant, so that the roles of the Nativity are exactly reversed. The Eastern name means 'falling asleep' rather than death.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "at the end of her earthly life"
+        },
+        {
+          "name": "The Apostles",
+          "note": "gathered miraculously from wherever they were preaching"
+        }
+      ],
+      "tradition": "byzantine"
+    },
+    {
+      "id": "man-of-sorrows",
+      "name": "Man of Sorrows",
+      "category": "Scene",
+      "aliases": [
+        "christ displaying his wounds",
+        "wounded christ standing upright",
+        "dead christ standing in a tomb"
+      ],
+      "meaning": "Christ stands upright showing the wounds, alive and dead at once, outside any moment the Gospels actually narrate. It is a devotional image rather than a story: the viewer is placed in front of the suffering and asked to dwell on it, which is why the Instruments of the Passion often float around him.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "shown for contemplation rather than as part of a narrative"
+        },
+        {
+          "name": "The Passion of Christ",
+          "note": "the wounds and instruments presented together"
+        }
+      ]
+    },
+    {
+      "id": "good-shepherd",
+      "name": "the Good Shepherd",
+      "category": "Scene",
+      "aliases": [
+        "youth carrying a sheep on his shoulders",
+        "shepherd with a lamb across the shoulders",
+        "man carrying a sheep"
+      ],
+      "meaning": "A beardless young shepherd with a sheep slung across his shoulders is the earliest widespread image of Christ, painted in the catacombs long before the crucifix was acceptable. The sheep is the recovered sinner, carried home rather than driven.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "the earliest form in which he was depicted"
+        },
+        {
+          "name": "Early Christian catacomb figures",
+          "note": "the standard funerary image of rescue",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "transfiguration",
+      "name": "Transfiguration",
+      "category": "Scene",
+      "aliases": [
+        "radiant christ on a mountain between two figures",
+        "three men fallen below a glowing figure",
+        "figure blazing white on a hilltop"
+      ],
+      "meaning": "On the mountain Christ turns blinding white between Moses and Elijah, while the three disciples below are thrown to the ground and shield their eyes. The light is the point: it is his own divinity briefly made visible rather than light falling on him from outside.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "shown in uncreated light, usually inside a mandorla"
+        },
+        {
+          "name": "Old Testament prophets",
+          "note": "Moses and Elijah flank him, law and prophecy",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "ascension-scene",
+      "name": "Ascension",
+      "category": "Scene",
+      "aliases": [
+        "christ rising into the sky",
+        "figures looking up at a departing figure",
+        "feet disappearing into a cloud"
+      ],
+      "meaning": "Christ rises out of the picture forty days after the Resurrection while the apostles crane upward from the ground. Some versions cut him off at the cloud line so that only his feet remain visible, which makes the departure rather than the figure the subject.",
+      "figures": [
+        {
+          "name": "The Risen Christ",
+          "note": "leaving the world bodily"
+        },
+        {
+          "name": "The Apostles",
+          "note": "left looking upward, often with the Virgin among them"
+        }
+      ]
+    },
+    {
+      "id": "throne-of-mercy",
+      "name": "Throne of Mercy (Gnadenstuhl)",
+      "category": "Scene",
+      "aliases": [
+        "father holding the crucified son",
+        "enthroned figure supporting a crucifix",
+        "trinity with a crucifix and a dove"
+      ],
+      "meaning": "God the Father, enthroned, holds the cross or the body of the crucified Son while the dove of the Spirit hovers between them — the whole Trinity in one image, organised around the Passion. It makes the Father a participant in the sacrifice rather than a spectator of it.",
+      "figures": [
+        {
+          "name": "God the Father",
+          "note": "supports the cross himself"
+        },
+        {
+          "name": "The Holy Spirit",
+          "note": "the dove between Father and Son completes the Trinity"
+        }
+      ],
+      "tradition": "western"
+    },
+    {
+      "id": "tree-of-jesse",
+      "name": "Tree of Jesse",
+      "category": "Scene",
+      "aliases": [
+        "tree growing from a sleeping man",
+        "vine with figures seated in its branches",
+        "genealogical tree with people in it"
+      ],
+      "meaning": "A vine springs from the body of a sleeping old man and carries the ancestors of Christ up through its branches to the Virgin and Child at the top. It is a family tree in the most literal sense, made to show that the Incarnation was promised and prepared for.",
+      "figures": [
+        {
+          "name": "King David",
+          "note": "among the royal ancestors in the branches"
+        },
+        {
+          "name": "The Virgin and Christ Child",
+          "note": "crown the tree at its summit"
+        }
+      ],
+      "tradition": "western"
+    },
+    {
+      "id": "burning-bush",
+      "name": "burning bush",
+      "category": "Plant",
+      "aliases": [
+        "bush on fire",
+        "flaming shrub",
+        "burning tree not consumed"
+      ],
+      "meaning": "The bush that burns without being consumed is where Moses is addressed by God and told to remove his sandals. Read forward, it became a figure of the Virgin — something that holds divine fire and is not destroyed by it.",
+      "figures": [
+        {
+          "name": "Old Testament figures",
+          "note": "Moses turns aside to look at it",
+          "generic": true
+        },
+        {
+          "name": "The Virgin Mary",
+          "note": "the bush unharmed by fire read as her virginity preserved"
+        }
+      ]
+    },
+    {
+      "id": "sacrifice-of-isaac",
+      "name": "Sacrifice of Isaac",
+      "category": "Scene",
+      "aliases": [
+        "old man with a raised knife over a bound boy",
+        "child bound on an altar",
+        "hand staying a raised blade"
+      ],
+      "meaning": "An old man raises a knife over his bound son on an altar and is stopped at the last moment, usually by an angel or by the hand of God, with a ram caught in a thicket nearby. It is placed in churches as a prefiguration of the Crucifixion: the son carries the wood for his own sacrifice, and a substitute is provided.",
+      "figures": [
+        {
+          "name": "Old Testament figures",
+          "note": "Abraham and Isaac on Mount Moriah",
+          "generic": true
+        },
+        {
+          "name": "The Crucifixion",
+          "note": "the standard Old Testament type for the sacrifice of the Son"
+        }
+      ]
+    },
+    {
+      "id": "jonah-and-the-whale",
+      "name": "Jonah and the sea creature",
+      "category": "Scene",
+      "aliases": [
+        "man swallowed by a sea creature",
+        "large fish disgorging a man",
+        "sea monster with a man in its mouth"
+      ],
+      "meaning": "Jonah is swallowed and after three days vomited out alive, which made him the favourite Resurrection image of the earliest Christians — far more common in the catacombs than the empty tomb. He is often shown a third time resting naked under a gourd vine.",
+      "figures": [
+        {
+          "name": "The Risen Christ",
+          "note": "three days in the fish read as three days in the tomb"
+        },
+        {
+          "name": "Early Christian catacomb figures",
+          "note": "the commonest funerary subject of all",
+          "generic": true
+        }
+      ]
+    },
+    {
+      "id": "ic-xc-monogram",
+      "name": "IC XC monogram",
+      "category": "Monogram",
+      "aliases": [
+        "greek inscription",
+        "IC XC",
+        "greek letters beside the head",
+        "greek lettering in the background"
+      ],
+      "meaning": "The letters IC XC, usually set in the upper corners on either side of Christ's head and marked with a bar above, are the first and last letters of 'Jesus Christ' in Greek. They are a nameplate rather than a decoration: an Orthodox icon is not considered complete until the person shown has been named on it.",
+      "figures": [
+        {
+          "name": "Christ",
+          "note": "the standard identifying inscription in Orthodox icons"
+        },
+        {
+          "name": "Christ Pantocrator",
+          "note": "flanks the head in the Pantocrator type"
+        }
+      ],
+      "tradition": "byzantine"
+    },
+    {
+      "id": "mp-thu-monogram",
+      "name": "MP ΘY monogram",
+      "category": "Monogram",
+      "aliases": [
+        "MP THU",
+        "greek letters beside the virgin",
+        "meter theou inscription"
+      ],
+      "meaning": "MP ΘY abbreviates Meter Theou, 'Mother of God,' and is placed beside the Virgin's head in the same way IC XC is placed beside Christ's. It names her by the title settled at Ephesus, so the letters are a doctrinal statement as much as a label.",
+      "figures": [
+        {
+          "name": "The Virgin Mary",
+          "note": "the standard identifying inscription in Orthodox icons"
+        }
+      ],
+      "tradition": "byzantine"
     }
   ]
 }

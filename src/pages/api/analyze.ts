@@ -13,6 +13,8 @@ interface AnalyzeResponse {
   unmatchedElements: string[];
   figureSuggestion: FigureSuggestion | null;
   message: string | null;
+  /** 'uncertain' is only ever used internally as "don't tie-break with it" — the UI hides it */
+  tradition: 'western' | 'byzantine' | 'uncertain';
 }
 
 function json(data: unknown, status = 200): Response {
@@ -73,7 +75,10 @@ export const POST: APIRoute = async ({ request }) => {
   // Symbol-first: every detected element that matches our reference data becomes
   // its own explained, croppable card. No forced "one figure" verdict — a figure
   // is only ever a derived, optional bonus signal, never an invented claim.
-  const symbols = matchSymbols(vision.detectedElements);
+  // Tradition ('uncertain' becomes undefined) is used only as a tie-breaker
+  // between equally-good matches, never to exclude anything outright.
+  const traditionHint = vision.tradition === 'uncertain' ? undefined : vision.tradition;
+  const symbols = matchSymbols(vision.detectedElements, traditionHint);
   const matchedRaw = new Set(symbols.map((s) => s.matchedElement.toLowerCase()));
   const unmatchedElements = vision.detectedElements
     .map((d) => d.element)
@@ -88,7 +93,13 @@ export const POST: APIRoute = async ({ request }) => {
     message = "I detected some elements, but none matched anything in the reference set yet.";
   }
 
-  const payload: AnalyzeResponse = { symbols, unmatchedElements, figureSuggestion, message };
+  const payload: AnalyzeResponse = {
+    symbols,
+    unmatchedElements,
+    figureSuggestion,
+    message,
+    tradition: vision.tradition
+  };
   return json(payload);
 };
 

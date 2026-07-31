@@ -26,6 +26,7 @@ interface AnalyzeResponse {
   unmatchedElements: string[];
   figureSuggestion: FigureSuggestion | null;
   message: string | null;
+  tradition: 'western' | 'byzantine' | 'uncertain';
 }
 
 const $ = <T extends HTMLElement = HTMLElement>(sel: string): T =>
@@ -393,9 +394,15 @@ function renderResult(data: AnalyzeResponse) {
   img.src = objectUrl!;
   img.alt = 'The artwork you captured';
   frame.appendChild(img);
-  root.appendChild(frame);
 
-  const { symbols, unmatchedElements, figureSuggestion, message } = data;
+  const { symbols, unmatchedElements, figureSuggestion, message, tradition } = data;
+
+  // Brief note only — never shown when Gemini itself wasn't confident.
+  if (tradition === 'western' || tradition === 'byzantine') {
+    frame.appendChild(el('span', 'tradition-badge', tradition === 'byzantine' ? 'Byzantine' : 'Western'));
+  }
+
+  root.appendChild(frame);
 
   // Optional, secondary context — never the headline claim.
   if (figureSuggestion) {

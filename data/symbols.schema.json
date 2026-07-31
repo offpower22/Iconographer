@@ -58,9 +58,14 @@
             "type": "string",
             "description": "standalone explanation of this symbol, true regardless of which figure it appears with"
           },
+          "tradition": {
+            "type": "string",
+            "enum": ["western", "byzantine"],
+            "description": "optional: set ONLY when this symbol is genuinely specific to one tradition (e.g. a Latin-only devotional object, or an Eastern icon convention). Most symbols apply to both and should leave this unset. Used as a tie-breaker in matching, not a hard filter."
+          },
           "figures": {
             "type": "array",
-            "description": "optional context: figures/scenes this symbol is commonly associated with",
+            "description": "optional context: which Christian figures/scenes this symbol is commonly associated with",
             "items": {
               "type": "object",
               "required": [

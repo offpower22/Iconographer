@@ -10,8 +10,12 @@ export interface GeminiDetection {
   box: [number, number, number, number] | null;
 }
 
+export type Tradition = 'western' | 'byzantine' | 'uncertain';
+
 export interface GeminiVisionResult {
   detectedElements: GeminiDetection[];
+  /** broad visual tradition of the artwork — used only as a matching tie-breaker */
+  tradition: Tradition;
 }
 
 // Chosen because it's confirmed to have free-tier quota; some other free-tier-listed
@@ -19,9 +23,11 @@ export interface GeminiVisionResult {
 // Override via GEMINI_MODEL if your project has quota on a different model.
 const DEFAULT_MODEL = 'gemini-flash-lite-latest';
 
-const SYSTEM_PROMPT = `You are a computer vision system assisting an iconography app. You do NOT
-interpret meaning — you only locate and label what is visibly present in a photograph of an
-artwork (painting, sculpture, fresco, icon, print, etc.).
+const SYSTEM_PROMPT = `You are a computer vision system assisting a Christian iconography app. You do
+NOT interpret meaning — you only locate and label what is visibly present in a photograph of an
+artwork (painting, sculpture, fresco, icon, print, etc.), typically devotional or religious in
+subject. Prioritize elements that carry Christian symbolic weight — saints' attributes, gestures,
+Biblical scenes, liturgical objects — over incidental background detail.
 
 Identify every discrete visual element that could carry iconographic meaning:
 - objects held or nearby (e.g. "book", "skull", "keys", "broken wheel")
@@ -35,12 +41,22 @@ For each element, also return a tight bounding box around exactly that element (
 figure, not the whole painting) as box_2d: [ymin, xmin, ymax, xmax], integers from 0 to 1000,
 where the image's top-left corner is (0,0) and bottom-right is (1000,1000).
 
+Also classify the artwork's broad visual tradition as "tradition":
+- "byzantine" — Eastern Orthodox icon style: flat, frontal, non-naturalistic figures, gold-leaf
+  background, little or no perspective/depth, often Greek or Church Slavonic lettering.
+- "western" — Latin/Catholic-Protestant European tradition: any degree of naturalism,
+  perspective, modeling of light and shadow — this covers everything from medieval panel
+  painting through Renaissance, Baroque, and later devotional art.
+- "uncertain" — sculpture, a detail too close-up to judge, an unclear photo, or genuinely
+  ambiguous style. Use this rather than guessing; a wrong guess here is worse than "uncertain."
+
 Rules:
 - Report only what you can actually see. Do not guess symbolic meaning — that is not your job.
 - Use short, lowercase noun phrases for "element" (e.g. "lion", "index finger raised", "blue mantle").
 - Prefer specific, minimal bounding boxes over boxes that cover the whole figure.
 - "location" is a short human-readable position (e.g. "bottom left", "held in right hand").
-- If the image is not an artwork or you cannot see meaningful detail, return an empty array.`;
+- If the image is not an artwork or you cannot see meaningful detail, return an empty array and
+  "tradition": "uncertain".`;
 
 const RESPONSE_SCHEMA = {
   type: 'object',
@@ -61,9 +77,10 @@ const RESPONSE_SCHEMA = {
         },
         required: ['element', 'location', 'box_2d']
       }
-    }
+    },
+    tradition: { type: 'string', enum: ['western', 'byzantine', 'uncertain'] }
   },
-  required: ['detectedElements']
+  required: ['detectedElements', 'tradition']
 };
 
 export class GeminiError extends Error {
@@ -141,7 +158,7 @@ export async function analyzeImage(
     );
   }
 
-  let parsed: { detectedElements?: unknown };
+  let parsed: { detectedElements?: unknown; tradition?: unknown };
   try {
     parsed = JSON.parse(text);
   } catch {
@@ -149,6 +166,8 @@ export async function analyzeImage(
   }
 
   const raw = Array.isArray(parsed.detectedElements) ? parsed.detectedElements : [];
+  const tradition: Tradition =
+    parsed.tradition === 'western' || parsed.tradition === 'byzantine' ? parsed.tradition : 'uncertain';
 
   return {
     detectedElements: raw
@@ -162,6 +181,7 @@ export async function analyzeImage(
           location: typeof e.location === 'string' ? e.location : '',
           box
         };
-      })
+      }),
+    tradition
   };
 }

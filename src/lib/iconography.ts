@@ -11,6 +11,8 @@ export interface FigureNote {
   generic?: boolean;
 }
 
+export type Tradition = 'western' | 'byzantine';
+
 export interface Symbol {
   id: string;
   name: string;
@@ -18,6 +20,8 @@ export interface Symbol {
   meaning: string;
   figures?: FigureNote[];
   aliases?: string[];
+  /** set only when a symbol is genuinely specific to one tradition; most are unset */
+  tradition?: Tradition;
 }
 
 export interface DetectedElement {
@@ -143,7 +147,7 @@ function matchQuality(detected: string, candidate: string): 0 | 1 | 2 | 3 {
  * ranking involved here, so there's no "shorter attribute list wins" bug —
  * each symbol is judged purely on its own name.
  */
-export function matchSymbols(detected: DetectedElement[]): SymbolMatch[] {
+export function matchSymbols(detected: DetectedElement[], detectedTradition?: Tradition): SymbolMatch[] {
   const results: SymbolMatch[] = [];
   const seenIds = new Set<string>();
 
@@ -173,14 +177,51 @@ export function matchSymbols(detected: DetectedElement[]): SymbolMatch[] {
       }
       if (quality === 0) continue;
 
-      // Stronger match always wins; within a tier, prefer the phrasing closest
-      // in length to the detection ("cross" -> "Latin cross", not "tau cross").
-      if (quality > bestQuality || (quality === bestQuality && distance < bestDistance)) {
+      if (!best) {
         best = sym;
         bestQuality = quality;
         bestDistance = distance;
+        continue;
+      }
+
+      if (quality !== bestQuality) {
+        // Quality always decides outright — nothing below outranks it.
+        if (quality > bestQuality) {
+          best = sym;
+          bestQuality = quality;
+          bestDistance = distance;
+          tied = false;
+        }
+        continue;
+      }
+      if (sym.id === best.id) continue;
+
+      // Quality is tied. Tradition outranks distance here: it's a purpose-built
+      // signal (does this artwork's detected style match this symbol's known
+      // tradition?), where distance is only ever a rough proxy for specificity
+      // based on incidental phrase length. Checking distance first would let
+      // "icon blessing hand" (Greek) beat "blessing hand" (Latin) on a Western
+      // painting purely because it happens to be closer in character count to
+      // whatever Gemini phrased the detection as — exactly backwards.
+      const symFits = detectedTradition != null && sym.tradition === detectedTradition;
+      const bestFits = detectedTradition != null && best.tradition === detectedTradition;
+      if (symFits && !bestFits) {
+        best = sym;
+        bestDistance = distance;
         tied = false;
-      } else if (quality === bestQuality && distance === bestDistance && best && sym.id !== best.id) {
+        continue;
+      }
+      if (bestFits && !symFits) {
+        continue; // keep current best — it matches the tradition, the challenger doesn't
+      }
+
+      // Tradition didn't disambiguate (no hint, or both/neither match) — fall
+      // back to distance as before.
+      if (distance < bestDistance) {
+        best = sym;
+        bestDistance = distance;
+        tied = false;
+      } else if (distance === bestDistance) {
         tied = true;
       }
     }

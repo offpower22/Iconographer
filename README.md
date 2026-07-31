@@ -1,9 +1,9 @@
 # Iconographer
 
-A camera-first **PWA** that reads the iconography of an artwork — a blessing gesture, a
-saint's attribute, a god's emblem, an allegorical object — crops each symbol out of your
-photo and explains what it means in plain English. Built to be installed on iOS via Safari's
-**Add to Home Screen** and behave like a native app.
+A camera-first **PWA** for **Christian iconography** — point it at a painting, fresco, icon,
+or sculpture and it reads a blessing gesture, a saint's attribute, a Biblical scene, crops
+each symbol out of your photo, and explains what it means in plain English. Built to be
+installed on iOS via Safari's **Add to Home Screen** and behave like a native app.
 
 It is **symbol-first, not figure-first**: the goal is to explain each individual symbol on
 its own terms, not to announce "this painting is Saint Jerome." A likely figure is offered
@@ -17,8 +17,8 @@ only as soft secondary context, and withheld whenever the evidence is thin.
    concrete visual elements — each with a bounding box — returned as strict JSON. Gemini is
    explicitly told *not* to interpret meaning.
 4. Each detected element is matched against a local reference set
-   ([`data/symbols.json`](data/symbols.json) — 218 symbols across gestures, poses, objects,
-   animals, plants, garments, colors, monograms, and scene types).
+   ([`data/symbols.json`](data/symbols.json) — 179 Christian symbols across gestures, poses,
+   objects, animals, plants, garments, colors, monograms, and scene types).
 5. The frontend crops each matched symbol out of your photo using its bounding box and shows
    one card per symbol: the crop, the standalone meaning, and any figures that symbol is
    commonly associated with.
@@ -103,8 +103,14 @@ Add entries to [`data/symbols.json`](data/symbols.json) following
 }
 ```
 
-Two rules keep the data honest:
+Three rules keep the data honest:
 
+- **Christian focus, deliberately.** The app used to also cover classical mythology and
+  secular allegory (Zeus, Venus, Justice/Fortitude/Prudence as personified virtues); that
+  content was removed to keep scope to Christian iconography. A symbol with real pagan/classical
+  *origins* can still be documented (e.g. the pomegranate's link to Persephone explaining its
+  resurrection symbolism) as long as the `figures` entries themselves are Christian — don't
+  reintroduce standalone mythological or allegorical figures.
 - **`meaning` must stand alone.** It is what the app shows first, so it has to make sense
   without knowing who is depicted. Figure-specific nuance belongs in `figures`.
 - **`aliases` are what actually drive recall.** The vision model rarely returns your formal
